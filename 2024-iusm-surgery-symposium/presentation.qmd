@@ -26,47 +26,19 @@ Case was modified for teaching purposes
 
 ------------------------------------------------------------------------
 
-## Initial Presentation
+## Initial Presentation {auto-animate=true auto-animate-easing="ease-in-out"}
 Meet Sarah, a 15-year-old girl who presents to the clinic with a three-month history of progressive headaches.
 
 ------------------------------------------------------------------------
 
-## Initial Presentation
+## Initial Presentation {.smaller auto-animate=true auto-animate-easing="ease-in-out"}
 Meet Sarah, a 15-year-old girl who presents to the clinic with a three-month history of progressive headaches.
 
 <br>
 
 <br>
 
-::: columns
-::: {.column width="\"40%"}
-::: {.fragment .fade-left}
-### Vital Signs
-
-120/80 mmHg
-
-78 bpm
-
-16 breaths per minute
-
-98.6°F (37°C)
-:::
-:::
-
-::: {.column width="\"40%"}
-:::
-:::
-
-------------------------------------------------------------------------
-
-## Initial Presentation {.smaller}
-Meet Sarah, a 15-year-old girl who presents to the clinic with a three-month history of progressive headaches.
-
-<br>
-
-<br>
-
-::: columns
+:::::: columns
 ::: {.column width="40%" .fragment}
 ### Vital Signs
 
@@ -88,21 +60,15 @@ Decreased visual acuity bilaterally
 
 ::: {.fragment .fade-up}
 ::: {.fragment .highlight-red}
-Papilledema evident
+Papilledema on fundoscopy
 :::
 :::
 
 ::: {.fragment .fade-up}
 Cranial nerves intact, no motor or sensory deficits
 :::
-
-::: {.fragment .fade-up}
-::: {.fragment .highlight-red}
-Whooshing sound heard upon auscultation of the ear
 :::
-:::
-:::
-:::
+::::::
 
 ------------------------------------------------------------------------
 
