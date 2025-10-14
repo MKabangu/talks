@@ -1,6 +1,11 @@
 ---
 title: "Beyond the Image"
-subtitle: "Addressing Disparities in Uterine Fibroid Embolization"
+subtitle: "Addressing Disparities in \n \n Uterine Fibroid Embolization"
+title-slide-attributes:
+  data-background-image: images/title-invert.png
+  data-background-size: auto 100%
+  data-background-opacity: "0.5"
+  data-background-position: right 0% bottom 45%
 format:
   clean-revealjs:
     transition: fade
@@ -11,7 +16,7 @@ format:
 author:
     name: Mirindi Kabangu, BS
     orcid: 0000-0002-4605-9089
-    email: mirindikabangu@gmail.com
+    email: mkabangu@iu.edu
     affiliations: Indiana University School of Medicine
 date: last-modified
 execute: 
@@ -42,37 +47,38 @@ Work History
 :::::
 ::::::
 
-## HISTORY {auto-animate=true}
+## HISTORY {auto-animate="true"}
 
-:::{.fragment .fade-in-then-semi-out}
+::: {.fragment .fade-in-then-semi-out}
 42-year-old woman
 :::
 
-:::{.fragment .fade-in-then-semi-out}
+::: {.fragment .fade-in-then-semi-out}
 Hypertension, dyslipidemia, diabetes
 :::
 
-:::{.fragment .fade-in-then-semi-out}
+::: {.fragment .fade-in-then-semi-out}
 Heavy menstrual bleeding, pelvic pressure, fatigue
 :::
 
-:::{.fragment .fade-in}
+::: {.fragment .fade-in}
 What's your differential?
 :::
 
-## {auto-animate=true}
+##  {auto-animate="true"}
 
-:::{style="margin-top: 10px; font-size: 1em; color: red;"}
+::: {style="margin-top: 10px; font-size: 1em; color: red;"}
 What's your differential?
 :::
 
-::: {.incremental}
-- Endometrial Cancer
-- Adenomyosis
-- Leiomyoma
+::: incremental
+-   Endometrial Cancer
+-   Adenomyosis
+-   Leiomyoma
 :::
 
 ## EXAM
+
 ::: {.fragment .fade-in}
 Enlarged uterus (\~14 weeks size)
 :::
@@ -85,11 +91,11 @@ Enlarged uterus (\~14 weeks size)
 
 ## Ultrasound {background-color="black" auto-animate="true" auto-animate-easing="ease-in-out"}
 
-:::::: columns
-::: {.column width="50%" .fragment}
+:::: columns
+::: {.column .fragment width="50%"}
 ![](images/lm-us-sag.png)
 :::
-::::::
+::::
 
 ::: aside
 Doubilet PM, et al. Atlas of Ultrasound in Obstetrics and Gynecology: A Multimedia Reference, 3e.
@@ -97,7 +103,7 @@ Doubilet PM, et al. Atlas of Ultrasound in Obstetrics and Gynecology: A Multimed
 
 ## Ultrasound {background-color="black" auto-animate="true" auto-animate-easing="ease-in-out"}
 
-:::::: columns
+::::: columns
 ::: {.column width="25%"}
 ![](images/lm-us-sag.png)
 :::
@@ -105,7 +111,7 @@ Doubilet PM, et al. Atlas of Ultrasound in Obstetrics and Gynecology: A Multimed
 ::: {.column width="50%"}
 ![](images/lm-us-cor.png)
 :::
-::::::
+:::::
 
 ::: aside
 Doubilet PM, et al. Atlas of Ultrasound in Obstetrics and Gynecology: A Multimedia Reference, 3e.
@@ -146,14 +152,12 @@ Doubilet PM, et al. Atlas of Ultrasound in Obstetrics and Gynecology: A Multimed
 ![](images/lm-us-dop.png)
 :::
 ::::::
-
 
 Diagnosis?
 
-. . . 
+. . .
 
 What kind?
-
 
 ::: aside
 Doubilet PM, et al. Atlas of Ultrasound in Obstetrics and Gynecology: A Multimedia Reference, 3e.
@@ -161,11 +165,11 @@ Doubilet PM, et al. Atlas of Ultrasound in Obstetrics and Gynecology: A Multimed
 
 ## Uterine fibroid types {auto-animate="true" auto-animate-easing="ease-in-out"}
 
-::::: columns
-::: {.column width="60%" .fragment}
+:::: columns
+::: {.column .fragment width="60%"}
 ![](images/lm-mayo-types.png){alt="https://www.mayoclinic.org/diseases-conditions/uterine-fibroids/symptoms-causes/"}
 :::
-:::::
+::::
 
 ::: aside
 https://www.mayoclinic.org/diseases-conditions/uterine-fibroids/symptoms-causes/
@@ -178,17 +182,16 @@ https://www.mayoclinic.org/diseases-conditions/uterine-fibroids/symptoms-causes/
 ![](images/lm-mayo-types.png){alt="https://www.mayoclinic.org/diseases-conditions/uterine-fibroids/symptoms-causes/"}
 :::
 
-::: {.column width="60%" .incremental}
+::: {.column .incremental width="60%"}
 #### FIGO Classification System
 
 ##### Submucosal Group
 
-- Type 0: pedunculated intracavitary
+-   Type 0: pedunculated intracavitary
 
-- Type 1: \<50% intramural
+-   Type 1: \<50% intramural
 
-- Type 2: ≥50% intramural
-
+-   Type 2: ≥50% intramural
 :::
 :::::
 
@@ -203,22 +206,22 @@ https://www.mayoclinic.org/diseases-conditions/uterine-fibroids/symptoms-causes/
 ![](images/lm-mayo-types.png){alt="https://www.mayoclinic.org/diseases-conditions/uterine-fibroids/symptoms-causes/"}
 :::
 
-::: {.column width="60%" .incremental}
+::: {.column .incremental width="60%"}
 #### FIGO Classification System
 
 ##### Other Group
 
-- Type 3: 100% intramural; contacts endometrium
+-   Type 3: 100% intramural; contacts endometrium
 
-- Type 4: intramural
+-   Type 4: intramural
 
-- Type 5: subserosal ≥50% intramural
+-   Type 5: subserosal ≥50% intramural
 
-- Type 6: subserosal \<50% intramural
+-   Type 6: subserosal \<50% intramural
 
-- Type 7: subserosal pedunculated
+-   Type 7: subserosal pedunculated
 
-- Type 8: other, e.g. cervical, parasitic
+-   Type 8: other, e.g. cervical, parasitic
 :::
 :::::
 
@@ -228,11 +231,11 @@ https://www.mayoclinic.org/diseases-conditions/uterine-fibroids/symptoms-causes/
 
 ## Ultrasound {background-color="black" auto-animate="true" auto-animate-easing="ease-in-out"}
 
-:::::: columns
-::: {.column width="50%" .fragment}
+:::: columns
+::: {.column .fragment width="50%"}
 ![](images/lm-submucosal-us.jpeg)
 :::
-::::::
+::::
 
 ::: aside
 Doubilet PM, et al. Atlas of Ultrasound in Obstetrics and Gynecology: A Multimedia Reference, 3e.
@@ -240,7 +243,7 @@ Doubilet PM, et al. Atlas of Ultrasound in Obstetrics and Gynecology: A Multimed
 
 ## Ultrasound {background-color="black" auto-animate="true" auto-animate-easing="ease-in-out"}
 
-:::::: columns
+::::: columns
 ::: {.column width="25%"}
 ![](images/lm-submucosal-us.jpeg)
 :::
@@ -248,7 +251,7 @@ Doubilet PM, et al. Atlas of Ultrasound in Obstetrics and Gynecology: A Multimed
 ::: {.column width="50%"}
 ![](images/lm-subserosal-us.png)
 :::
-::::::
+:::::
 
 ::: aside
 Doubilet PM, et al. Atlas of Ultrasound in Obstetrics and Gynecology: A Multimedia Reference, 3e.
@@ -300,6 +303,80 @@ Doubilet PM, et al. Atlas of Ultrasound in Obstetrics and Gynecology: A Multimed
 
 [![](images/acr-ac-aub-v2.png){fig-align="center"}](https://acsearch.acr.org/docs/69458/Narrative/)
 
-## MRI
+## MRI {background-color="black" auto-animate="true" auto-animate-easing="ease-in-out"}
 
-## {background-iframe="https://radiopaedia.org/cases/22c1df725d8b32afe15d3014e511132d?lang=us"}
+:::::: columns
+::: {.column .fragment width="40%"}
+![](images/lm-t2-saggital.jpg)
+:::
+::::::
+
+::: aside
+Case courtesy of Hani M. Al Salam, Radiopaedia.org, rID: 12507
+:::
+
+## MRI {background-color="black" auto-animate="true" auto-animate-easing="ease-in-out"}
+
+:::::: columns
+::: {.column width="40%"}
+![](images/lm-t2-saggital.jpg)
+:::
+
+::: {.column width="40%"}
+![](images/lm-t1-pc-saggital.jpg)
+:::
+::::::
+
+::: aside
+Case courtesy of Hani M. Al Salam, Radiopaedia.org, rID: 12507
+:::
+
+## Ultrasound {background-color="black" auto-animate="true" auto-animate-easing="ease-in-out"}
+
+:::: columns
+::: {.column .fragment width="50%"}
+![](images/pregnant-t2-axial.jpg)
+:::
+::::
+
+::: aside
+Case courtesy of Roberto Schubert, Radiopaedia.org, rID: 16726
+:::
+
+## Cystic Degeneration {background-color="black" auto-animate="true" auto-animate-easing="ease-in-out"}
+
+::::: columns
+::: {.column width="25%"}
+![](images/pregnant-t2-axial.jpg)
+:::
+
+::: {.column width="50%"}
+![](images/pregnant-t1-axial.jpg)
+:::
+:::::
+
+::: aside
+Case courtesy of Roberto Schubert, Radiopaedia.org, rID: 16726
+:::
+
+## Cystic Degeneration {background-color="black" auto-animate="true" auto-animate-easing="ease-in-out"}
+
+:::::: columns
+::: {.column width="25%"}
+![](images/pregnant-t2-axial.jpg)
+:::
+
+::: {.column width="25%"}
+![](images/pregnant-t1-axial.jpg)
+:::
+
+::: {.column width="50%"}
+![](images/pregnant-t2-coronal.jpg)
+:::
+::::::
+
+::: aside
+Case courtesy of Roberto Schubert, Radiopaedia.org, rID: 16726
+:::
+
+## What next?

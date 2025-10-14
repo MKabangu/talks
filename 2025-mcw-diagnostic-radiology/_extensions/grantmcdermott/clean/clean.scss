@@ -61,7 +61,7 @@ $selection-bg: #26351c !default;
 
   .title {
     color: $body-color;
-    font-size: 1.4em;
+    font-size: 1em;
     // font-weight: 350;
     font-weight: lighter;
   }
@@ -69,6 +69,7 @@ $selection-bg: #26351c !default;
   .subtitle {
     color: $accent;
     font-style: italic;
+    font-size: 1.5em;
     margin-top: 0em;
     font-weight: lighter;
   }
