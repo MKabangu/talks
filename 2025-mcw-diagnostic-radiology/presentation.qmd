@@ -13,6 +13,8 @@ format:
     preview-links: false
     slide-number: c/t
     logo: images/mcw-logo.svg
+    footer: |
+      [Back to Site](https://mkabangu.github.io/mirindikabangu)
 author:
     name: Mirindi Kabangu, BS
     orcid: 0000-0002-4605-9089
