@@ -2,3 +2,16 @@ input[type="radio"] {
   width: 30px;
   height: 30px;
 }
+
+.slide-logo {
+  display: block !important;
+  position: fixed !important;
+  bottom: 0 !important;
+  right: 10px !important;
+  width: 10% !important;
+  height: 10% !important;
+  max-width: unset !important;
+  max-height: unset !important;
+  width: auto !important;
+  color: $body-color !important;
+}

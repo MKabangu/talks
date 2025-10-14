@@ -59,7 +59,7 @@ Meet Sarah, a 15-year-old girl who presents to the clinic with a three-month his
 
 ------------------------------------------------------------------------
 
-## Initial Presentation
+## Initial Presentation {.smaller}
 Meet Sarah, a 15-year-old girl who presents to the clinic with a three-month history of progressive headaches.
 
 <br>
@@ -67,7 +67,7 @@ Meet Sarah, a 15-year-old girl who presents to the clinic with a three-month his
 <br>
 
 ::: columns
-::: {.column width="\"40%"}
+::: {.column width="40%" .fragment}
 ### Vital Signs
 
 120/80 mmHg
@@ -79,7 +79,7 @@ Meet Sarah, a 15-year-old girl who presents to the clinic with a three-month his
 98.6°F (37°C)
 :::
 
-::: {.column width="\"40%"}
+::: {.column width="60%" .fragment}
 ### Physical Exam Findings
 
 ::: {.fragment .fade-up}
