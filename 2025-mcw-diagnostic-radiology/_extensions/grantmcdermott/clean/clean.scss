@@ -215,8 +215,10 @@ $selection-bg: #26351c !default;
   position: fixed !important;
   bottom: 0 !important;
   left: 10px !important;
-  max-width: 150px; // Adjust if necessary
-  max-height: 50px;
+  width: 100px !important;
+  height: 100px !important;
+  max-width: unset !important;
+  max-height: unset !important;
   width: auto !important;
   color: $body-color !important;
 }

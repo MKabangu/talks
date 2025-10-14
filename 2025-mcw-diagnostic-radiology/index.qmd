@@ -3,16 +3,19 @@ title: "Beyond the Image"
 subtitle: "Addressing Disparities in Uterine Fibroid Embolization"
 format:
   clean-revealjs:
+    transition: fade
     self-contained: true
     preview-links: false
     slide-number: c/t
-    logo: images/logo.png
+    logo: images/mcw-logo.svg
 author:
     name: Mirindi Kabangu, BS
     orcid: 0000-0002-4605-9089
     email: mirindikabangu@gmail.com
     affiliations: Indiana University School of Medicine
 date: last-modified
+execute: 
+  cache: true
 ---
 
 ## Biography
@@ -54,9 +57,7 @@ Heavy menstrual bleeding, pelvic pressure, fatigue
 :::
 
 :::{.fragment .fade-in}
-:::{.fragment .highlight-blue}
 What's your differential?
-:::
 :::
 
 ## {auto-animate=true}
@@ -85,14 +86,8 @@ Enlarged uterus (\~14 weeks size)
 ## Ultrasound {background-color="black" auto-animate="true" auto-animate-easing="ease-in-out"}
 
 :::::: columns
-::: {.column width="50%"}
+::: {.column width="50%" .fragment}
 ![](images/lm-us-sag.png)
-:::
-
-::: {.column width="20%"}
-:::
-
-::: {.column width="20%"}
 :::
 ::::::
 
@@ -103,15 +98,12 @@ Doubilet PM, et al. Atlas of Ultrasound in Obstetrics and Gynecology: A Multimed
 ## Ultrasound {background-color="black" auto-animate="true" auto-animate-easing="ease-in-out"}
 
 :::::: columns
-::: {.column width="30%"}
+::: {.column width="25%"}
 ![](images/lm-us-sag.png)
 :::
 
 ::: {.column width="50%"}
 ![](images/lm-us-cor.png)
-:::
-
-::: {.column width="20%"}
 :::
 ::::::
 
@@ -142,56 +134,48 @@ Doubilet PM, et al. Atlas of Ultrasound in Obstetrics and Gynecology: A Multimed
 ## Ultrasound {background-color="black" auto-animate="true" auto-animate-easing="ease-in-out"}
 
 :::::: columns
-::: {.column width="20%"}
+::: {.column width="25%"}
 ![](images/lm-us-sag.png)
 :::
 
-::: {.column width="20%"}
+::: {.column width="25%"}
 ![](images/lm-us-cor.png)
 :::
 
-::: {.column width="20%"}
+::: {.column width="25%"}
 ![](images/lm-us-dop.png)
 :::
 ::::::
+
 
 Diagnosis?
 
-::: aside
-Doubilet PM, et al. Atlas of Ultrasound in Obstetrics and Gynecology: A Multimedia Reference, 3e.
-:::
-
-## Ultrasound {background-color="black" auto-animate="true" auto-animate-easing="ease-in-out"}
-
-:::::: columns
-::: {.column width="20%"}
-![](images/lm-us-sag.png)
-:::
-
-::: {.column width="20%"}
-![](images/lm-us-cor.png)
-:::
-
-::: {.column width="20%"}
-![](images/lm-us-dop.png)
-:::
-::::::
+. . . 
 
 What kind?
 
+
 ::: aside
 Doubilet PM, et al. Atlas of Ultrasound in Obstetrics and Gynecology: A Multimedia Reference, 3e.
 :::
 
-## Uterine fibroid types
+## Uterine fibroid types {auto-animate="true" auto-animate-easing="ease-in-out"}
 
-![](images/lm-mayo-types.png)
+::::: columns
+::: {.column width="60%" .fragment}
+![](images/lm-mayo-types.png){alt="https://www.mayoclinic.org/diseases-conditions/uterine-fibroids/symptoms-causes/"}
+:::
+:::::
 
-## Uterine fibroid types
+::: aside
+https://www.mayoclinic.org/diseases-conditions/uterine-fibroids/symptoms-causes/
+:::
+
+## Uterine fibroid types {auto-animate="true" auto-animate-easing="ease-in-out"}
 
 ::::: columns
 ::: {.column width="40%"}
-![https://www.mayoclinic.org/diseases-conditions/uterine-fibroids/symptoms-causes/](images/lm-mayo-types.png){alt="https://www.mayoclinic.org/diseases-conditions/uterine-fibroids/symptoms-causes/"}
+![](images/lm-mayo-types.png){alt="https://www.mayoclinic.org/diseases-conditions/uterine-fibroids/symptoms-causes/"}
 :::
 
 ::: {.column width="60%" .incremental}
@@ -208,11 +192,15 @@ Doubilet PM, et al. Atlas of Ultrasound in Obstetrics and Gynecology: A Multimed
 :::
 :::::
 
-## Uterine fibroid types
+::: aside
+https://www.mayoclinic.org/diseases-conditions/uterine-fibroids/symptoms-causes/
+:::
+
+## Uterine fibroid types {auto-animate="true" auto-animate-easing="ease-in-out"}
 
 ::::: columns
 ::: {.column width="40%"}
-![https://www.mayoclinic.org/diseases-conditions/uterine-fibroids/symptoms-causes/](images/lm-mayo-types.png){alt="https://www.mayoclinic.org/diseases-conditions/uterine-fibroids/symptoms-causes/"}
+![](images/lm-mayo-types.png){alt="https://www.mayoclinic.org/diseases-conditions/uterine-fibroids/symptoms-causes/"}
 :::
 
 ::: {.column width="60%" .incremental}
@@ -234,17 +222,15 @@ Doubilet PM, et al. Atlas of Ultrasound in Obstetrics and Gynecology: A Multimed
 :::
 :::::
 
+::: aside
+https://www.mayoclinic.org/diseases-conditions/uterine-fibroids/symptoms-causes/
+:::
+
 ## Ultrasound {background-color="black" auto-animate="true" auto-animate-easing="ease-in-out"}
 
 :::::: columns
-::: {.column width="50%"}
+::: {.column width="50%" .fragment}
 ![](images/lm-submucosal-us.jpeg)
-:::
-
-::: {.column width="20%"}
-:::
-
-::: {.column width="20%"}
 :::
 ::::::
 
@@ -255,15 +241,12 @@ Doubilet PM, et al. Atlas of Ultrasound in Obstetrics and Gynecology: A Multimed
 ## Ultrasound {background-color="black" auto-animate="true" auto-animate-easing="ease-in-out"}
 
 :::::: columns
-::: {.column width="30%"}
+::: {.column width="25%"}
 ![](images/lm-submucosal-us.jpeg)
 :::
 
 ::: {.column width="50%"}
 ![](images/lm-subserosal-us.png)
-:::
-
-::: {.column width="20%"}
 :::
 ::::::
 
@@ -294,15 +277,15 @@ Doubilet PM, et al. Atlas of Ultrasound in Obstetrics and Gynecology: A Multimed
 ## Ultrasound {background-color="black" auto-animate="true" auto-animate-easing="ease-in-out"}
 
 :::::: columns
-::: {.column width="20%"}
+::: {.column width="25%"}
 ![](images/lm-submucosal-us.jpeg)
 :::
 
-::: {.column width="20%"}
+::: {.column width="25%"}
 ![](images/lm-subserosal-us.png)
 :::
 
-::: {.column width="20%"}
+::: {.column width="25%"}
 ![](images/lm-pedunculated-us.png)
 :::
 ::::::
@@ -316,3 +299,7 @@ Doubilet PM, et al. Atlas of Ultrasound in Obstetrics and Gynecology: A Multimed
 ## ACR Criteria
 
 [![](images/acr-ac-aub-v2.png){fig-align="center"}](https://acsearch.acr.org/docs/69458/Narrative/)
+
+## MRI
+
+## {background-iframe="https://radiopaedia.org/cases/22c1df725d8b32afe15d3014e511132d?lang=us"}

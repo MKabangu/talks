@@ -34,10 +34,10 @@ Welcome to this case-based presentation on diagnosing and managing idiopathic in
 
 ------------------------------------------------------------------------
 
-::: question
+:::::::: question
 Given Sarah's presentation of severe headaches, visual disturbances, and pulsatile tinnitus, what is the most likely diagnosis?
 
-::: choices
+::::::: choices
 ::: choice
 Migraine
 :::
@@ -53,8 +53,8 @@ Idiopathic intracranial hypertension
 ::: choice
 Tension headache
 :::
-:::
-:::
+:::::::
+::::::::
 
 <details>
 
@@ -74,10 +74,10 @@ Tension headache
 
 ------------------------------------------------------------------------
 
-::: question
+:::::::: question
 During the ophthalmology appointment, the ophthalmologist performs a fundoscopy and discovers papilledema. What does the presence of papilledema suggest in the context of Sarah's symptoms?
 
-::: choices
+::::::: choices
 ::: choice
 It is a benign finding with no significance
 :::
@@ -93,8 +93,8 @@ It indicates a possible retinal detachment
 ::: choice
 It confirms a diagnosis of glaucoma
 :::
-:::
-:::
+:::::::
+::::::::
 
 <details>
 
@@ -114,10 +114,10 @@ It confirms a diagnosis of glaucoma
 
 ------------------------------------------------------------------------
 
-::: question
+:::::::: question
 What is the next best step in the evaluation of Sarah's condition, considering her symptoms and the finding of papilledema?
 
-::: choices
+::::::: choices
 ::: choice
 Prescribe migraine medication
 :::
@@ -133,8 +133,8 @@ Start corticosteroids
 ::: choice
 Refer to a neurologist
 :::
-:::
-:::
+:::::::
+::::::::
 
 <details>
 
@@ -154,10 +154,10 @@ Refer to a neurologist
 
 ------------------------------------------------------------------------
 
-::: question
+:::::::: question
 According to the latest guidelines, what additional test is crucial to confirm the diagnosis of IIH and assess intracranial pressure?
 
-::: choices
+::::::: choices
 ::: {.choice .correct-choice}
 Lumbar puncture
 :::
@@ -173,8 +173,8 @@ Electroencephalogram (EEG)
 ::: choice
 Carotid ultrasound
 :::
-:::
-:::
+:::::::
+::::::::
 
 <details>
 
@@ -194,10 +194,10 @@ Carotid ultrasound
 
 ------------------------------------------------------------------------
 
-::: question
+:::::::: question
 What is the primary mechanism of action of acetazolamide in the management of IIH?
 
-::: choices
+::::::: choices
 ::: choice
 Increases cerebrospinal fluid (CSF) absorption
 :::
@@ -213,8 +213,8 @@ Reduces cerebral blood flow
 ::: choice
 Acts as a diuretic to reduce intracranial pressure
 :::
-:::
-:::
+:::::::
+::::::::
 
 <details>
 
@@ -234,10 +234,10 @@ Acts as a diuretic to reduce intracranial pressure
 
 ------------------------------------------------------------------------
 
-::: question
+:::::::: question
 According to the latest guidelines, what is the recommended next step in Sarah's management, considering her refractory symptoms and worsening vision?
 
-::: choices
+::::::: choices
 ::: {.choice .correct-choice}
 Increase the dose of acetazolamide to 1000 mg twice daily
 :::
@@ -253,8 +253,8 @@ Refer to interventional radiology for dural sinus stenting
 ::: choice
 Start corticosteroids
 :::
-:::
-:::
+:::::::
+::::::::
 
 <details>
 
@@ -274,10 +274,10 @@ Start corticosteroids
 
 ------------------------------------------------------------------------
 
-::: question
+:::::::: question
 What are key factors to consider when counseling a patient on choosing between a VP shunt and dural sinus stenting for IIH?
 
-::: choices
+::::::: choices
 ::: choice
 Invasiveness of the procedure
 :::
@@ -293,8 +293,8 @@ Patient preference and lifestyle
 ::: {.choice .correct-choice}
 All of the above
 :::
-:::
-:::
+:::::::
+::::::::
 
 <details>
 
@@ -314,10 +314,10 @@ All of the above
 
 ------------------------------------------------------------------------
 
-::: question
+:::::::: question
 During the dural sinus stenting procedure, what is the minimum pressure gradient on venography recommended for stenting according to guidelines?
 
-::: choices
+::::::: choices
 ::: choice
 2 mmHg
 :::
@@ -333,8 +333,8 @@ During the dural sinus stenting procedure, what is the minimum pressure gradient
 ::: choice
 8 mmHg
 :::
-:::
-:::
+:::::::
+::::::::
 
 <details>
 
@@ -352,10 +352,10 @@ During the dural sinus stenting procedure, what is the minimum pressure gradient
 
 ------------------------------------------------------------------------
 
-::: question
+:::::::: question
 What follow-up care is recommended for Sarah post-stenting to ensure continued improvement and monitor for potential complications?
 
-::: choices
+::::::: choices
 ::: choice
 Regular neurological assessments
 :::
@@ -371,8 +371,8 @@ Continued acetazolamide therapy
 ::: {.choice .correct-choice}
 All of the above
 :::
-:::
-:::
+:::::::
+::::::::
 
 <details>
 
@@ -392,10 +392,10 @@ All of the above
 
 #### Predictive Factors for DVSS Success
 
-::: question
+:::::::: question
 Which of the following factors is most predictive of a successful outcome following dural venous sinus stenting (DVSS) for IIH?
 
-::: choices
+::::::: choices
 ::: choice
 Patient's age
 :::
@@ -411,8 +411,8 @@ Initial severity of papilledema
 ::: choice
 Duration of symptoms before treatment
 :::
-:::
-:::
+:::::::
+::::::::
 
 <details>
 
@@ -428,10 +428,10 @@ Duration of symptoms before treatment
 
 #### Differential Diagnosis of IIH
 
-::: question
+:::::::: question
 Which condition must be ruled out to definitively diagnose idiopathic intracranial hypertension (IIH)?
 
-::: choices
+::::::: choices
 ::: choice
 Normal pressure hydrocephalus
 :::
@@ -447,8 +447,8 @@ Subarachnoid hemorrhage
 ::: {.choice .correct-choice}
 Venous sinus thrombosis
 :::
-:::
-:::
+:::::::
+::::::::
 
 <details>
 
@@ -464,10 +464,10 @@ Venous sinus thrombosis
 
 #### Improvement in Visual Disturbances
 
-::: question
+:::::::: question
 What percentage of patients experienced improvement in visual disturbances after undergoing venous sinus stenting, according to the meta-analysis?
 
-::: choices
+::::::: choices
 ::: choice
 75%
 :::
@@ -483,8 +483,8 @@ What percentage of patients experienced improvement in visual disturbances after
 ::: choice
 95%
 :::
-:::
-:::
+:::::::
+::::::::
 
 <details>
 
@@ -500,10 +500,10 @@ What percentage of patients experienced improvement in visual disturbances after
 
 #### Reduction in Acetazolamide Dosage
 
-::: question
+:::::::: question
 What is the average reduction in acetazolamide dosage following DVSS at the 3-month postoperative assessment?
 
-::: choices
+::::::: choices
 ::: question
 From 1000mg to 500mg daily
 :::
@@ -519,8 +519,8 @@ From 950mg to 300mg daily
 ::: choice
 From 500mg to 100mg daily
 :::
-:::
-:::
+:::::::
+::::::::
 
 <details>
 
@@ -536,10 +536,10 @@ From 500mg to 100mg daily
 
 #### Impact of Comorbid Conditions
 
-::: question
+:::::::: question
 How do comorbid conditions such as polycystic ovary syndrome (PCOS) impact the management of IIH?
 
-::: choices
+::::::: choices
 ::: choice
 They do not impact the management of IIH
 :::
@@ -555,8 +555,8 @@ They may necessitate a multidisciplinary approach to treatment
 ::: choice
 They only affect the choice of surgical intervention
 :::
-:::
-:::
+:::::::
+::::::::
 
 <details>
 
