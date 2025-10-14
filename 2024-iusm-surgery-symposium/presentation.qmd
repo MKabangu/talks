@@ -9,7 +9,7 @@ format:
     preview-links: false
     slide-number: c/t
     theme: simple
-    logo: img/white-iu.png
+    logo: images/white-iu.png
     footer: |
       [Back to Site](https://mkabangu.github.io/mirindikabangu)
 css: custom.css
