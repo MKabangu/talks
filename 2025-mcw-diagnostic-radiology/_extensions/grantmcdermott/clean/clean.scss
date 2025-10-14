@@ -3,7 +3,7 @@
 // Custom colours and variables
 
 $jet: #131516;
-$accent: #107895;
+$accent: #007066;
 $accent2: #9a2515;
 // $accent2: #e64173;
 $right-arrow: "\2192"; // Unicode character for right arrow
@@ -216,8 +216,8 @@ $selection-bg: #26351c !default;
   position: fixed !important;
   bottom: 0 !important;
   left: 10px !important;
-  width: 100px !important;
-  height: 100px !important;
+  width: 10% !important;
+  height: 10% !important;
   max-width: unset !important;
   max-height: unset !important;
   width: auto !important;
