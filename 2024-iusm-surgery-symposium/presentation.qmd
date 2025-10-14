@@ -1,0 +1,823 @@
+---
+title: "Dural Sinus Stenting"
+author: "Mirindi T. Kabangu & Noor U. Malik"
+institute: "Indiana University School of Medicine"
+format:
+  revealjs:
+    transition: fade
+    self-contained: true
+    preview-links: false
+    slide-number: c/t
+    theme: simple
+    logo: img/white-iu.png
+    footer: |
+      [Back to Site](https://mkabangu.github.io/mirindikabangu)
+css: custom.css
+filters: 
+  - naquiz
+---
+
+## Case
+### Chronic headaches
+
+::: aside
+Case was modified for teaching purposes
+:::
+
+------------------------------------------------------------------------
+
+## Initial Presentation
+Meet Sarah, a 15-year-old girl who presents to the clinic with a three-month history of progressive headaches.
+
+------------------------------------------------------------------------
+
+## Initial Presentation
+Meet Sarah, a 15-year-old girl who presents to the clinic with a three-month history of progressive headaches.
+
+<br>
+
+<br>
+
+::: columns
+::: {.column width="\"40%"}
+::: {.fragment .fade-left}
+### Vital Signs
+
+120/80 mmHg
+
+78 bpm
+
+16 breaths per minute
+
+98.6°F (37°C)
+:::
+:::
+
+::: {.column width="\"40%"}
+:::
+:::
+
+------------------------------------------------------------------------
+
+## Initial Presentation
+Meet Sarah, a 15-year-old girl who presents to the clinic with a three-month history of progressive headaches.
+
+<br>
+
+<br>
+
+::: columns
+::: {.column width="\"40%"}
+### Vital Signs
+
+120/80 mmHg
+
+78 bpm
+
+16 breaths per minute
+
+98.6°F (37°C)
+:::
+
+::: {.column width="\"40%"}
+### Physical Exam Findings
+
+::: {.fragment .fade-up}
+Decreased visual acuity bilaterally
+:::
+
+::: {.fragment .fade-up}
+::: {.fragment .highlight-red}
+Papilledema evident
+:::
+:::
+
+::: {.fragment .fade-up}
+Cranial nerves intact, no motor or sensory deficits
+:::
+
+::: {.fragment .fade-up}
+::: {.fragment .highlight-red}
+Whooshing sound heard upon auscultation of the ear
+:::
+:::
+:::
+:::
+
+------------------------------------------------------------------------
+
+::: question
+Given Sarah's presentation of severe headaches, visual disturbances, and pulsatile tinnitus, what is the most likely diagnosis?
+
+<br>
+
+<br>
+
+::: choices
+::: choice
+Migraine
+:::
+
+::: choice
+Cluster headache
+:::
+
+::: {.choice .correct-choice}
+Idiopathic intracranial hypertension
+:::
+
+::: choice
+Tension headache
+:::
+
+::: choice
+Secondary hypertension
+:::
+:::
+:::
+
+<br>
+
+<br>
+
+<details>
+
+<summary><strong>Answer and Explanation</strong></summary>
+
+**Answer: C. Idiopathic intracranial hypertension**
+
+**Explanation:** Sarah's symptoms of severe headaches, visual disturbances, and pulsatile tinnitus are characteristic of IIH, especially when accompanied by papilledema, which should be confirmed on further examination.
+
+</details>
+
+------------------------------------------------------------------------
+
+## Visit to the Primary Care Physician {transition="slide"}
+
+Sarah's primary care physician performs a comprehensive history and physical examination. Given her symptoms, Sarah is referred to an ophthalmologist for further evaluation of her visual complaints.
+
+------------------------------------------------------------------------
+
+::: question
+During the ophthalmology appointment, the ophthalmologist performs a fundoscopy and discovers papilledema. What does the presence of papilledema suggest in the context of Sarah's symptoms?
+
+<br>
+
+<br>
+
+::: choices
+::: choice
+It is a benign finding with no significance
+:::
+
+::: {.choice .correct-choice}
+It suggests increased intracranial pressure
+:::
+
+::: choice
+It indicates a possible retinal detachment
+:::
+
+::: choice
+It confirms a diagnosis of glaucoma
+:::
+
+::: choice
+It is indicative of optic neuritis
+:::
+:::
+:::
+
+<br>
+
+<br>
+
+<details>
+
+<summary><strong>Answer and Explanation</strong></summary>
+
+**Answer: B. It suggests increased intracranial pressure**
+
+**Explanation:** Papilledema is swelling of the optic disc due to increased intracranial pressure, which aligns with Sarah's symptoms of headaches and vision changes. It requires prompt further investigation.
+
+</details>
+
+------------------------------------------------------------------------
+
+## Seeking Further Medical Attention
+
+Following the discovery of papilledema, Sarah's ophthalmologist refers her back to the primary care physician with a recommendation for neuroimaging and further evaluation by a neurologist.
+
+------------------------------------------------------------------------
+
+::: question
+What is the next best step in the evaluation of Sarah's condition, considering her symptoms and the finding of papilledema?
+
+<br>
+
+<br>
+
+::: choices
+::: choice
+Prescribe migraine medication
+:::
+
+::: {.choice .correct-choice}
+Order a brain MRI and MRV
+:::
+
+::: choice
+Start corticosteroids
+:::
+
+::: choice
+Refer to a neurologist
+:::
+
+::: choice
+Schedule a follow-up in three months
+:::
+:::
+:::
+
+<br>
+
+<br>
+
+<details>
+
+<summary><strong>Answer and Explanation</strong></summary>
+
+**Answer: B. Order a brain MRI and MRV**
+
+**Explanation:** The next step is to confirm the diagnosis of IIH and rule out other causes of increased intracranial pressure. An MRI can help exclude mass lesions, while an MRV can identify venous sinus stenosis.
+
+</details>
+
+------------------------------------------------------------------------
+
+## Diagnostic Imaging
+
+Sarah undergoes a brain MRI, which comes back normal, ruling out any masses or structural abnormalities. However, the MRV reveals stenosis of the transverse sinuses.
+
+------------------------------------------------------------------------
+
+::: question
+What is the most appropriate initial step in management?
+
+<br>
+
+<br>
+
+::: choices
+::: choice
+Observe and re-evaluate in six months
+:::
+
+::: choice
+Start migraine prophylaxis
+:::
+
+::: {.choice .correct-choice}
+Perform a lumbar puncture to assess opening pressure
+:::
+
+::: choice
+Immediate venous sinus stenting
+:::
+
+::: choice
+Initiate anti-inflammatory treatment
+:::
+:::
+:::
+
+<br>
+
+<br>
+
+<details>
+
+<summary><strong>Answer and Explanation</strong></summary>
+
+**Answer: C. Perform a lumbar puncture to assess opening pressure**
+
+**Explanation:** Given the MRI findings and symptoms suggestive of increased intracranial pressure, a lumbar puncture is crucial to measure the opening pressure and confirm the diagnosis of idiopathic intracranial hypertension.
+
+</details>
+
+------------------------------------------------------------------------
+
+## Management Plan
+
+Sarah's lumbar puncture reveals an elevated opening pressure of 30 cm H2O, confirming the diagnosis of IIH. Initial management with acetazolamide 500 mg twice daily and lifestyle modifications is started.
+
+------------------------------------------------------------------------
+
+::: question
+What is the primary mechanism of action of acetazolamide in the management of IIH?
+
+<br>
+
+<br>
+
+::: choices
+::: choice
+Increases cerebrospinal fluid (CSF) absorption
+:::
+
+::: {.choice .correct-choice}
+Decreases CSF production
+:::
+
+::: choice
+Reduces cerebral blood flow
+:::
+
+::: choice
+Acts as a diuretic to reduce intracranial pressure
+:::
+
+::: choice
+Enhances cerebral oxygen delivery
+:::
+:::
+:::
+
+<br>
+
+<br>
+
+<details>
+
+<summary><strong>Answer and Explanation</strong></summary>
+
+**Answer: B. Decreases CSF production**
+
+**Explanation:** Acetazolamide is a carbonic anhydrase inhibitor that reduces cerebrospinal fluid production, thereby lowering intracranial pressure. This is supported by clinical guidelines for IIH management.
+
+</details>
+
+------------------------------------------------------------------------
+
+## Persistent Symptoms
+
+Despite initial treatment with acetazolamide and lifestyle modifications, Sarah's symptoms persist, and her vision continues to deteriorate.
+
+------------------------------------------------------------------------
+
+::: question
+According to the latest guidelines, what is the recommended next step in Sarah's management, considering her refractory symptoms and worsening vision?
+
+<br>
+
+<br>
+
+::: choices
+::: choice
+Add topiramate to her treatment
+:::
+
+::: {.choice .correct-choice}
+Increase the dose of acetazolamide to 1000 mg twice daily
+:::
+
+::: choice
+Refer to interventional radiology for dural sinus stenting
+:::
+
+::: choice
+Start corticosteroids
+:::
+
+::: choice
+Observe and re-evaluate in six months
+:::
+:::
+:::
+
+<br>
+
+<br>
+
+<details>
+
+<summary><strong>Answer and Explanation</strong></summary>
+
+**Answer: B. Increase the dose of acetazolamide to 1000 mg twice daily**
+
+**Explanation:** Before proceeding to more invasive options, increasing the dose of acetazolamide is a reasonable next step to attempt to better manage intracranial pressure as per guidelines.
+
+</details>
+
+------------------------------------------------------------------------
+
+## Counseling on Treatment Options
+
+Sarah's symptoms remain refractory to maximum medical therapy. She is counseled on further treatment options, including ventriculoperitoneal (VP) shunt and dural sinus stenting.
+
+------------------------------------------------------------------------
+
+::: question
+What are key factors to consider when counseling a patient on choosing between a VP shunt and dural sinus stenting for IIH?
+
+<br>
+
+<br>
+
+::: choices
+::: choice
+Invasiveness of the procedure
+:::
+
+::: choice
+Risk of complications and need for revisions
+:::
+
+::: choice
+Patient preference and lifestyle
+:::
+
+::: {.choice .correct-choice}
+All of the above
+:::
+
+::: choice
+Cost and accessibility of treatment
+:::
+:::
+:::
+
+<br>
+
+<br>
+
+<details>
+
+<summary><strong>Answer and Explanation</strong></summary>
+
+**Answer: D. All of the above**
+
+**Explanation:** Key factors include the invasiveness of the procedure, the risk of complications and need for revisions, and the patient's preference and lifestyle. Dural sinus stenting is less invasive and typically has fewer complications compared to VP shunting.
+
+</details>
+
+------------------------------------------------------------------------
+
+## Decision and Procedure
+
+Sarah opts for dural sinus stenting after discussing her options with her healthcare team. She is referred to an interventional radiologist and undergoes venous angiogram to evaluate for stenosis.
+
+------------------------------------------------------------------------
+
+::: question
+During the dural sinus stenting procedure, what is the minimum pressure gradient on venography recommended for stenting according to guidelines?
+
+<br>
+
+<br>
+
+::: choices
+::: choice
+2 mmHg
+:::
+
+::: {.choice .correct-choice}
+4 mmHg
+:::
+
+::: choice
+6 mmHg
+:::
+
+::: choice
+8 mmHg
+:::
+
+::: choice
+10 mmHg
+:::
+:::
+:::
+
+<br>
+
+<br>
+
+<details>
+
+<summary><strong>Answer and Explanation</strong></summary>
+
+**Answer: D. 8 mmHg**
+
+**Explanation:** According to guidelines, a minimum pressure gradient of 4 mmHg is recommended on venography to justify st
+
+------------------------------------------------------------------------
+
+## Follow-Up and Outcome
+
+After the stenting procedure, Sarah's symptoms significantly improve. Her headaches diminish, her vision is restored, and the pulsatile tinnitus resolves.
+
+------------------------------------------------------------------------
+
+::: question
+What follow-up care is recommended for Sarah post-stenting to ensure continued improvement and monitor for potential complications?
+
+<br>
+
+<br>
+
+::: choices
+::: choice
+Regular neurological assessments
+:::
+
+::: choice
+Periodic imaging to monitor stent patency
+:::
+
+::: choice
+Continued acetazolamide therapy
+:::
+
+::: {.choice .correct-choice}
+All of the above
+:::
+
+::: choice
+Biannual comprehensive eye exams
+:::
+:::
+:::
+
+<br>
+
+<br>
+
+<details>
+
+<summary><strong>Answer and Explanation</strong></summary>
+
+**Answer: D. All of the above**
+
+**Explanation:** Post-stenting care includes regular neurological assessments, periodic imaging to ensure the stent remains patent, and continued acetazolamide therapy to manage intracranial pressure. These recommendations align with follow-up guidelines for IIH.
+
+</details>
+
+------------------------------------------------------------------------
+
+## Challenge Questions
+
+------------------------------------------------------------------------
+
+#### Predictive Factors for DVSS Success {transition="slide"}
+
+::: question
+Which of the following factors is most predictive of a successful outcome following dural venous sinus stenting (DVSS) for IIH?
+
+<br>
+
+<br>
+
+::: choices
+::: choice
+Patient's age
+:::
+
+::: {.choice .correct-choice}
+Reduction in trans-stenotic pressure gradient
+:::
+
+::: choice
+Initial severity of papilledema
+:::
+
+::: choice
+Duration of symptoms before treatment
+:::
+
+::: choice
+Overall health and comorbidity profile
+:::
+:::
+:::
+
+<br>
+
+<br>
+
+<details>
+
+<summary><strong>Answer and Explanation</strong></summary>
+
+**Answer: Reduction in trans-stenotic pressure gradient**
+
+**Explanation:** The review identifies that a significant reduction in the trans-stenotic pressure gradient is a key predictive factor for successful outcomes following DVSS in IIH patients.
+
+</details>
+
+------------------------------------------------------------------------
+
+#### Differential Diagnosis of IIH
+
+::: question
+Which condition must be ruled out to definitively diagnose idiopathic intracranial hypertension (IIH)?
+
+<br>
+
+<br>
+
+::: choices
+::: choice
+Normal pressure hydrocephalus
+:::
+
+::: choice
+Chiari malformation
+:::
+
+::: choice
+Subarachnoid hemorrhage
+:::
+
+::: {.choice .correct-choice}
+Venous sinus thrombosis
+:::
+
+::: choice
+Meningitis
+:::
+:::
+:::
+
+<br>
+
+<br>
+
+<details>
+
+<summary><strong>Answer and Explanation</strong></summary>
+
+**Answer: Venous sinus thrombosis**
+
+**Explanation:** To definitively diagnose IIH, venous sinus thrombosis must be ruled out, as it can present with similar symptoms but requires different management.
+
+</details>
+
+------------------------------------------------------------------------
+
+#### Improvement in Visual Disturbances
+
+::: question
+What percentage of patients experienced improvement in visual disturbances after undergoing venous sinus stenting, according to the meta-analysis?
+
+<br>
+
+<br>
+
+::: choices
+::: choice
+75%
+:::
+
+::: choice
+80%
+:::
+
+::: {.choice .correct-choice}
+88%
+:::
+
+::: choice
+95%
+:::
+
+::: choice
+92%
+:::
+:::
+:::
+
+<br>
+
+<br>
+
+<details>
+
+<summary><strong>Answer and Explanation</strong></summary>
+
+**Answer: 88%**
+
+**Explanation:** 88% of patients experienced improvement in visual disturbances after undergoing venous sinus stenting.
+
+</details>
+
+------------------------------------------------------------------------
+
+#### Reduction in Acetazolamide Dosage
+
+::: question
+What is the average reduction in acetazolamide dosage following DVSS at the 3-month postoperative assessment?
+
+<br>
+
+<br>
+
+::: choices
+::: question
+From 1000mg to 500mg daily
+:::
+
+::: choice
+From 750mg to 250mg daily
+:::
+
+::: {.choice .correct-choice}
+From 950mg to 300mg daily
+:::
+
+::: choice
+From 500mg to 100mg daily
+:::
+
+::: choice
+From 1200mg to 600mg daily
+:::
+:::
+:::
+
+<br>
+
+<br>
+
+<details>
+
+<summary><strong>Answer and Explanation</strong></summary>
+
+**Answer: From 950mg to 300mg daily**
+
+**Explanation:** The average daily dose of acetazolamide decreased from 950mg to 300mg at the 3-month postoperative assessment following DVSS.
+
+</details>
+
+------------------------------------------------------------------------
+
+#### Impact of Comorbid Conditions
+
+::: question
+How do comorbid conditions such as polycystic ovary syndrome (PCOS) impact the management of IIH?
+
+<br>
+
+<br>
+
+::: choices
+::: choice
+They do not impact the management of IIH
+:::
+
+::: choice
+They complicate the diagnosis but not the treatment
+:::
+
+::: {.choice .correct-choice}
+They may necessitate a multidisciplinary approach to treatment
+:::
+
+::: choice
+They only affect the choice of surgical intervention
+:::
+
+::: choice
+They require specialized pharmacological interventions
+:::
+:::
+:::
+
+<br>
+
+<br>
+
+<details>
+
+<summary><strong>Answer and Explanation</strong></summary>
+
+**Answer: They may necessitate a multidisciplinary approach to treatment**
+
+**Explanation:** Comorbid conditions such as PCOS can affect the management of IIH, requiring a multidisciplinary approach to address both IIH and the underlying conditions.
+
+</details>
+
+------------------------------------------------------------------------
+
+## Summary
+
+-   IIH is characterized by increased intracranial pressure without a detectable cause.
+-   Diagnosis involves imaging and lumbar puncture to measure opening pressure, following the latest guidelines.
+-   Initial management includes medication and lifestyle changes, with dural sinus stenting as an option for refractory cases, supported by current clinical guidelines.
+
+## Authors
+
+**Authors:** Mirindi T. Kabangu & Noor U. Malik
+
+**Contact:** [mkabangu\@iu.edu](mailto:mkabangu@iu.edu) & [noumalik\@iu.edu](mailto:noumalik@iu.edu)
