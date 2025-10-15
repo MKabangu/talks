@@ -382,3 +382,80 @@ Case courtesy of Roberto Schubert, Radiopaedia.org, rID: 16726
 :::
 
 ## What next?
+
+:::::: {.columns}
+::: {.column width="33%" .fragment}
+![](images/stethoscope.png)
+:::
+
+::: {.column width="33%" .fragment}
+![](images/scalpel.png)
+:::
+
+::: {.column width="33%" .fragment}
+![](images/needle.png)
+:::
+::::::
+
+## Evidence
+
+::: {.fragment}
+::: {.column width="100%"}
+![](images/jama-ufe.png)
+:::
+:::
+
+## Patient Characteristics {.scrollable}
+
+::: {.column width="100%"}
+![](images/jama-demo.svg)
+:::
+
+## Treatment Distribution by Location
+
+![](images/jama-loc-dist.png)
+
+## Treatment Distribution by Race
+
+::: {.column width="100%"}
+![](images/jama-odds.svg)
+:::
+
+
+### Treatment Modalities & Selection Criteria
+
+::: {.fragment}
+**Medical Management**
+
+- **First-line** for most patients
+
+- **Options**: NSAIDs, tranexamic acid, combined oral contraceptives, progestins, LnG-IUD
+
+- **Guideline**: ACOG recommends starting with medical therapy for symptomatic management
+:::
+
+## Shared Decision-Making Essentials
+
+### Key Discussion Points:
+
+- Reproductive plans and timing
+
+- Symptom severity and impact on quality of life
+
+- Treatment risks and recovery expectations
+
+- Long-term outcomes and recurrence risks
+
+- Personal values and preferences
+
+## Shared Decision-Making Essentials
+
+### Key Discussion Points:
+
+- ACOG Practice Bulletin #228 (2021)
+
+- ACR Appropriateness Criteria®
+
+- SIR Guidelines for UAE
+
+- ESHRE Guidelines on Fibroid Management
