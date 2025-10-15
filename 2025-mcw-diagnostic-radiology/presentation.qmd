@@ -397,6 +397,46 @@ Case courtesy of Roberto Schubert, Radiopaedia.org, rID: 16726
 :::
 ::::::
 
+## Anatomy
+
+::: {.r-stack}
+![](images/iliac-dsa-unlabeled.jpg){.fragment width="1000"}
+
+![](images/iliac-dsa-common-iliac.jpg){.fragment width="1000"}
+
+![](images/iliac-dsa-iliolumbar.jpg){.fragment width="1000"}
+
+![](images/iliac-dsa-superior-gluteal.jpg){.fragment width="1000"}
+
+![](images/iliac-dsa-middle-rectal.jpg){.fragment width="1000"}
+:::
+
+## Anatomy Mnemonic {.smaller}
+
+::: {.fragment}
+I Love Going Places In My Very Own Underwear!
+:::
+
+::: {.incremental}
+- I: iliolumbar artery
+
+- L: lateral sacral artery
+
+- G: gluteal (superior and inferior) arteries
+
+- P: (internal) pudendal artery
+
+- I: inferior vesical (vaginal in females) artery.
+
+- M: middle rectal artery
+
+- V: vaginal artery (females only)
+
+- O: obturator artery
+
+- U: umbilical artery and uterine artery (females only)
+:::
+
 ## Evidence
 
 ::: {.fragment}
