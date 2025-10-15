@@ -27,14 +27,13 @@ execute:
 
 ## Overview
 
-::: {.incremental}
-- Case
+::: incremental
+-   Case
 
-- Anatomy
+-   Anatomy
 
-- Literature
+-   Literature
 :::
-
 
 ## HISTORY {auto-animate="true"}
 
@@ -294,11 +293,11 @@ Doubilet PM, et al. Atlas of Ultrasound in Obstetrics and Gynecology: A Multimed
 
 ## MRI {background-color="black" auto-animate="true" auto-animate-easing="ease-in-out"}
 
-:::::: columns
+:::: columns
 ::: {.column .fragment width="40%"}
 ![](images/lm-t2-saggital.jpg)
 :::
-::::::
+::::
 
 ::: aside
 Case courtesy of Hani M. Al Salam, Radiopaedia.org, rID: 12507
@@ -306,7 +305,7 @@ Case courtesy of Hani M. Al Salam, Radiopaedia.org, rID: 12507
 
 ## MRI {background-color="black" auto-animate="true" auto-animate-easing="ease-in-out"}
 
-:::::: columns
+::::: columns
 ::: {.column width="40%"}
 ![](images/lm-t2-saggital.jpg)
 :::
@@ -314,7 +313,7 @@ Case courtesy of Hani M. Al Salam, Radiopaedia.org, rID: 12507
 ::: {.column width="40%"}
 ![](images/lm-t1-pc-saggital.jpg)
 :::
-::::::
+:::::
 
 ::: aside
 Case courtesy of Hani M. Al Salam, Radiopaedia.org, rID: 12507
@@ -372,93 +371,93 @@ Case courtesy of Roberto Schubert, Radiopaedia.org, rID: 16726
 
 ### Treatment Modalities & Selection Criteria
 
-::: {.fragment}
+::: fragment
 **Medical Management**
 
-- **First-line** for most patients
+-   **First-line** for most patients
 
-- **Options**: NSAIDs, tranexamic acid, combined oral contraceptives, progestins, LNG-IUS
+-   **Options**: NSAIDs, tranexamic acid, combined oral contraceptives, progestins, LNG-IUS
 
-- **Guideline**: ACOG recommends starting with medical therapy for symptomatic management
+-   **Guideline**: ACOG recommends starting with medical therapy for symptomatic management
 :::
 
-::: {.fragment}
+::: fragment
 **Myomectomy**
 
-- **Gold standard** for fertility preservation
+-   **Gold standard** for fertility preservation
 
-- **Approaches**: Hysteroscopic (submucosal), laparoscopic (selected cases), abdominal (complex)
+-   **Approaches**: Hysteroscopic (submucosal), laparoscopic (selected cases), abdominal (complex)
 
-- **Consider**: Fibroid size, number, location, and surgical expertise
+-   **Consider**: Fibroid size, number, location, and surgical expertise
 :::
 
-::: {.fragment}
+::: fragment
 **Hysterectomy**
 
-- **Definitive treatment** for completed childbearing
+-   **Definitive treatment** for completed childbearing
 
-- **Consider**: Failed medical/conservative treatments, large symptomatic fibroids
+-   **Consider**: Failed medical/conservative treatments, large symptomatic fibroids
 
-- **Approach**: Minimally invasive preferred when feasible
+-   **Approach**: Minimally invasive preferred when feasible
 :::
 
-::: {.fragment}
+::: fragment
 **Uterine Artery Embolization (UAE)**
 
-- **Ideal candidate**: Women who desire uterine preservation but not future pregnancy
+-   **Ideal candidate**: Women who desire uterine preservation but not future pregnancy
 
-- **ACR Appropriateness**: Usually appropriate for symptomatic fibroids
+-   **ACR Appropriateness**: Usually appropriate for symptomatic fibroids
 
-- **Evidence**: 85-95% symptom improvement, equivalent to myomectomy at 2 years
+-   **Evidence**: 85-95% symptom improvement, equivalent to myomectomy at 2 years
 :::
 
 ## Anatomy {background-color="black"}
 
-::: {.r-stack}
-![](images/iliac-dsa-unlabeled.jpg){.fragment width="1000"}
+::: r-stack
+![](images/iliac-dsa-unlabeled.jpg){.fragment width="500"}
 
-![](images/iliac-dsa-common-iliac.jpg){.fragment width="1000"}
+![](images/iliac-dsa-common-iliac.jpg){.fragment width="500"}
 
-![](images/iliac-dsa-iliolumbar.jpg){.fragment width="1000"}
+![](images/iliac-dsa-iliolumbar.jpg){.fragment width="500"}
 
-![](images/iliac-dsa-superior-gluteal.jpg){.fragment width="1000"}
+![](images/iliac-dsa-superior-gluteal.jpg){.fragment width="500"}
 
-![](images/iliac-dsa-middle-rectal.jpg){.fragment width="1000"}
+![](images/iliac-dsa-middle-rectal.jpg){.fragment width="500"}
 :::
 
 ## Anatomy Mnemonic {.smaller}
 
-::: {.fragment}
+::: fragment
 I Love Going Places In My Very Own Underwear!
 :::
 
-::: {.incremental}
-- *I*: iliolumbar artery
+::: incremental
+-   **I**: iliolumbar artery
 
-- *L*: lateral sacral artery
+-   **L**: lateral sacral artery
 
-- *G*: gluteal (superior and inferior) arteries
+-   **G**: gluteal (superior and inferior) arteries
 
-- *P*: (internal) pudendal artery
+-   **P**: (internal) pudendal artery
 
-- *I*: inferior vesical (vaginal in females) artery.
+-   **I**: inferior vesical (vaginal in females) artery.
 
-- *M*: middle rectal artery
+-   **M**: middle rectal artery
 
-- *V*: vaginal artery (females only)
+-   **V**: vaginal artery (females only)
 
-- *O*: obturator artery
+-   **O**: obturator artery
 
-- *U*: umbilical artery and uterine artery (females only)
+-   **U**: umbilical artery and uterine artery (females only)
 :::
 
 ## Evidence
 
-::: {.fragment}
+:::: fragment
 ::: {.column width="100%"}
 ![](images/jama-ufe.png)
 :::
-:::
+::::
 
 ## Patient Characteristics {.scrollable}
 
@@ -482,24 +481,24 @@ I Love Going Places In My Very Own Underwear!
 
 ### Key Discussion Points:
 
-- Reproductive plans and timing
+-   Reproductive plans and timing
 
-- Symptom severity and impact on quality of life
+-   Symptom severity and impact on quality of life
 
-- Treatment risks and recovery expectations
+-   Treatment risks and recovery expectations
 
-- Long-term outcomes and recurrence risks
+-   Long-term outcomes and recurrence risks
 
-- Personal values and preferences
+-   Personal values and preferences
 
 ## Shared Decision-Making Essentials {.incremental}
 
 ### Key Discussion Points:
 
-- ACOG Practice Bulletin #228 (2021)
+-   ACOG Practice Bulletin #228 (2021)
 
-- ACR Appropriateness Criteria®
+-   ACR Appropriateness Criteria®
 
-- SIR Guidelines for UAE
+-   SIR Guidelines for UAE
 
-- ESHRE Guidelines on Fibroid Management
+-   ESHRE Guidelines on Fibroid Management
