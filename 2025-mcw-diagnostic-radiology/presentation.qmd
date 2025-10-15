@@ -49,6 +49,10 @@ Hypertension, dyslipidemia, diabetes
 Heavy menstrual bleeding, pelvic pressure, fatigue
 :::
 
+::: {.fragment .fade-in-then-semi-out}
+Enlarged uterus (\~14 weeks size)
+:::
+
 ::: {.fragment .fade-in}
 What's your differential?
 :::
@@ -56,19 +60,14 @@ What's your differential?
 ##  {auto-animate="true"}
 
 ::: {style="margin-top: 10px; font-size: 1em; color: red;"}
-What's your differential?
+Differential?
 :::
 
 ::: incremental
--   Endometrial Cancer
--   Adenomyosis
--   Leiomyoma
-:::
-
-## EXAM
-
-::: {.fragment .fade-in}
-Enlarged uterus (\~14 weeks size)
+- Endometrial Cancer
+- Adenomyosis
+- Leiomyoma
+- Leiomyosarcoma
 :::
 
 ## What is Your First Step in Imaging?
