@@ -367,11 +367,11 @@ Case courtesy of Roberto Schubert, Radiopaedia.org, rID: 16726
 Case courtesy of Roberto Schubert, Radiopaedia.org, rID: 16726
 :::
 
-## What next? {.smaller}
+## What next?
 
-### Treatment Modalities & Selection Criteria
+### Treatment Modalities & Selection Criteria 
 
-::: fragment
+::: {.fragment}
 **Medical Management**
 
 -   **First-line** for most patients
@@ -381,7 +381,10 @@ Case courtesy of Roberto Schubert, Radiopaedia.org, rID: 16726
 -   **Guideline**: ACOG recommends starting with medical therapy for symptomatic management
 :::
 
-::: fragment
+## What next?
+
+### Treatment Modalities & Selection Criteria 
+
 **Myomectomy**
 
 -   **Gold standard** for fertility preservation
@@ -389,9 +392,12 @@ Case courtesy of Roberto Schubert, Radiopaedia.org, rID: 16726
 -   **Approaches**: Hysteroscopic (submucosal), laparoscopic (selected cases), abdominal (complex)
 
 -   **Consider**: Fibroid size, number, location, and surgical expertise
-:::
 
-::: fragment
+
+## What next?
+
+### Treatment Modalities & Selection Criteria 
+
 **Hysterectomy**
 
 -   **Definitive treatment** for completed childbearing
@@ -399,9 +405,13 @@ Case courtesy of Roberto Schubert, Radiopaedia.org, rID: 16726
 -   **Consider**: Failed medical/conservative treatments, large symptomatic fibroids
 
 -   **Approach**: Minimally invasive preferred when feasible
-:::
 
-::: fragment
+
+## What next?
+
+### Treatment Modalities & Selection Criteria 
+
+
 **Uterine Artery Embolization (UAE)**
 
 -   **Ideal candidate**: Women who desire uterine preservation but not future pregnancy
@@ -409,20 +419,23 @@ Case courtesy of Roberto Schubert, Radiopaedia.org, rID: 16726
 -   **ACR Appropriateness**: Usually appropriate for symptomatic fibroids
 
 -   **Evidence**: 85-95% symptom improvement, equivalent to myomectomy at 2 years
-:::
 
 ## Anatomy {background-color="black"}
 
 ::: r-stack
-![](images/iliac-dsa-unlabeled.jpg){.fragment width="500"}
+![](images/iliac-dsa-unlabeled.jpg){.fragment width="600"}
 
-![](images/iliac-dsa-common-iliac.jpg){.fragment width="500"}
+![](images/iliac-dsa-common-iliac.jpg){.fragment width="600"}
 
-![](images/iliac-dsa-iliolumbar.jpg){.fragment width="500"}
+![](images/iliac-dsa-iliolumbar.jpg){.fragment width="600"}
 
-![](images/iliac-dsa-superior-gluteal.jpg){.fragment width="500"}
+![](images/iliac-dsa-superior-gluteal.jpg){.fragment width="600"}
 
-![](images/iliac-dsa-middle-rectal.jpg){.fragment width="500"}
+![](images/iliac-dsa-middle-rectal.jpg){.fragment width="600"}
+:::
+
+::: aside
+Case courtesy of Craig Hacking, Radiopaedia.org, rID: 156512
 :::
 
 ## Anatomy Mnemonic {.smaller}
