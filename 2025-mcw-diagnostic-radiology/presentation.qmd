@@ -25,29 +25,16 @@ execute:
   cache: true
 ---
 
-## Biography
+## Overview
 
-:::::: normalfont
-::::: columns
-::: {.column width="30%"}
-![](images/grad.jpg)
+::: {.incremental}
+- Case
+
+- Anatomy
+
+- Literature
 :::
 
-::: {.column width="70%"}
-Education
-
--   **2021** - B.S., Biology, *University of Kentucky*
-
--   **2026** - M.D., *Indiana University School of Medicine*
-
-Work History
-
--   2023-2025 Research Assistant (Department of Medical and Molecular Genetics)
-
--   2020-2022 Research Assistant (Spinal Cord and Brain Injury Research Center)
-:::
-:::::
-::::::
 
 ## HISTORY {auto-animate="true"}
 
@@ -397,7 +384,7 @@ Case courtesy of Roberto Schubert, Radiopaedia.org, rID: 16726
 :::
 ::::::
 
-## Anatomy
+## Anatomy {background-color="black"}
 
 ::: {.r-stack}
 ![](images/iliac-dsa-unlabeled.jpg){.fragment width="1000"}
@@ -418,23 +405,23 @@ I Love Going Places In My Very Own Underwear!
 :::
 
 ::: {.incremental}
-- I: iliolumbar artery
+- *I*: iliolumbar artery
 
-- L: lateral sacral artery
+- *L*: lateral sacral artery
 
-- G: gluteal (superior and inferior) arteries
+- *G*: gluteal (superior and inferior) arteries
 
-- P: (internal) pudendal artery
+- *P*: (internal) pudendal artery
 
-- I: inferior vesical (vaginal in females) artery.
+- *I*: inferior vesical (vaginal in females) artery.
 
-- M: middle rectal artery
+- *M*: middle rectal artery
 
-- V: vaginal artery (females only)
+- *V*: vaginal artery (females only)
 
-- O: obturator artery
+- *O*: obturator artery
 
-- U: umbilical artery and uterine artery (females only)
+- *U*: umbilical artery and uterine artery (females only)
 :::
 
 ## Evidence
@@ -453,28 +440,17 @@ I Love Going Places In My Very Own Underwear!
 
 ## Treatment Distribution by Location
 
+::: {.column width="100%"}
 ![](images/jama-loc-dist.png)
+:::
 
-## Treatment Distribution by Race
+## Treatment Distribution by Race {.scrollable}
 
 ::: {.column width="100%"}
 ![](images/jama-odds.svg)
 :::
 
-
-### Treatment Modalities & Selection Criteria
-
-::: {.fragment}
-**Medical Management**
-
-- **First-line** for most patients
-
-- **Options**: NSAIDs, tranexamic acid, combined oral contraceptives, progestins, LnG-IUD
-
-- **Guideline**: ACOG recommends starting with medical therapy for symptomatic management
-:::
-
-## Shared Decision-Making Essentials
+## Shared Decision-Making Essentials {.incremental}
 
 ### Key Discussion Points:
 
@@ -488,7 +464,7 @@ I Love Going Places In My Very Own Underwear!
 
 - Personal values and preferences
 
-## Shared Decision-Making Essentials
+## Shared Decision-Making Essentials {.incremental}
 
 ### Key Discussion Points:
 
