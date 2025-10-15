@@ -368,21 +368,49 @@ Case courtesy of Roberto Schubert, Radiopaedia.org, rID: 16726
 Case courtesy of Roberto Schubert, Radiopaedia.org, rID: 16726
 :::
 
-## What next?
+## What next? {.smaller}
 
-:::::: {.columns}
-::: {.column width="33%" .fragment}
-![](images/stethoscope.png)
+### Treatment Modalities & Selection Criteria
+
+::: {.fragment}
+**Medical Management**
+
+- **First-line** for most patients
+
+- **Options**: NSAIDs, tranexamic acid, combined oral contraceptives, progestins, LNG-IUS
+
+- **Guideline**: ACOG recommends starting with medical therapy for symptomatic management
 :::
 
-::: {.column width="33%" .fragment}
-![](images/scalpel.png)
+::: {.fragment}
+**Myomectomy**
+
+- **Gold standard** for fertility preservation
+
+- **Approaches**: Hysteroscopic (submucosal), laparoscopic (selected cases), abdominal (complex)
+
+- **Consider**: Fibroid size, number, location, and surgical expertise
 :::
 
-::: {.column width="33%" .fragment}
-![](images/needle.png)
+::: {.fragment}
+**Hysterectomy**
+
+- **Definitive treatment** for completed childbearing
+
+- **Consider**: Failed medical/conservative treatments, large symptomatic fibroids
+
+- **Approach**: Minimally invasive preferred when feasible
 :::
-::::::
+
+::: {.fragment}
+**Uterine Artery Embolization (UAE)**
+
+- **Ideal candidate**: Women who desire uterine preservation but not future pregnancy
+
+- **ACR Appropriateness**: Usually appropriate for symptomatic fibroids
+
+- **Evidence**: 85-95% symptom improvement, equivalent to myomectomy at 2 years
+:::
 
 ## Anatomy {background-color="black"}
 
