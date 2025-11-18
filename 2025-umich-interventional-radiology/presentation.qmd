@@ -285,10 +285,27 @@ Evidence
 
 # Clinical Workflow {auto-animate="true"}
 
-## Patient Selection: Screeening {auto-animate="true"}
+## Patient Selection {auto-animate="true"}
 
 ::::: columns
 ::: {.column width="40%"}
+
+-   US Screening
+
+-   CT/MRI Diagnosis
+
+:::
+
+::: {.column width="40%"}
+[![](images/li-rads-all-algorithms.png)](https://edge.sitecorecloud.io/americancoldf5f-acrorgf92a-productioncb02-3650/media/ACR/Files/RADS/LI-RADS/LI-RADS-US-Surveillance-v2024-Core.pdf)
+:::
+:::::
+
+## Patient Selection
+
+::::: columns
+::: {.column width="40%"}
+
 -   Child-Pugh A and early B
 
 -   Liver-dominant disease
@@ -298,46 +315,10 @@ Evidence
 -   Multidisciplinary input with hepatology and surgery
 :::
 
-::: {.column width="40%"}
-[![](images/li-rads-us.png)](https://edge.sitecorecloud.io/americancoldf5f-acrorgf92a-productioncb02-3650/media/ACR/Files/RADS/LI-RADS/LI-RADS-US-Surveillance-v2024-Core.pdf)
+::: {.column width="60%"}
+![](images/bclc-2025.jpg){.lightbox}
 :::
 :::::
-
-## Patient Selection: Screening {auto-animate="true"}
-
-::::: columns
-::: {.column width="30%"}
-[![](images/li-rads-us.png)](https://edge.sitecorecloud.io/americancoldf5f-acrorgf92a-productioncb02-3650/media/ACR/Files/RADS/LI-RADS/LI-RADS-US-Surveillance-v2024-Core.pdf)
-:::
-
-::: {.column width="30%"}
-![](images/li-rads-us-examples.png){.lightbox height="500"}
-:::
-:::::
-
-## Patient Selection: Diagnosis {auto-animate="true"}
-
-:::: columns
-::: {.column width="40%"}
-[![](images/li-rads-ct-mri-dx.png){height="500"}](https://edge.sitecorecloud.io/americancoldf5f-acrorgf92a-productioncb02-3650/media/ACR/Files/RADS/LI-RADS/LI-RADS-CT-MRI-2018-Core.pdf)
-:::
-::::
-
-## Patient Selection: Diagnosis {auto-animate="true"}
-
-::::: columns
-::: {.column width="30%"}
-[![](images/li-rads-ct-mri-dx.png){height="500"}](https://edge.sitecorecloud.io/americancoldf5f-acrorgf92a-productioncb02-3650/media/ACR/Files/RADS/LI-RADS/LI-RADS-CT-MRI-2018-Core.pdf)
-:::
-
-::: {.column width="30%"}
-![](images/li-rads-ct-mri-example.png){.lightbox height="500"}
-:::
-:::::
-
-## Patient Selection: Staging
-
-![](images/nejm-staging.jpg){height="500" fig-align="center"}
 
 ## Mapping Angiogram
 
@@ -379,7 +360,7 @@ Scan](https://media.springernature.com/lw1200/springer-static/image/art%3A10.118
 
 ## Case 1
 
-::: panel-tabset
+:::: panel-tabset
 ### Profile
 
 {{< fa user >}} brief pathognomonic HPI
@@ -392,7 +373,15 @@ Scan](https://media.springernature.com/lw1200/springer-static/image/art%3A10.118
 
 ### Imaging
 
+::: {layout="[1,1,1,1]"}
 {{< placeholder 600 400 >}}
+
+{{< placeholder 600 400 >}}
+
+{{< placeholder 600 400 >}}
+
+{{< placeholder 600 400 >}}
+:::
 
 ### Procedure
 
@@ -401,11 +390,11 @@ Scan](https://media.springernature.com/lw1200/springer-static/image/art%3A10.118
 ### Pearls
 
 1.  
-:::
+::::
 
 ## Case 2
 
-::: panel-tabset
+:::: panel-tabset
 ### Profile
 
 {{< fa user >}} brief pathognomonic HPI
@@ -418,7 +407,15 @@ Scan](https://media.springernature.com/lw1200/springer-static/image/art%3A10.118
 
 ### Imaging
 
-{{< placeholder 600 400 >}}
+::: {layout="[1,1,1,1]"}
+{{< placeholder 400 200 >}}
+
+{{< placeholder 400 200 >}}
+
+{{< placeholder 400 200 >}}
+
+{{< placeholder 400 200 >}}
+:::
 
 ### Procedure
 
@@ -427,11 +424,11 @@ Scan](https://media.springernature.com/lw1200/springer-static/image/art%3A10.118
 ### Pearls
 
 1.  
-:::
+::::
 
 ## Case 3
 
-::: panel-tabset
+:::: panel-tabset
 ### Profile
 
 {{< fa user >}} brief pathognomonic HPI
@@ -444,7 +441,15 @@ Scan](https://media.springernature.com/lw1200/springer-static/image/art%3A10.118
 
 ### Imaging
 
+::: {layout="[1,1,1,1]"}
+{{< placeholder 400 200 >}}
+
+{{< placeholder 400 200 >}}
+
+{{< placeholder 400 200 >}}
+
 {{< placeholder 600 400 >}}
+:::
 
 ### Procedure
 
@@ -453,4 +458,4 @@ Scan](https://media.springernature.com/lw1200/springer-static/image/art%3A10.118
 ### Pearls
 
 1.  
-:::
+::::
