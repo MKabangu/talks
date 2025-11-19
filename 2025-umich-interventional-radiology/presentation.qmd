@@ -442,9 +442,6 @@ for a hepatic mass.
 ![](images/cases/case-1-p3-4.png){.lightbox}
 :::
 
-### Pearls
-
-1.  
 :::::::::
 
 ## Case 2
@@ -497,9 +494,6 @@ years ago presenting today for a screening ultrasound.
 ![](images/cases/case-2-p3-3.png){.lightbox}
 :::
 
-### Pearls
-
-1.  
 :::::::::
 
 ## Case 3
@@ -561,7 +555,5 @@ rhinorrhea, and congestion
 ![](images/cases/case-3-p3-6.png){.lightbox}
 :::
 
-### Pearls
-
-1.  
+:::::::::
 

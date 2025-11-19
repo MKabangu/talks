@@ -216,10 +216,10 @@ $selection-bg: #26351c !default;
   position: fixed !important;
   bottom: 0 !important;
   left: 10px !important;
-  max-width: 150px; // Adjust if necessary
-  max-height: 10px;
-  width: 50px !important;
-  color: $body-color !important;
+  height: 8% !important;
+  max-width: unset !important;
+  max-height: unset !important;
+  width: auto !important;
 }
 
 // Also need to enforce slide numbers at bottom-right (if logo is present)
