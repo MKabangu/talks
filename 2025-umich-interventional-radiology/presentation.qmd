@@ -2,7 +2,7 @@
 title: "Targeted Treatment"
 subtitle: "Yttrium-90 \n \n Radioembolization"
 title-slide-attributes:
-  data-background-image: images/title.png
+  data-background-image: images/cases/intro.png
   data-background-size: auto 100%
   data-background-opacity: "0.6"
   data-background-position: right 0% bottom 45%
@@ -16,7 +16,7 @@ format:
     self-contained: true
     preview-links: false
     slide-number: c/t
-    logo: images/umich-med-white.png
+    logo: images/umich-med.png
     footer: |
       [Back to Site](https://mkabangu.github.io/mirindikabangu)
 author:
@@ -66,7 +66,7 @@ Y90 is suited for liver-dominant disease, especially:
 :::
 
 ::: {.column width="60%"}
-![](images/tare-image.png){.lightbox}
+![](images/TARE-image.png){.lightbox}
 :::
 :::::
 
@@ -288,24 +288,48 @@ Evidence
 ## Patient Selection {auto-animate="true"}
 
 ::::: columns
-::: {.column width="40%"}
-
--   US Screening
-
--   CT/MRI Diagnosis
-
-:::
 
 ::: {.column width="40%"}
 [![](images/li-rads-all-algorithms.png)](https://edge.sitecorecloud.io/americancoldf5f-acrorgf92a-productioncb02-3650/media/ACR/Files/RADS/LI-RADS/LI-RADS-US-Surveillance-v2024-Core.pdf)
+
+![](images/li-rads-basics-1.jpeg){.lightbox width="246"}
 :::
+
+:::: {.column width="30%"}
+![](images/li-rads-us.png){.lightbox}
+::::
+
+:::: {.column width="30%"}
+![](images/li-rads-us-examples.png){.lightbox}
+::::
+
+:::::
+
+## Patient Selection {auto-animate="true"}
+
+::::: columns
+
+::: {.column width="40%"}
+[![](images/li-rads-all-algorithms.png)](https://edge.sitecorecloud.io/americancoldf5f-acrorgf92a-productioncb02-3650/media/ACR/Files/RADS/LI-RADS/LI-RADS-US-Surveillance-v2024-Core.pdf)
+
+![](images/li-rads-basics-1.jpeg){.lightbox width="246"}
+:::
+
+:::: {.column width="30%"}
+![](images/li-rads-ct-mri-dx.png){.lightbox}
+::::
+
+:::: {.column width="30%"}
+![](images/li-rads-ct-mri-example.png){.lightbox}
+::::
+
 :::::
 
 ## Patient Selection
 
 ::::: columns
-::: {.column width="40%"}
 
+::: {.column width="40%"}
 -   Child-Pugh A and early B
 
 -   Liver-dominant disease
@@ -318,6 +342,7 @@ Evidence
 ::: {.column width="60%"}
 ![](images/bclc-2025.jpg){.lightbox}
 :::
+
 :::::
 
 ## Mapping Angiogram
@@ -326,7 +351,8 @@ Comprehensive vascular mapping with CBCT to identify tumor supply and
 prevent extrahepatic deposition.
 
 ::::: columns
-::: column
+
+::: {.column width="40%"}
 -   Selective catherization
 
 -   Identify variant hepatic arterial anatomy
@@ -336,16 +362,18 @@ prevent extrahepatic deposition.
 -   MAA injection to estimate lung shunt and dosimetry
 :::
 
-::: column
+::: {.column width="60%"}
 ![MAA SPECT/CT
 Scan](https://media.springernature.com/lw1200/springer-static/image/art%3A10.1186%2Fs13550-018-0402-8/MediaObjects/13550_2018_402_Fig6_HTML.png){.lightbox}
 :::
+
 :::::
 
 ## Treatment Day
 
 ::::: columns
-::: column
+
+::: {.column width="40%"}
 -   Selective catheterization
 
 -   Deliver microspheres slowly under fluoroscopy
@@ -353,109 +381,187 @@ Scan](https://media.springernature.com/lw1200/springer-static/image/art%3A10.118
 -   Post-treatment SPECT or PET imaging
 :::
 
-::: column
+::: {.column width="60%"}
 ![](images/tare-and-followup.jpg){.lightbox}
 :::
+
 :::::
 
 ## Case 1
 
-:::: panel-tabset
-### Profile
+::::::::: panel-tabset
+### Part 1
 
-{{< fa user >}} brief pathognomonic HPI
+::::: columns
 
-{{< fa heart-pulse >}} BP mmHg / HR / RR / T / SpO₂
+::: {.column width="40%"}
+{{< fa user >}} 79 M with PMH of CKD, HLD, prostate cancer s/p
+prostatectomy + radiation presenting with feelings of fogginess, upset
+stomach, and diarrhea. Originally worked up at OSH, imaging concerning
+for a hepatic mass.
 
-{{< fa stethoscope >}} key physical findings
+{{< fa heart-pulse >}} 148/77 mmHg / 95 bpm / 15 breaths/min / 98.1°F /
+98 ORA
 
-{{< fa vial >}} pertinent labs
+{{< fa stethoscope >}} sclera anicteric, no jaundice
 
-### Imaging
-
-::: {layout="[1,1,1,1]"}
-{{< placeholder 600 400 >}}
-
-{{< placeholder 600 400 >}}
-
-{{< placeholder 600 400 >}}
-
-{{< placeholder 600 400 >}}
+{{< fa vial >}} AST 112, ALT 34, Alk Phos 202, CEA 2, CA 19-9 4
 :::
 
-### Procedure
+::: {.column width="60%"}
+::: {layout="[1,1]"}
+![](images/cases/case-1-p1-1.png){.lightbox}
 
-{{< placeholder 600 400 >}}
+![](images/cases/case-1-p1-2.png){.lightbox}
+:::
+:::
+
+:::::
+
+### Part 2
+
+::: {layout="[1,1,1,1],[1,1,1,1]"}
+![](images/cases/case-1-p2-1.png){.lightbox}
+
+![](images/cases/case-1-p2-2.png){.lightbox}
+
+![](images/cases/case-1-p2-3.png){.lightbox}
+
+![](images/cases/case-1-p2-4.png){.lightbox}
+:::
+
+### Part 3
+
+::: {layout="[1,1,1,1],[1,1,1,1]"}
+![](images/cases/case-1-p3-1.png){.lightbox}
+
+![](images/cases/case-1-p3-2.png){.lightbox}
+
+![](images/cases/case-1-p3-3-1.png){.lightbox}
+
+![](images/cases/case-1-p3-4.png){.lightbox}
+:::
 
 ### Pearls
 
 1.  
-::::
+:::::::::
 
 ## Case 2
 
-:::: panel-tabset
-### Profile
+::::::::: panel-tabset
+### Part 1
 
-{{< fa user >}} brief pathognomonic HPI
+::::: columns
 
-{{< fa heart-pulse >}} BP mmHg / HR / RR / T / SpO₂
+::: {.column width="40%"}
+{{< fa user >}} 69 M with PMH of HCV cirrhosis & HCC s/p resection in 14
+years ago presenting today for a screening ultrasound.
 
-{{< fa stethoscope >}} key physical findings
+{{< fa heart-pulse >}} 135/73 mmHg / 78 bpm / 16 breaths/min / 96.4°F
 
-{{< fa vial >}} pertinent labs
+{{< fa stethoscope >}} sclerae anicteric, no jaundice
 
-### Imaging
-
-::: {layout="[1,1,1,1]"}
-{{< placeholder 400 200 >}}
-
-{{< placeholder 400 200 >}}
-
-{{< placeholder 400 200 >}}
-
-{{< placeholder 400 200 >}}
+{{< fa vial >}} CMP wnl, AFP 5
 :::
 
-### Procedure
+::: {.column width="60%"}
+::: {layout="[1,1]"}
+![](images/cases/case-2-p1-1.png){.lightbox}
 
-{{< placeholder 600 400 >}}
+![](images/cases/case-2-p1-2.png){.lightbox}
+:::
+:::
+
+:::::
+
+### Part 2
+
+::: {layout="[1,1,1,1],[1,1,1,1]"}
+![](images/cases/case-2-p2-1.png){.lightbox}
+
+![](images/cases/case-2-p2-2.png){.lightbox}
+
+![](images/cases/case-2-p2-3.png){.lightbox}
+
+![](images/cases/case-2-p2-4.png){.lightbox}
+:::
+
+### Part 3
+
+::: {layout="[1,1,1,1],[1,1,1,1]"}
+![](images/cases/case-2-p3-1.png){.lightbox}
+
+![](images/cases/case-2-p3-2.png){.lightbox}
+
+![](images/cases/case-2-p3-3.png){.lightbox}
+:::
 
 ### Pearls
 
 1.  
-::::
+:::::::::
 
 ## Case 3
 
-:::: panel-tabset
-### Profile
+::::::::: panel-tabset
+### Part1
 
-{{< fa user >}} brief pathognomonic HPI
+::::: columns
 
-{{< fa heart-pulse >}} BP mmHg / HR / RR / T / SpO₂
+::: {.column width="40%"}
+{{< fa user >}} 20 F with PMH hypoplastic left heart s/p fenestrated
+Fontan procedure admitted for shortness of breath and hypoxia of uncear
+etiology.
 
-{{< fa stethoscope >}} key physical findings
+{{< fa heart-pulse >}} 145/58 mmHg / 78 bpm / 20 breaths/min / 97.6°F /
+88% 6L
 
-{{< fa vial >}} pertinent labs
+{{< fa stethoscope >}} Faint expiratory wheezing in upper lungs,
+rhinorrhea, and congestion
 
-### Imaging
-
-::: {layout="[1,1,1,1]"}
-{{< placeholder 400 200 >}}
-
-{{< placeholder 400 200 >}}
-
-{{< placeholder 400 200 >}}
-
-{{< placeholder 600 400 >}}
+{{< fa vial >}} AST 33, ALT 33, Alk Phos 222
 :::
 
-### Procedure
+::: {.column width="60%"}
+::: {layout="[1,1]"}
+![](images/cases/case-3-p1-1.png){.lightbox}
 
-{{< placeholder 600 400 >}}
+![](images/cases/case-3-p1-2.png){.lightbox}
+:::
+:::
+
+:::::
+
+### Part 2
+
+::: {layout="[1,1,1,1],[1,1,1,1]"}
+![](images/cases/case-3-p2-1.png){.lightbox}
+
+![](images/cases/case-3-p2-2.png){.lightbox}
+
+![](images/cases/case-3-p2-3.png){.lightbox}
+
+![](images/cases/case-3-p2-4.png){.lightbox}
+:::
+
+### Part 3
+
+::: {layout="[1,1,1,1],[1,1,1,1]"}
+![](images/cases/case-3-p3-1.png){.lightbox}
+
+![](images/cases/case-3-p3-2.png){.lightbox}
+
+![](images/cases/case-3-p3-3.png){.lightbox}
+
+![](images/cases/case-3-p3-4.png){.lightbox}
+
+![](images/cases/case-3-p3-5.png){.lightbox}
+
+![](images/cases/case-3-p3-6.png){.lightbox}
+:::
 
 ### Pearls
 
 1.  
-::::
+
