@@ -1,0 +1,468 @@
+---
+title: "AMEC 2026 | Indiana University School of Medicine"
+subtitle: "R for SNMA"
+author: "Mirindi Kabangu"
+format: 
+  live-revealjs:
+    self-contained: true
+    footer: "IU School of Medicine | SNMA AMEC"
+    logo: iu_logo.png # Optional: if you have the IU trident logo
+    theme: [default]
+    incremental: false
+engine: knitr
+webr:
+  render-df: paged-table
+  packages: [ 'readr', 'dplyr', 'tidyr', 'ggplot2', 'gt', 'gtsummary','ggsignif', 'palmerpenguins', 'medicaldata']
+  cell:
+    autoload: true
+---
+
+{{< include ./_extensions/r-wasm/live/_knitr.qmd >}}
+{{< include ./_extensions/r-wasm/live/_gradethis.qmd >}}
+
+## Instructor
+
+Mirindi Kabangu
+
+## Scope
+
+::: aside
+Taming the Data Beast, by Allison Horst
+:::
+
+## Overview
+
+## The "Real-World" Medical Researcher Problem
+
+You are a resident on a busy clinical rotation. You’ve been handed a
+messy Vital Signs log from a 3-patient pilot study.
+
+-   The Data:
+-   The Goal:
+    -   Download the CSV
+    -   Split blood pressure into two columns
+    -   Remove the "F" from Temperature
+    -   Create a "Flag" column for any patient with a systolic BP \>
+        140.5
+    -   Make a bar chart of all the Systolic BPs
+-   You have 2 minutes
+
+## 
+
+```{r}
+#| label: reveal-cleaning
+#| echo: false
+library(flipbookr)
+library(tidyverse)
+
+# Secretly create the messy data for the demo
+messy_vitals <- tibble::tibble(
+  patient = c("Gemma Dunn", "Priscilla Holding", "Aniya Warner"),
+  bp = c("128/78", "148/92", "115/73"),
+  temp = c("98.6F", "101.2F", "97.5F")
+)
+```
+
+##
+
+```{r}
+#| label: cleaning-demo-1
+#| echo: true
+#| output-location: column
+#| code-line-numbers: "1"
+
+print(messy_vitals)
+```
+
+##
+
+```{r}
+#| label: cleaning-demo-2
+#| echo: true
+#| output-location: column
+#| code-line-numbers: "1-3"
+
+messy_vitals |>
+  # Separate BP into two numbers
+  separate(bp, into = c("sys", "dia"), sep = "/")
+```
+
+##
+
+```{r}
+#| label: cleaning-demo-3
+#| echo: true
+#| output-location: column
+#| code-line-numbers: "4-5"
+
+messy_vitals |>
+  # Separate BP into two numbers
+  separate(bp, into = c("sys", "dia"), sep = "/") |>
+  # Clean Temp units
+  mutate(temp = parse_number(temp))
+```
+
+##
+
+```{r}
+#| label: cleaning-demo-4
+#| echo: true
+#| output-location: column
+#| code-line-numbers: "6-7"
+
+messy_vitals |>
+  # Separate BP into two numbers
+  separate(bp, into = c("sys", "dia"), sep = "/") |>
+  # Clean Temp units
+  mutate(temp = parse_number(temp)) |>
+  # Convert types
+  mutate(across(c(sys, dia), as.numeric))
+```
+
+##
+
+```{r}
+#| label: cleaning-demo-5
+#| echo: true
+#| output-location: column
+#| code-line-numbers: "8-9"
+
+messy_vitals |>
+  # Separate BP into two numbers
+  separate(bp, into = c("sys", "dia"), sep = "/") |>
+  # Clean Temp units
+  mutate(temp = parse_number(temp)) |>
+  # Convert types
+  mutate(across(c(sys, dia), as.numeric)) |>
+  # Add the Clinical Flag
+  mutate(flag = sys >= 140)
+```
+
+##
+
+```{r}
+#| label: cleaning-demo-7
+#| echo: true
+#| output-location: column
+#| code-line-numbers: "10-12"
+
+messy_vitals |>
+  # Separate BP into two numbers
+  separate(bp, into = c("sys", "dia"), sep = "/") |>
+  # Clean Temp units
+  mutate(temp = parse_number(temp)) |>
+  # Convert types
+  mutate(across(c(sys, dia), as.numeric)) |>
+  # Add the Clinical Flag
+  mutate(flag = sys >= 140) |>
+  # Instant Visualization
+  ggplot(aes(x = patient, y = sys, fill = flag)) +
+  geom_col()
+```
+
+##
+
+```{r}
+#| label: cleaning-demo-8
+#| echo: true
+#| output-location: column
+#| code-line-numbers: "13-14"
+
+messy_vitals |>
+  # Separate BP into two numbers
+  separate(bp, into = c("sys", "dia"), sep = "/") |>
+  # Clean Temp units
+  mutate(temp = parse_number(temp)) |>
+  # Convert types
+  mutate(across(c(sys, dia), as.numeric)) |>
+  # Add the Clinical Flag
+  mutate(flag = sys >= 140) |>
+  # Instant Visualization
+  ggplot(aes(x = patient, y = sys, fill = flag)) +
+  geom_col() +
+  scale_fill_manual(values = c("gray", "#990000")) + # IU Crimson!
+  theme_minimal()
+```
+
+## Another Challenge
+
+You are a resident on a busy clinical rotation. You’ve been handed a
+messy of cancer treatement data.
+
+- The Data
+- The Goal:
+    - Download the CSV
+    - Calculate the mean and standard deviations for each row
+    - Calculate the p-values
+
+## 
+
+```{r}
+#| label: table-demo-1
+#| echo: true
+#| output-location: column
+#| code-line-numbers: "1"
+
+library(gtsummary)
+
+# Use the built-in 'trial' clinical dataset
+gtsummary::trial |>
+  select(trt, age, grade, response) |>
+  # Create the summary table
+  tbl_summary()
+```
+
+## 
+
+```{r}
+#| label: table-demo-2
+#| echo: true
+#| output-location: column
+#| code-line-numbers: "1"
+
+library(gtsummary)
+
+# Use the built-in 'trial' clinical dataset
+gtsummary::trial |>
+  select(trt, age, grade, response) |>
+  # Create the summary table
+  tbl_summary(
+    by = trt, # Split by treatment group
+  )
+```
+
+## 
+
+```{r}
+#| label: table-demo-3
+#| echo: true
+#| output-location: column
+#| code-line-numbers: "1"
+
+library(gtsummary)
+
+# Use the built-in 'trial' clinical dataset
+gtsummary::trial |>
+  select(trt, age, grade, response) |>
+  # Create the summary table
+  tbl_summary(
+    by = trt, # Split by treatment group
+    statistic = list(all_continuous() ~ "{mean} ({sd})")
+  )
+```
+
+## 
+
+```{r}
+#| label: table-demo-4
+#| echo: true
+#| output-location: column
+#| code-line-numbers: "1"
+
+library(gtsummary)
+
+# Use the built-in 'trial' clinical dataset
+gtsummary::trial |>
+  select(trt, age, grade, response) |>
+  # Create the summary table
+  tbl_summary(
+    by = trt, # Split by treatment group
+    statistic = list(all_continuous() ~ "{mean} ({sd})")
+  ) |>
+  # Add statistical comparison (p-values)
+  add_p()
+```
+
+## 
+
+```{r}
+#| label: table-demo-5
+#| echo: true
+#| output-location: column
+#| code-line-numbers: "1"
+
+library(gtsummary)
+
+# Use the built-in 'trial' clinical dataset
+gtsummary::trial |>
+  select(trt, age, grade, response) |>
+  # Create the summary table
+  tbl_summary(
+    by = trt, # Split by treatment group
+    statistic = list(all_continuous() ~ "{mean} ({sd})")
+  ) |>
+  # Add statistical comparison (p-values)
+  add_p() |>
+  # Add a "Total" column
+  add_overall()
+```
+
+## 
+
+```{r}
+#| label: table-demo-6
+#| echo: true
+#| output-location: column
+#| code-line-numbers: "1"
+
+library(gtsummary)
+
+# Use the built-in 'trial' clinical dataset
+gtsummary::trial |>
+  select(trt, age, grade, response) |>
+  # Create the summary table
+  tbl_summary(
+    by = trt, # Split by treatment group
+    label = list(
+      age ~ "Patient Age",
+      grade ~ "Tumor Grade",
+      response ~ "Treatment Response"
+    ),
+    statistic = list(all_continuous() ~ "{mean} ({sd})")
+  ) |>
+  # Add statistical comparison (p-values)
+  add_p() |>
+  # Add a "Total" column
+  add_overall() |>
+  # Make it look professional
+  bold_labels() |>
+  modify_header(label = "**Variable**")
+```
+
+# Your Turn
+
+:::{.fragment}
+```{webr}
+#| exercise: ex_2
+#| setup: true
+library(palmerpenguins)
+library(medicaldata)
+library(gtsummary)
+penguins <- penguins[1:6,]
+library(dplyr)
+```
+
+## Exercise 1: Isolate High-Grade Tumors {.smaller}
+
+The `blood_storage` dataset contains a `Grade` variable (1-4). Filter the data to show only the most aggressive tumors (Grade 4) and assign it to `high_grade_cancers`.
+
+:::{.fragment}
+```{webr}
+#| exercise: medex_1
+# Filter for Grade 4 tumors
+high_grade_cancers <- blood_storage |> 
+  filter(Grade == ____)
+
+# Count the results
+nrow(high_grade_cancers)
+```
+
+::: { .solution exercise="medex_1"} 
+::: { .callout-tip collapse=false}
+
+```{webr}
+#| exercise: medex_1
+#| solution: true
+high_grade_cancers <- blood_storage |> 
+  filter(Grade == 4)
+
+nrow(high_grade_cancers)
+```
+
+:::
+:::
+
+```{webr}
+#| exercise: medex_1
+#| check: true
+gradethis::grade_this_code()
+```
+
+:::
+
+---
+
+### Exercise 2: Mutate and Clinical Thresholds (Intermediate)
+**Goal:** Practice the "Rectangle Rule" by adding a new logical "Flag" column to indicate a clinical threshold (PSA level), as described in the Chen and Brown text.
+
+## Exercise 2: Defining Clinical Risk {.smaller}
+
+A PSA (Prostate Specific Antigen) level $\ge$ 10 is often considered high risk. Use `mutate()` to create a new column called `high_psa` that is `TRUE` if `PreopPSA` is 10 or greater.
+
+:::{.fragment}
+
+```{webr}
+#| exercise: medex_2
+# Create a logical flag for high PSA
+psa_analysis <- blood_storage |> 
+  mutate(high_psa = ________ >= 10)
+
+# View the first few rows
+head(psa_analysis)
+```
+
+::: { .solution exercise="med_ex_2"} 
+::: { .callout-tip collapse=false}
+
+```{webr}
+#| exercise: medex_2
+#| solution: true
+psa_analysis <- blood_storage |> 
+  mutate(high_psa = PreopPSA >= 10)
+
+head(psa_analysis)
+```
+
+:::
+:::
+
+```{webr}
+#| exercise: medex_2
+#| check: true
+gradethis::grade_this_code()
+```
+
+:::
+
+---
+### Exercise 3: The Multi-Step Pipeline (Advanced)
+**Goal:** Combine multiple operations to prepare a dataset for a "Table 1" or summary report. This reinforces the idea that data cleaning is a series of explicit "recipe" steps.
+
+## Exercise 3: Complex Data Preparation {.smaller}
+
+The PI wants to look at younger patients (Age $\le$ 60) who had a cancer recurrence (`Recurrence == 1`). Select only those patients and calculate their average PSA.
+
+:::{.fragment}
+```{webr}
+#| exercise: medex_3
+# Combine filter and summarize
+summary_stats <- blood_storage |> 
+  filter(Age <= 60, ________ == 1) |> 
+  summarize(mean_psa = ________(PreopPSA, na.rm = TRUE))
+
+summary_stats
+```
+
+::: { .solution exercise="medex_3"} 
+::: { .callout-tip collapse=false}
+
+```{webr}
+#| exercise: medex_3
+#| solution: true
+summary_stats <- blood_storage |> 
+  filter(Age <= 60, Recurrence == 1) |> 
+  summarize(mean_psa = mean(PreopPSA, na.rm = TRUE))
+
+summary_stats
+```
+
+::: 
+:::
+
+```{webr}
+#| exercise: medex_3
+#| check: true
+gradethis::grade_this_code()
+```
+
+:::
