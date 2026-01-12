@@ -6,7 +6,7 @@ format:
   live-revealjs:
     self-contained: true
     footer: "IU School of Medicine | SNMA AMEC"
-    logo: iu_logo.png # Optional: if you have the IU trident logo
+    logo: iu_logo.png
     theme: [default]
     incremental: false
 engine: knitr
@@ -141,7 +141,7 @@ messy_vitals |>
 ##
 
 ```{r}
-#| label: cleaning-demo-7
+#| label: cleaning-demo-6
 #| echo: true
 #| output-location: column
 #| code-line-numbers: "10-12"
@@ -163,7 +163,7 @@ messy_vitals |>
 ##
 
 ```{r}
-#| label: cleaning-demo-8
+#| label: cleaning-demo-7
 #| echo: true
 #| output-location: column
 #| code-line-numbers: "13-14"
@@ -329,11 +329,12 @@ gtsummary::trial |>
   modify_header(label = "**Variable**")
 ```
 
+
 # Your Turn
 
 :::{.fragment}
 ```{webr}
-#| exercise: ex_2
+#| exercise: medex
 #| setup: true
 library(palmerpenguins)
 library(medicaldata)
@@ -341,6 +342,8 @@ library(gtsummary)
 penguins <- penguins[1:6,]
 library(dplyr)
 ```
+
+:::
 
 ## Exercise 1: Isolate High-Grade Tumors {.smaller}
 
