@@ -63,7 +63,7 @@ messy_vitals <- tibble::tibble(
 )
 ```
 
-##
+## {auto-animate="true"}
 
 ```{r}
 #| label: cleaning-demo-1
@@ -74,7 +74,7 @@ messy_vitals <- tibble::tibble(
 print(messy_vitals)
 ```
 
-##
+## {auto-animate="true"}
 
 ```{r}
 #| label: cleaning-demo-2
@@ -87,7 +87,7 @@ messy_vitals |>
   separate(bp, into = c("sys", "dia"), sep = "/")
 ```
 
-##
+## {auto-animate="true"}
 
 ```{r}
 #| label: cleaning-demo-3
@@ -102,7 +102,7 @@ messy_vitals |>
   mutate(temp = parse_number(temp))
 ```
 
-##
+## {auto-animate="true"}
 
 ```{r}
 #| label: cleaning-demo-4
@@ -119,7 +119,7 @@ messy_vitals |>
   mutate(across(c(sys, dia), as.numeric))
 ```
 
-##
+## {auto-animate="true"}
 
 ```{r}
 #| label: cleaning-demo-5
@@ -138,7 +138,7 @@ messy_vitals |>
   mutate(flag = sys >= 140)
 ```
 
-##
+## {auto-animate="true"}
 
 ```{r}
 #| label: cleaning-demo-6
@@ -160,7 +160,7 @@ messy_vitals |>
   geom_col()
 ```
 
-##
+## {auto-animate="true"}
 
 ```{r}
 #| label: cleaning-demo-7
@@ -195,7 +195,7 @@ messy of cancer treatement data.
     - Calculate the mean and standard deviations for each row
     - Calculate the p-values
 
-## 
+## {auto-animate="true"} 
 
 ```{r}
 #| label: table-demo-1
@@ -212,7 +212,7 @@ gtsummary::trial |>
   tbl_summary()
 ```
 
-## 
+## {auto-animate="true"} 
 
 ```{r}
 #| label: table-demo-2
@@ -231,7 +231,7 @@ gtsummary::trial |>
   )
 ```
 
-## 
+## {auto-animate="true"} 
 
 ```{r}
 #| label: table-demo-3
@@ -251,7 +251,7 @@ gtsummary::trial |>
   )
 ```
 
-## 
+## {auto-animate="true"} 
 
 ```{r}
 #| label: table-demo-4
@@ -273,7 +273,7 @@ gtsummary::trial |>
   add_p()
 ```
 
-## 
+## {auto-animate="true"} 
 
 ```{r}
 #| label: table-demo-5
@@ -297,7 +297,7 @@ gtsummary::trial |>
   add_overall()
 ```
 
-## 
+## {auto-animate="true"} 
 
 ```{r}
 #| label: table-demo-6
@@ -345,7 +345,7 @@ library(dplyr)
 
 :::
 
-## Exercise 1: Isolate High-Grade Tumors {.smaller}
+## Exercise 1: Isolate High-Grade Tumors {.scrollable}
 
 The `blood_storage` dataset contains a `Grade` variable (1-4). Filter the data to show only the most aggressive tumors (Grade 4) and assign it to `high_grade_cancers`.
 
@@ -385,10 +385,7 @@ gradethis::grade_this_code()
 
 ---
 
-### Exercise 2: Mutate and Clinical Thresholds (Intermediate)
-**Goal:** Practice the "Rectangle Rule" by adding a new logical "Flag" column to indicate a clinical threshold (PSA level), as described in the Chen and Brown text.
-
-## Exercise 2: Defining Clinical Risk {.smaller}
+## Exercise 2: Defining Clinical Risk {.scrollable}
 
 A PSA (Prostate Specific Antigen) level $\ge$ 10 is often considered high risk. Use `mutate()` to create a new column called `high_psa` that is `TRUE` if `PreopPSA` is 10 or greater.
 
@@ -428,10 +425,8 @@ gradethis::grade_this_code()
 :::
 
 ---
-### Exercise 3: The Multi-Step Pipeline (Advanced)
-**Goal:** Combine multiple operations to prepare a dataset for a "Table 1" or summary report. This reinforces the idea that data cleaning is a series of explicit "recipe" steps.
 
-## Exercise 3: Complex Data Preparation {.smaller}
+## Exercise 3: Complex Data Preparation {.scrollable}
 
 The PI wants to look at younger patients (Age $\le$ 60) who had a cancer recurrence (`Recurrence == 1`). Select only those patients and calculate their average PSA.
 

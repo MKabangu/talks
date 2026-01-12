@@ -25263,11 +25263,11 @@ eyJhdHRyIjp7ImVkaXQiOmZhbHNlLCJldmFsIjp0cnVlLCJvdXRwdXQiOmZhbHNlfSwiY29kZSI6Indl
 <section id="section" class="slide level2">
 <h2></h2>
 </section>
-<section id="section-1" class="slide level2">
-<h2></h2>
+<section id="section-1" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title"></h2>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" data-code-line-numbers="1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href></a><span class="fu">print</span>(messy_vitals)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" data-code-line-numbers="1"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb1-1" class="hljs-ln-code"><a href></a><span class="fu">print</span>(messy_vitals)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column">
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 3 × 3
@@ -25279,13 +25279,13 @@ eyJhdHRyIjp7ImVkaXQiOmZhbHNlLCJldmFsIjp0cnVlLCJvdXRwdXQiOmZhbHNlfSwiY29kZSI6Indl
 </div>
 </div></div>
 </section>
-<section id="section-2" class="slide level2">
-<h2></h2>
+<section id="section-2" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title"></h2>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3" data-code-line-numbers="1-3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href></a>messy_vitals <span class="sc">|&gt;</span></span>
-<span id="cb3-2"><a href></a>  <span class="co"># Separate BP into two numbers</span></span>
-<span id="cb3-3"><a href></a>  <span class="fu">separate</span>(bp, <span class="at">into =</span> <span class="fu">c</span>(<span class="st">&quot;sys&quot;</span>, <span class="st">&quot;dia&quot;</span>), <span class="at">sep =</span> <span class="st">&quot;/&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3" data-code-line-numbers="1-3"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb3-1" class="hljs-ln-code"><a href></a>messy_vitals <span class="sc">|&gt;</span></span>
+<span id="cb3-2" class="hljs-ln-code"><a href></a>  <span class="co"># Separate BP into two numbers</span></span>
+<span id="cb3-3" class="hljs-ln-code"><a href></a>  <span class="fu">separate</span>(bp, <span class="at">into =</span> <span class="fu">c</span>(<span class="st">&quot;sys&quot;</span>, <span class="st">&quot;dia&quot;</span>), <span class="at">sep =</span> <span class="st">&quot;/&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column">
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 3 × 4
@@ -25297,15 +25297,15 @@ eyJhdHRyIjp7ImVkaXQiOmZhbHNlLCJldmFsIjp0cnVlLCJvdXRwdXQiOmZhbHNlfSwiY29kZSI6Indl
 </div>
 </div></div>
 </section>
-<section id="section-3" class="slide level2">
-<h2></h2>
+<section id="section-3" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title"></h2>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5" data-code-line-numbers="4-5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href></a>messy_vitals <span class="sc">|&gt;</span></span>
-<span id="cb5-2"><a href></a>  <span class="co"># Separate BP into two numbers</span></span>
-<span id="cb5-3"><a href></a>  <span class="fu">separate</span>(bp, <span class="at">into =</span> <span class="fu">c</span>(<span class="st">&quot;sys&quot;</span>, <span class="st">&quot;dia&quot;</span>), <span class="at">sep =</span> <span class="st">&quot;/&quot;</span>) <span class="sc">|&gt;</span></span>
-<span id="cb5-4"><a href></a>  <span class="co"># Clean Temp units</span></span>
-<span id="cb5-5"><a href></a>  <span class="fu">mutate</span>(<span class="at">temp =</span> <span class="fu">parse_number</span>(temp))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5" data-code-line-numbers="4-5"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb5-1" class="hljs-ln-code"><a href></a>messy_vitals <span class="sc">|&gt;</span></span>
+<span id="cb5-2" class="hljs-ln-code"><a href></a>  <span class="co"># Separate BP into two numbers</span></span>
+<span id="cb5-3" class="hljs-ln-code"><a href></a>  <span class="fu">separate</span>(bp, <span class="at">into =</span> <span class="fu">c</span>(<span class="st">&quot;sys&quot;</span>, <span class="st">&quot;dia&quot;</span>), <span class="at">sep =</span> <span class="st">&quot;/&quot;</span>) <span class="sc">|&gt;</span></span>
+<span id="cb5-4" class="hljs-ln-code"><a href></a>  <span class="co"># Clean Temp units</span></span>
+<span id="cb5-5" class="hljs-ln-code"><a href></a>  <span class="fu">mutate</span>(<span class="at">temp =</span> <span class="fu">parse_number</span>(temp))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column">
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 3 × 4
@@ -25317,17 +25317,17 @@ eyJhdHRyIjp7ImVkaXQiOmZhbHNlLCJldmFsIjp0cnVlLCJvdXRwdXQiOmZhbHNlfSwiY29kZSI6Indl
 </div>
 </div></div>
 </section>
-<section id="section-4" class="slide level2">
-<h2></h2>
+<section id="section-4" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title"></h2>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7" data-code-line-numbers="6-7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href></a>messy_vitals <span class="sc">|&gt;</span></span>
-<span id="cb7-2"><a href></a>  <span class="co"># Separate BP into two numbers</span></span>
-<span id="cb7-3"><a href></a>  <span class="fu">separate</span>(bp, <span class="at">into =</span> <span class="fu">c</span>(<span class="st">&quot;sys&quot;</span>, <span class="st">&quot;dia&quot;</span>), <span class="at">sep =</span> <span class="st">&quot;/&quot;</span>) <span class="sc">|&gt;</span></span>
-<span id="cb7-4"><a href></a>  <span class="co"># Clean Temp units</span></span>
-<span id="cb7-5"><a href></a>  <span class="fu">mutate</span>(<span class="at">temp =</span> <span class="fu">parse_number</span>(temp)) <span class="sc">|&gt;</span></span>
-<span id="cb7-6"><a href></a>  <span class="co"># Convert types</span></span>
-<span id="cb7-7"><a href></a>  <span class="fu">mutate</span>(<span class="fu">across</span>(<span class="fu">c</span>(sys, dia), as.numeric))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7" data-code-line-numbers="6-7"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb7-1" class="hljs-ln-code"><a href></a>messy_vitals <span class="sc">|&gt;</span></span>
+<span id="cb7-2" class="hljs-ln-code"><a href></a>  <span class="co"># Separate BP into two numbers</span></span>
+<span id="cb7-3" class="hljs-ln-code"><a href></a>  <span class="fu">separate</span>(bp, <span class="at">into =</span> <span class="fu">c</span>(<span class="st">&quot;sys&quot;</span>, <span class="st">&quot;dia&quot;</span>), <span class="at">sep =</span> <span class="st">&quot;/&quot;</span>) <span class="sc">|&gt;</span></span>
+<span id="cb7-4" class="hljs-ln-code"><a href></a>  <span class="co"># Clean Temp units</span></span>
+<span id="cb7-5" class="hljs-ln-code"><a href></a>  <span class="fu">mutate</span>(<span class="at">temp =</span> <span class="fu">parse_number</span>(temp)) <span class="sc">|&gt;</span></span>
+<span id="cb7-6" class="hljs-ln-code"><a href></a>  <span class="co"># Convert types</span></span>
+<span id="cb7-7" class="hljs-ln-code"><a href></a>  <span class="fu">mutate</span>(<span class="fu">across</span>(<span class="fu">c</span>(sys, dia), as.numeric))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column">
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 3 × 4
@@ -25339,19 +25339,19 @@ eyJhdHRyIjp7ImVkaXQiOmZhbHNlLCJldmFsIjp0cnVlLCJvdXRwdXQiOmZhbHNlfSwiY29kZSI6Indl
 </div>
 </div></div>
 </section>
-<section id="section-5" class="slide level2">
-<h2></h2>
+<section id="section-5" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title"></h2>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9" data-code-line-numbers="8-9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href></a>messy_vitals <span class="sc">|&gt;</span></span>
-<span id="cb9-2"><a href></a>  <span class="co"># Separate BP into two numbers</span></span>
-<span id="cb9-3"><a href></a>  <span class="fu">separate</span>(bp, <span class="at">into =</span> <span class="fu">c</span>(<span class="st">&quot;sys&quot;</span>, <span class="st">&quot;dia&quot;</span>), <span class="at">sep =</span> <span class="st">&quot;/&quot;</span>) <span class="sc">|&gt;</span></span>
-<span id="cb9-4"><a href></a>  <span class="co"># Clean Temp units</span></span>
-<span id="cb9-5"><a href></a>  <span class="fu">mutate</span>(<span class="at">temp =</span> <span class="fu">parse_number</span>(temp)) <span class="sc">|&gt;</span></span>
-<span id="cb9-6"><a href></a>  <span class="co"># Convert types</span></span>
-<span id="cb9-7"><a href></a>  <span class="fu">mutate</span>(<span class="fu">across</span>(<span class="fu">c</span>(sys, dia), as.numeric)) <span class="sc">|&gt;</span></span>
-<span id="cb9-8"><a href></a>  <span class="co"># Add the Clinical Flag</span></span>
-<span id="cb9-9"><a href></a>  <span class="fu">mutate</span>(<span class="at">flag =</span> sys <span class="sc">&gt;=</span> <span class="dv">140</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9" data-code-line-numbers="8-9"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb9-1" class="hljs-ln-code"><a href></a>messy_vitals <span class="sc">|&gt;</span></span>
+<span id="cb9-2" class="hljs-ln-code"><a href></a>  <span class="co"># Separate BP into two numbers</span></span>
+<span id="cb9-3" class="hljs-ln-code"><a href></a>  <span class="fu">separate</span>(bp, <span class="at">into =</span> <span class="fu">c</span>(<span class="st">&quot;sys&quot;</span>, <span class="st">&quot;dia&quot;</span>), <span class="at">sep =</span> <span class="st">&quot;/&quot;</span>) <span class="sc">|&gt;</span></span>
+<span id="cb9-4" class="hljs-ln-code"><a href></a>  <span class="co"># Clean Temp units</span></span>
+<span id="cb9-5" class="hljs-ln-code"><a href></a>  <span class="fu">mutate</span>(<span class="at">temp =</span> <span class="fu">parse_number</span>(temp)) <span class="sc">|&gt;</span></span>
+<span id="cb9-6" class="hljs-ln-code"><a href></a>  <span class="co"># Convert types</span></span>
+<span id="cb9-7" class="hljs-ln-code"><a href></a>  <span class="fu">mutate</span>(<span class="fu">across</span>(<span class="fu">c</span>(sys, dia), as.numeric)) <span class="sc">|&gt;</span></span>
+<span id="cb9-8" class="hljs-ln-code"><a href></a>  <span class="co"># Add the Clinical Flag</span></span>
+<span id="cb9-9" class="hljs-ln-code"><a href></a>  <span class="fu">mutate</span>(<span class="at">flag =</span> sys <span class="sc">&gt;=</span> <span class="dv">140</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column">
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 3 × 5
@@ -25363,22 +25363,22 @@ eyJhdHRyIjp7ImVkaXQiOmZhbHNlLCJldmFsIjp0cnVlLCJvdXRwdXQiOmZhbHNlfSwiY29kZSI6Indl
 </div>
 </div></div>
 </section>
-<section id="section-6" class="slide level2">
-<h2></h2>
+<section id="section-6" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title"></h2>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11" data-code-line-numbers="10-12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href></a>messy_vitals <span class="sc">|&gt;</span></span>
-<span id="cb11-2"><a href></a>  <span class="co"># Separate BP into two numbers</span></span>
-<span id="cb11-3"><a href></a>  <span class="fu">separate</span>(bp, <span class="at">into =</span> <span class="fu">c</span>(<span class="st">&quot;sys&quot;</span>, <span class="st">&quot;dia&quot;</span>), <span class="at">sep =</span> <span class="st">&quot;/&quot;</span>) <span class="sc">|&gt;</span></span>
-<span id="cb11-4"><a href></a>  <span class="co"># Clean Temp units</span></span>
-<span id="cb11-5"><a href></a>  <span class="fu">mutate</span>(<span class="at">temp =</span> <span class="fu">parse_number</span>(temp)) <span class="sc">|&gt;</span></span>
-<span id="cb11-6"><a href></a>  <span class="co"># Convert types</span></span>
-<span id="cb11-7"><a href></a>  <span class="fu">mutate</span>(<span class="fu">across</span>(<span class="fu">c</span>(sys, dia), as.numeric)) <span class="sc">|&gt;</span></span>
-<span id="cb11-8"><a href></a>  <span class="co"># Add the Clinical Flag</span></span>
-<span id="cb11-9"><a href></a>  <span class="fu">mutate</span>(<span class="at">flag =</span> sys <span class="sc">&gt;=</span> <span class="dv">140</span>) <span class="sc">|&gt;</span></span>
-<span id="cb11-10"><a href></a>  <span class="co"># Instant Visualization</span></span>
-<span id="cb11-11"><a href></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> patient, <span class="at">y =</span> sys, <span class="at">fill =</span> flag)) <span class="sc">+</span></span>
-<span id="cb11-12"><a href></a>  <span class="fu">geom_col</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11" data-code-line-numbers="10-12"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb11-1" class="hljs-ln-code"><a href></a>messy_vitals <span class="sc">|&gt;</span></span>
+<span id="cb11-2" class="hljs-ln-code"><a href></a>  <span class="co"># Separate BP into two numbers</span></span>
+<span id="cb11-3" class="hljs-ln-code"><a href></a>  <span class="fu">separate</span>(bp, <span class="at">into =</span> <span class="fu">c</span>(<span class="st">&quot;sys&quot;</span>, <span class="st">&quot;dia&quot;</span>), <span class="at">sep =</span> <span class="st">&quot;/&quot;</span>) <span class="sc">|&gt;</span></span>
+<span id="cb11-4" class="hljs-ln-code"><a href></a>  <span class="co"># Clean Temp units</span></span>
+<span id="cb11-5" class="hljs-ln-code"><a href></a>  <span class="fu">mutate</span>(<span class="at">temp =</span> <span class="fu">parse_number</span>(temp)) <span class="sc">|&gt;</span></span>
+<span id="cb11-6" class="hljs-ln-code"><a href></a>  <span class="co"># Convert types</span></span>
+<span id="cb11-7" class="hljs-ln-code"><a href></a>  <span class="fu">mutate</span>(<span class="fu">across</span>(<span class="fu">c</span>(sys, dia), as.numeric)) <span class="sc">|&gt;</span></span>
+<span id="cb11-8" class="hljs-ln-code"><a href></a>  <span class="co"># Add the Clinical Flag</span></span>
+<span id="cb11-9" class="hljs-ln-code"><a href></a>  <span class="fu">mutate</span>(<span class="at">flag =</span> sys <span class="sc">&gt;=</span> <span class="dv">140</span>) <span class="sc">|&gt;</span></span>
+<span id="cb11-10" class="hljs-ln-code"><a href></a>  <span class="co"># Instant Visualization</span></span>
+<span id="cb11-11" class="hljs-ln-code"><a href></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> patient, <span class="at">y =</span> sys, <span class="at">fill =</span> flag)) <span class="sc">+</span></span>
+<span id="cb11-12" class="hljs-ln-code"><a href></a>  <span class="fu">geom_col</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column">
 <div class="cell-output-display">
 <div>
@@ -25389,24 +25389,24 @@ eyJhdHRyIjp7ImVkaXQiOmZhbHNlLCJldmFsIjp0cnVlLCJvdXRwdXQiOmZhbHNlfSwiY29kZSI6Indl
 </div>
 </div></div>
 </section>
-<section id="section-7" class="slide level2">
-<h2></h2>
+<section id="section-7" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title"></h2>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12" data-code-line-numbers="13-14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href></a>messy_vitals <span class="sc">|&gt;</span></span>
-<span id="cb12-2"><a href></a>  <span class="co"># Separate BP into two numbers</span></span>
-<span id="cb12-3"><a href></a>  <span class="fu">separate</span>(bp, <span class="at">into =</span> <span class="fu">c</span>(<span class="st">&quot;sys&quot;</span>, <span class="st">&quot;dia&quot;</span>), <span class="at">sep =</span> <span class="st">&quot;/&quot;</span>) <span class="sc">|&gt;</span></span>
-<span id="cb12-4"><a href></a>  <span class="co"># Clean Temp units</span></span>
-<span id="cb12-5"><a href></a>  <span class="fu">mutate</span>(<span class="at">temp =</span> <span class="fu">parse_number</span>(temp)) <span class="sc">|&gt;</span></span>
-<span id="cb12-6"><a href></a>  <span class="co"># Convert types</span></span>
-<span id="cb12-7"><a href></a>  <span class="fu">mutate</span>(<span class="fu">across</span>(<span class="fu">c</span>(sys, dia), as.numeric)) <span class="sc">|&gt;</span></span>
-<span id="cb12-8"><a href></a>  <span class="co"># Add the Clinical Flag</span></span>
-<span id="cb12-9"><a href></a>  <span class="fu">mutate</span>(<span class="at">flag =</span> sys <span class="sc">&gt;=</span> <span class="dv">140</span>) <span class="sc">|&gt;</span></span>
-<span id="cb12-10"><a href></a>  <span class="co"># Instant Visualization</span></span>
-<span id="cb12-11"><a href></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> patient, <span class="at">y =</span> sys, <span class="at">fill =</span> flag)) <span class="sc">+</span></span>
-<span id="cb12-12"><a href></a>  <span class="fu">geom_col</span>() <span class="sc">+</span></span>
-<span id="cb12-13"><a href></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">&quot;gray&quot;</span>, <span class="st">&quot;#990000&quot;</span>)) <span class="sc">+</span> <span class="co"># IU Crimson!</span></span>
-<span id="cb12-14"><a href></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12" data-code-line-numbers="13-14"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb12-1" class="hljs-ln-code"><a href></a>messy_vitals <span class="sc">|&gt;</span></span>
+<span id="cb12-2" class="hljs-ln-code"><a href></a>  <span class="co"># Separate BP into two numbers</span></span>
+<span id="cb12-3" class="hljs-ln-code"><a href></a>  <span class="fu">separate</span>(bp, <span class="at">into =</span> <span class="fu">c</span>(<span class="st">&quot;sys&quot;</span>, <span class="st">&quot;dia&quot;</span>), <span class="at">sep =</span> <span class="st">&quot;/&quot;</span>) <span class="sc">|&gt;</span></span>
+<span id="cb12-4" class="hljs-ln-code"><a href></a>  <span class="co"># Clean Temp units</span></span>
+<span id="cb12-5" class="hljs-ln-code"><a href></a>  <span class="fu">mutate</span>(<span class="at">temp =</span> <span class="fu">parse_number</span>(temp)) <span class="sc">|&gt;</span></span>
+<span id="cb12-6" class="hljs-ln-code"><a href></a>  <span class="co"># Convert types</span></span>
+<span id="cb12-7" class="hljs-ln-code"><a href></a>  <span class="fu">mutate</span>(<span class="fu">across</span>(<span class="fu">c</span>(sys, dia), as.numeric)) <span class="sc">|&gt;</span></span>
+<span id="cb12-8" class="hljs-ln-code"><a href></a>  <span class="co"># Add the Clinical Flag</span></span>
+<span id="cb12-9" class="hljs-ln-code"><a href></a>  <span class="fu">mutate</span>(<span class="at">flag =</span> sys <span class="sc">&gt;=</span> <span class="dv">140</span>) <span class="sc">|&gt;</span></span>
+<span id="cb12-10" class="hljs-ln-code"><a href></a>  <span class="co"># Instant Visualization</span></span>
+<span id="cb12-11" class="hljs-ln-code"><a href></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> patient, <span class="at">y =</span> sys, <span class="at">fill =</span> flag)) <span class="sc">+</span></span>
+<span id="cb12-12" class="hljs-ln-code"><a href></a>  <span class="fu">geom_col</span>() <span class="sc">+</span></span>
+<span id="cb12-13" class="hljs-ln-code"><a href></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">&quot;gray&quot;</span>, <span class="st">&quot;#990000&quot;</span>)) <span class="sc">+</span> <span class="co"># IU Crimson!</span></span>
+<span id="cb12-14" class="hljs-ln-code"><a href></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column">
 <div class="cell-output-display">
 <div>
@@ -25430,33 +25430,33 @@ eyJhdHRyIjp7ImVkaXQiOmZhbHNlLCJldmFsIjp0cnVlLCJvdXRwdXQiOmZhbHNlfSwiY29kZSI6Indl
 </ul></li>
 </ul>
 </section>
-<section id="section-8" class="slide level2">
-<h2></h2>
+<section id="section-8" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title"></h2>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13" data-code-line-numbers="1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href></a><span class="fu">library</span>(gtsummary)</span>
-<span id="cb13-2"><a href></a></span>
-<span id="cb13-3"><a href></a><span class="co"># Use the built-in &#39;trial&#39; clinical dataset</span></span>
-<span id="cb13-4"><a href></a>gtsummary<span class="sc">::</span>trial <span class="sc">|&gt;</span></span>
-<span id="cb13-5"><a href></a>  <span class="fu">select</span>(trt, age, grade, response) <span class="sc">|&gt;</span></span>
-<span id="cb13-6"><a href></a>  <span class="co"># Create the summary table</span></span>
-<span id="cb13-7"><a href></a>  <span class="fu">tbl_summary</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13" data-code-line-numbers="1"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb13-1" class="hljs-ln-code"><a href></a><span class="fu">library</span>(gtsummary)</span>
+<span id="cb13-2" class="hljs-ln-code"><a href></a></span>
+<span id="cb13-3" class="hljs-ln-code"><a href></a><span class="co"># Use the built-in &#39;trial&#39; clinical dataset</span></span>
+<span id="cb13-4" class="hljs-ln-code"><a href></a>gtsummary<span class="sc">::</span>trial <span class="sc">|&gt;</span></span>
+<span id="cb13-5" class="hljs-ln-code"><a href></a>  <span class="fu">select</span>(trt, age, grade, response) <span class="sc">|&gt;</span></span>
+<span id="cb13-6" class="hljs-ln-code"><a href></a>  <span class="co"># Create the summary table</span></span>
+<span id="cb13-7" class="hljs-ln-code"><a href></a>  <span class="fu">tbl_summary</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column">
 <div class="cell-output-display">
-<div id="geowlbusfx" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#geowlbusfx table {
+<div id="efvyvcfsqf" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#efvyvcfsqf table {
 font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 -webkit-font-smoothing: antialiased;
 -moz-osx-font-smoothing: grayscale;
 }
-#geowlbusfx thead, #geowlbusfx tbody, #geowlbusfx tfoot, #geowlbusfx tr, #geowlbusfx td, #geowlbusfx th {
+#efvyvcfsqf thead, #efvyvcfsqf tbody, #efvyvcfsqf tfoot, #efvyvcfsqf tr, #efvyvcfsqf td, #efvyvcfsqf th {
 border-style: none;
 }
-#geowlbusfx p {
+#efvyvcfsqf p {
 margin: 0;
 padding: 0;
 }
-#geowlbusfx .gt_table {
+#efvyvcfsqf .gt_table {
 display: table;
 border-collapse: collapse;
 line-height: normal;
@@ -25481,11 +25481,11 @@ border-left-style: none;
 border-left-width: 2px;
 border-left-color: #D3D3D3;
 }
-#geowlbusfx .gt_caption {
+#efvyvcfsqf .gt_caption {
 padding-top: 4px;
 padding-bottom: 4px;
 }
-#geowlbusfx .gt_title {
+#efvyvcfsqf .gt_title {
 color: #333333;
 font-size: 125%;
 font-weight: initial;
@@ -25496,7 +25496,7 @@ padding-right: 5px;
 border-bottom-color: #FFFFFF;
 border-bottom-width: 0;
 }
-#geowlbusfx .gt_subtitle {
+#efvyvcfsqf .gt_subtitle {
 color: #333333;
 font-size: 85%;
 font-weight: initial;
@@ -25507,7 +25507,7 @@ padding-right: 5px;
 border-top-color: #FFFFFF;
 border-top-width: 0;
 }
-#geowlbusfx .gt_heading {
+#efvyvcfsqf .gt_heading {
 background-color: #FFFFFF;
 text-align: center;
 border-bottom-color: #FFFFFF;
@@ -25518,12 +25518,12 @@ border-right-style: none;
 border-right-width: 1px;
 border-right-color: #D3D3D3;
 }
-#geowlbusfx .gt_bottom_border {
+#efvyvcfsqf .gt_bottom_border {
 border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 }
-#geowlbusfx .gt_col_headings {
+#efvyvcfsqf .gt_col_headings {
 border-top-style: solid;
 border-top-width: 2px;
 border-top-color: #D3D3D3;
@@ -25537,7 +25537,7 @@ border-right-style: none;
 border-right-width: 1px;
 border-right-color: #D3D3D3;
 }
-#geowlbusfx .gt_col_heading {
+#efvyvcfsqf .gt_col_heading {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -25556,7 +25556,7 @@ padding-left: 5px;
 padding-right: 5px;
 overflow-x: hidden;
 }
-#geowlbusfx .gt_column_spanner_outer {
+#efvyvcfsqf .gt_column_spanner_outer {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -25567,13 +25567,13 @@ padding-bottom: 0;
 padding-left: 4px;
 padding-right: 4px;
 }
-#geowlbusfx .gt_column_spanner_outer:first-child {
+#efvyvcfsqf .gt_column_spanner_outer:first-child {
 padding-left: 0;
 }
-#geowlbusfx .gt_column_spanner_outer:last-child {
+#efvyvcfsqf .gt_column_spanner_outer:last-child {
 padding-right: 0;
 }
-#geowlbusfx .gt_column_spanner {
+#efvyvcfsqf .gt_column_spanner {
 border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
@@ -25584,10 +25584,10 @@ overflow-x: hidden;
 display: inline-block;
 width: 100%;
 }
-#geowlbusfx .gt_spanner_row {
+#efvyvcfsqf .gt_spanner_row {
 border-bottom-style: hidden;
 }
-#geowlbusfx .gt_group_heading {
+#efvyvcfsqf .gt_group_heading {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -25612,7 +25612,7 @@ border-right-color: #D3D3D3;
 vertical-align: middle;
 text-align: left;
 }
-#geowlbusfx .gt_empty_group_heading {
+#efvyvcfsqf .gt_empty_group_heading {
 padding: 0.5px;
 color: #333333;
 background-color: #FFFFFF;
@@ -25626,13 +25626,13 @@ border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 vertical-align: middle;
 }
-#geowlbusfx .gt_from_md > :first-child {
+#efvyvcfsqf .gt_from_md > :first-child {
 margin-top: 0;
 }
-#geowlbusfx .gt_from_md > :last-child {
+#efvyvcfsqf .gt_from_md > :last-child {
 margin-bottom: 0;
 }
-#geowlbusfx .gt_row {
+#efvyvcfsqf .gt_row {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -25650,7 +25650,7 @@ border-right-color: #D3D3D3;
 vertical-align: middle;
 overflow-x: hidden;
 }
-#geowlbusfx .gt_stub {
+#efvyvcfsqf .gt_stub {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -25662,7 +25662,7 @@ border-right-color: #D3D3D3;
 padding-left: 5px;
 padding-right: 5px;
 }
-#geowlbusfx .gt_stub_row_group {
+#efvyvcfsqf .gt_stub_row_group {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -25675,13 +25675,13 @@ padding-left: 5px;
 padding-right: 5px;
 vertical-align: top;
 }
-#geowlbusfx .gt_row_group_first td {
+#efvyvcfsqf .gt_row_group_first td {
 border-top-width: 2px;
 }
-#geowlbusfx .gt_row_group_first th {
+#efvyvcfsqf .gt_row_group_first th {
 border-top-width: 2px;
 }
-#geowlbusfx .gt_summary_row {
+#efvyvcfsqf .gt_summary_row {
 color: #333333;
 background-color: #FFFFFF;
 text-transform: inherit;
@@ -25690,14 +25690,14 @@ padding-bottom: 8px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#geowlbusfx .gt_first_summary_row {
+#efvyvcfsqf .gt_first_summary_row {
 border-top-style: solid;
 border-top-color: #D3D3D3;
 }
-#geowlbusfx .gt_first_summary_row.thick {
+#efvyvcfsqf .gt_first_summary_row.thick {
 border-top-width: 2px;
 }
-#geowlbusfx .gt_last_summary_row {
+#efvyvcfsqf .gt_last_summary_row {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -25706,7 +25706,7 @@ border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 }
-#geowlbusfx .gt_grand_summary_row {
+#efvyvcfsqf .gt_grand_summary_row {
 color: #333333;
 background-color: #FFFFFF;
 text-transform: inherit;
@@ -25715,7 +25715,7 @@ padding-bottom: 8px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#geowlbusfx .gt_first_grand_summary_row {
+#efvyvcfsqf .gt_first_grand_summary_row {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -25724,7 +25724,7 @@ border-top-style: double;
 border-top-width: 6px;
 border-top-color: #D3D3D3;
 }
-#geowlbusfx .gt_last_grand_summary_row_top {
+#efvyvcfsqf .gt_last_grand_summary_row_top {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -25733,10 +25733,10 @@ border-bottom-style: double;
 border-bottom-width: 6px;
 border-bottom-color: #D3D3D3;
 }
-#geowlbusfx .gt_striped {
+#efvyvcfsqf .gt_striped {
 background-color: rgba(128, 128, 128, 0.05);
 }
-#geowlbusfx .gt_table_body {
+#efvyvcfsqf .gt_table_body {
 border-top-style: solid;
 border-top-width: 2px;
 border-top-color: #D3D3D3;
@@ -25744,7 +25744,7 @@ border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 }
-#geowlbusfx .gt_footnotes {
+#efvyvcfsqf .gt_footnotes {
 color: #333333;
 background-color: #FFFFFF;
 border-bottom-style: none;
@@ -25757,7 +25757,7 @@ border-right-style: none;
 border-right-width: 2px;
 border-right-color: #D3D3D3;
 }
-#geowlbusfx .gt_footnote {
+#efvyvcfsqf .gt_footnote {
 margin: 0px;
 font-size: 90%;
 padding-top: 4px;
@@ -25765,7 +25765,7 @@ padding-bottom: 4px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#geowlbusfx .gt_sourcenotes {
+#efvyvcfsqf .gt_sourcenotes {
 color: #333333;
 background-color: #FFFFFF;
 border-bottom-style: none;
@@ -25778,64 +25778,64 @@ border-right-style: none;
 border-right-width: 2px;
 border-right-color: #D3D3D3;
 }
-#geowlbusfx .gt_sourcenote {
+#efvyvcfsqf .gt_sourcenote {
 font-size: 90%;
 padding-top: 4px;
 padding-bottom: 4px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#geowlbusfx .gt_left {
+#efvyvcfsqf .gt_left {
 text-align: left;
 }
-#geowlbusfx .gt_center {
+#efvyvcfsqf .gt_center {
 text-align: center;
 }
-#geowlbusfx .gt_right {
+#efvyvcfsqf .gt_right {
 text-align: right;
 font-variant-numeric: tabular-nums;
 }
-#geowlbusfx .gt_font_normal {
+#efvyvcfsqf .gt_font_normal {
 font-weight: normal;
 }
-#geowlbusfx .gt_font_bold {
+#efvyvcfsqf .gt_font_bold {
 font-weight: bold;
 }
-#geowlbusfx .gt_font_italic {
+#efvyvcfsqf .gt_font_italic {
 font-style: italic;
 }
-#geowlbusfx .gt_super {
+#efvyvcfsqf .gt_super {
 font-size: 65%;
 }
-#geowlbusfx .gt_footnote_marks {
+#efvyvcfsqf .gt_footnote_marks {
 font-size: 75%;
 vertical-align: 0.4em;
 position: initial;
 }
-#geowlbusfx .gt_asterisk {
+#efvyvcfsqf .gt_asterisk {
 font-size: 100%;
 vertical-align: 0;
 }
-#geowlbusfx .gt_indent_1 {
+#efvyvcfsqf .gt_indent_1 {
 text-indent: 5px;
 }
-#geowlbusfx .gt_indent_2 {
+#efvyvcfsqf .gt_indent_2 {
 text-indent: 10px;
 }
-#geowlbusfx .gt_indent_3 {
+#efvyvcfsqf .gt_indent_3 {
 text-indent: 15px;
 }
-#geowlbusfx .gt_indent_4 {
+#efvyvcfsqf .gt_indent_4 {
 text-indent: 20px;
 }
-#geowlbusfx .gt_indent_5 {
+#efvyvcfsqf .gt_indent_5 {
 text-indent: 25px;
 }
-#geowlbusfx .katex-display {
+#efvyvcfsqf .katex-display {
 display: inline-flex !important;
 margin-bottom: 0.75em !important;
 }
-#geowlbusfx div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#efvyvcfsqf div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
 height: 0px !important;
 }
 </style>
@@ -25910,35 +25910,35 @@ height: 0px !important;
 </div>
 </div></div>
 </section>
-<section id="section-9" class="slide level2">
-<h2></h2>
+<section id="section-9" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title"></h2>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14" data-code-line-numbers="1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href></a><span class="fu">library</span>(gtsummary)</span>
-<span id="cb14-2"><a href></a></span>
-<span id="cb14-3"><a href></a><span class="co"># Use the built-in &#39;trial&#39; clinical dataset</span></span>
-<span id="cb14-4"><a href></a>gtsummary<span class="sc">::</span>trial <span class="sc">|&gt;</span></span>
-<span id="cb14-5"><a href></a>  <span class="fu">select</span>(trt, age, grade, response) <span class="sc">|&gt;</span></span>
-<span id="cb14-6"><a href></a>  <span class="co"># Create the summary table</span></span>
-<span id="cb14-7"><a href></a>  <span class="fu">tbl_summary</span>(</span>
-<span id="cb14-8"><a href></a>    <span class="at">by =</span> trt, <span class="co"># Split by treatment group</span></span>
-<span id="cb14-9"><a href></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14" data-code-line-numbers="1"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb14-1" class="hljs-ln-code"><a href></a><span class="fu">library</span>(gtsummary)</span>
+<span id="cb14-2" class="hljs-ln-code"><a href></a></span>
+<span id="cb14-3" class="hljs-ln-code"><a href></a><span class="co"># Use the built-in &#39;trial&#39; clinical dataset</span></span>
+<span id="cb14-4" class="hljs-ln-code"><a href></a>gtsummary<span class="sc">::</span>trial <span class="sc">|&gt;</span></span>
+<span id="cb14-5" class="hljs-ln-code"><a href></a>  <span class="fu">select</span>(trt, age, grade, response) <span class="sc">|&gt;</span></span>
+<span id="cb14-6" class="hljs-ln-code"><a href></a>  <span class="co"># Create the summary table</span></span>
+<span id="cb14-7" class="hljs-ln-code"><a href></a>  <span class="fu">tbl_summary</span>(</span>
+<span id="cb14-8" class="hljs-ln-code"><a href></a>    <span class="at">by =</span> trt, <span class="co"># Split by treatment group</span></span>
+<span id="cb14-9" class="hljs-ln-code"><a href></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column">
 <div class="cell-output-display">
-<div id="uirpkvbbsn" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#uirpkvbbsn table {
+<div id="evbppbrpyj" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#evbppbrpyj table {
 font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 -webkit-font-smoothing: antialiased;
 -moz-osx-font-smoothing: grayscale;
 }
-#uirpkvbbsn thead, #uirpkvbbsn tbody, #uirpkvbbsn tfoot, #uirpkvbbsn tr, #uirpkvbbsn td, #uirpkvbbsn th {
+#evbppbrpyj thead, #evbppbrpyj tbody, #evbppbrpyj tfoot, #evbppbrpyj tr, #evbppbrpyj td, #evbppbrpyj th {
 border-style: none;
 }
-#uirpkvbbsn p {
+#evbppbrpyj p {
 margin: 0;
 padding: 0;
 }
-#uirpkvbbsn .gt_table {
+#evbppbrpyj .gt_table {
 display: table;
 border-collapse: collapse;
 line-height: normal;
@@ -25963,11 +25963,11 @@ border-left-style: none;
 border-left-width: 2px;
 border-left-color: #D3D3D3;
 }
-#uirpkvbbsn .gt_caption {
+#evbppbrpyj .gt_caption {
 padding-top: 4px;
 padding-bottom: 4px;
 }
-#uirpkvbbsn .gt_title {
+#evbppbrpyj .gt_title {
 color: #333333;
 font-size: 125%;
 font-weight: initial;
@@ -25978,7 +25978,7 @@ padding-right: 5px;
 border-bottom-color: #FFFFFF;
 border-bottom-width: 0;
 }
-#uirpkvbbsn .gt_subtitle {
+#evbppbrpyj .gt_subtitle {
 color: #333333;
 font-size: 85%;
 font-weight: initial;
@@ -25989,7 +25989,7 @@ padding-right: 5px;
 border-top-color: #FFFFFF;
 border-top-width: 0;
 }
-#uirpkvbbsn .gt_heading {
+#evbppbrpyj .gt_heading {
 background-color: #FFFFFF;
 text-align: center;
 border-bottom-color: #FFFFFF;
@@ -26000,12 +26000,12 @@ border-right-style: none;
 border-right-width: 1px;
 border-right-color: #D3D3D3;
 }
-#uirpkvbbsn .gt_bottom_border {
+#evbppbrpyj .gt_bottom_border {
 border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 }
-#uirpkvbbsn .gt_col_headings {
+#evbppbrpyj .gt_col_headings {
 border-top-style: solid;
 border-top-width: 2px;
 border-top-color: #D3D3D3;
@@ -26019,7 +26019,7 @@ border-right-style: none;
 border-right-width: 1px;
 border-right-color: #D3D3D3;
 }
-#uirpkvbbsn .gt_col_heading {
+#evbppbrpyj .gt_col_heading {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -26038,7 +26038,7 @@ padding-left: 5px;
 padding-right: 5px;
 overflow-x: hidden;
 }
-#uirpkvbbsn .gt_column_spanner_outer {
+#evbppbrpyj .gt_column_spanner_outer {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -26049,13 +26049,13 @@ padding-bottom: 0;
 padding-left: 4px;
 padding-right: 4px;
 }
-#uirpkvbbsn .gt_column_spanner_outer:first-child {
+#evbppbrpyj .gt_column_spanner_outer:first-child {
 padding-left: 0;
 }
-#uirpkvbbsn .gt_column_spanner_outer:last-child {
+#evbppbrpyj .gt_column_spanner_outer:last-child {
 padding-right: 0;
 }
-#uirpkvbbsn .gt_column_spanner {
+#evbppbrpyj .gt_column_spanner {
 border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
@@ -26066,10 +26066,10 @@ overflow-x: hidden;
 display: inline-block;
 width: 100%;
 }
-#uirpkvbbsn .gt_spanner_row {
+#evbppbrpyj .gt_spanner_row {
 border-bottom-style: hidden;
 }
-#uirpkvbbsn .gt_group_heading {
+#evbppbrpyj .gt_group_heading {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -26094,7 +26094,7 @@ border-right-color: #D3D3D3;
 vertical-align: middle;
 text-align: left;
 }
-#uirpkvbbsn .gt_empty_group_heading {
+#evbppbrpyj .gt_empty_group_heading {
 padding: 0.5px;
 color: #333333;
 background-color: #FFFFFF;
@@ -26108,13 +26108,13 @@ border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 vertical-align: middle;
 }
-#uirpkvbbsn .gt_from_md > :first-child {
+#evbppbrpyj .gt_from_md > :first-child {
 margin-top: 0;
 }
-#uirpkvbbsn .gt_from_md > :last-child {
+#evbppbrpyj .gt_from_md > :last-child {
 margin-bottom: 0;
 }
-#uirpkvbbsn .gt_row {
+#evbppbrpyj .gt_row {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -26132,7 +26132,7 @@ border-right-color: #D3D3D3;
 vertical-align: middle;
 overflow-x: hidden;
 }
-#uirpkvbbsn .gt_stub {
+#evbppbrpyj .gt_stub {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -26144,7 +26144,7 @@ border-right-color: #D3D3D3;
 padding-left: 5px;
 padding-right: 5px;
 }
-#uirpkvbbsn .gt_stub_row_group {
+#evbppbrpyj .gt_stub_row_group {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -26157,13 +26157,13 @@ padding-left: 5px;
 padding-right: 5px;
 vertical-align: top;
 }
-#uirpkvbbsn .gt_row_group_first td {
+#evbppbrpyj .gt_row_group_first td {
 border-top-width: 2px;
 }
-#uirpkvbbsn .gt_row_group_first th {
+#evbppbrpyj .gt_row_group_first th {
 border-top-width: 2px;
 }
-#uirpkvbbsn .gt_summary_row {
+#evbppbrpyj .gt_summary_row {
 color: #333333;
 background-color: #FFFFFF;
 text-transform: inherit;
@@ -26172,14 +26172,14 @@ padding-bottom: 8px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#uirpkvbbsn .gt_first_summary_row {
+#evbppbrpyj .gt_first_summary_row {
 border-top-style: solid;
 border-top-color: #D3D3D3;
 }
-#uirpkvbbsn .gt_first_summary_row.thick {
+#evbppbrpyj .gt_first_summary_row.thick {
 border-top-width: 2px;
 }
-#uirpkvbbsn .gt_last_summary_row {
+#evbppbrpyj .gt_last_summary_row {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -26188,7 +26188,7 @@ border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 }
-#uirpkvbbsn .gt_grand_summary_row {
+#evbppbrpyj .gt_grand_summary_row {
 color: #333333;
 background-color: #FFFFFF;
 text-transform: inherit;
@@ -26197,7 +26197,7 @@ padding-bottom: 8px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#uirpkvbbsn .gt_first_grand_summary_row {
+#evbppbrpyj .gt_first_grand_summary_row {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -26206,7 +26206,7 @@ border-top-style: double;
 border-top-width: 6px;
 border-top-color: #D3D3D3;
 }
-#uirpkvbbsn .gt_last_grand_summary_row_top {
+#evbppbrpyj .gt_last_grand_summary_row_top {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -26215,10 +26215,10 @@ border-bottom-style: double;
 border-bottom-width: 6px;
 border-bottom-color: #D3D3D3;
 }
-#uirpkvbbsn .gt_striped {
+#evbppbrpyj .gt_striped {
 background-color: rgba(128, 128, 128, 0.05);
 }
-#uirpkvbbsn .gt_table_body {
+#evbppbrpyj .gt_table_body {
 border-top-style: solid;
 border-top-width: 2px;
 border-top-color: #D3D3D3;
@@ -26226,7 +26226,7 @@ border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 }
-#uirpkvbbsn .gt_footnotes {
+#evbppbrpyj .gt_footnotes {
 color: #333333;
 background-color: #FFFFFF;
 border-bottom-style: none;
@@ -26239,7 +26239,7 @@ border-right-style: none;
 border-right-width: 2px;
 border-right-color: #D3D3D3;
 }
-#uirpkvbbsn .gt_footnote {
+#evbppbrpyj .gt_footnote {
 margin: 0px;
 font-size: 90%;
 padding-top: 4px;
@@ -26247,7 +26247,7 @@ padding-bottom: 4px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#uirpkvbbsn .gt_sourcenotes {
+#evbppbrpyj .gt_sourcenotes {
 color: #333333;
 background-color: #FFFFFF;
 border-bottom-style: none;
@@ -26260,64 +26260,64 @@ border-right-style: none;
 border-right-width: 2px;
 border-right-color: #D3D3D3;
 }
-#uirpkvbbsn .gt_sourcenote {
+#evbppbrpyj .gt_sourcenote {
 font-size: 90%;
 padding-top: 4px;
 padding-bottom: 4px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#uirpkvbbsn .gt_left {
+#evbppbrpyj .gt_left {
 text-align: left;
 }
-#uirpkvbbsn .gt_center {
+#evbppbrpyj .gt_center {
 text-align: center;
 }
-#uirpkvbbsn .gt_right {
+#evbppbrpyj .gt_right {
 text-align: right;
 font-variant-numeric: tabular-nums;
 }
-#uirpkvbbsn .gt_font_normal {
+#evbppbrpyj .gt_font_normal {
 font-weight: normal;
 }
-#uirpkvbbsn .gt_font_bold {
+#evbppbrpyj .gt_font_bold {
 font-weight: bold;
 }
-#uirpkvbbsn .gt_font_italic {
+#evbppbrpyj .gt_font_italic {
 font-style: italic;
 }
-#uirpkvbbsn .gt_super {
+#evbppbrpyj .gt_super {
 font-size: 65%;
 }
-#uirpkvbbsn .gt_footnote_marks {
+#evbppbrpyj .gt_footnote_marks {
 font-size: 75%;
 vertical-align: 0.4em;
 position: initial;
 }
-#uirpkvbbsn .gt_asterisk {
+#evbppbrpyj .gt_asterisk {
 font-size: 100%;
 vertical-align: 0;
 }
-#uirpkvbbsn .gt_indent_1 {
+#evbppbrpyj .gt_indent_1 {
 text-indent: 5px;
 }
-#uirpkvbbsn .gt_indent_2 {
+#evbppbrpyj .gt_indent_2 {
 text-indent: 10px;
 }
-#uirpkvbbsn .gt_indent_3 {
+#evbppbrpyj .gt_indent_3 {
 text-indent: 15px;
 }
-#uirpkvbbsn .gt_indent_4 {
+#evbppbrpyj .gt_indent_4 {
 text-indent: 20px;
 }
-#uirpkvbbsn .gt_indent_5 {
+#evbppbrpyj .gt_indent_5 {
 text-indent: 25px;
 }
-#uirpkvbbsn .katex-display {
+#evbppbrpyj .katex-display {
 display: inline-flex !important;
 margin-bottom: 0.75em !important;
 }
-#uirpkvbbsn div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#evbppbrpyj div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
 height: 0px !important;
 }
 </style>
@@ -26392,36 +26392,36 @@ N = 102<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
 </div>
 </div></div>
 </section>
-<section id="section-10" class="slide level2">
-<h2></h2>
+<section id="section-10" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title"></h2>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15" data-code-line-numbers="1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href></a><span class="fu">library</span>(gtsummary)</span>
-<span id="cb15-2"><a href></a></span>
-<span id="cb15-3"><a href></a><span class="co"># Use the built-in &#39;trial&#39; clinical dataset</span></span>
-<span id="cb15-4"><a href></a>gtsummary<span class="sc">::</span>trial <span class="sc">|&gt;</span></span>
-<span id="cb15-5"><a href></a>  <span class="fu">select</span>(trt, age, grade, response) <span class="sc">|&gt;</span></span>
-<span id="cb15-6"><a href></a>  <span class="co"># Create the summary table</span></span>
-<span id="cb15-7"><a href></a>  <span class="fu">tbl_summary</span>(</span>
-<span id="cb15-8"><a href></a>    <span class="at">by =</span> trt, <span class="co"># Split by treatment group</span></span>
-<span id="cb15-9"><a href></a>    <span class="at">statistic =</span> <span class="fu">list</span>(<span class="fu">all_continuous</span>() <span class="sc">~</span> <span class="st">&quot;{mean} ({sd})&quot;</span>)</span>
-<span id="cb15-10"><a href></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15" data-code-line-numbers="1"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb15-1" class="hljs-ln-code"><a href></a><span class="fu">library</span>(gtsummary)</span>
+<span id="cb15-2" class="hljs-ln-code"><a href></a></span>
+<span id="cb15-3" class="hljs-ln-code"><a href></a><span class="co"># Use the built-in &#39;trial&#39; clinical dataset</span></span>
+<span id="cb15-4" class="hljs-ln-code"><a href></a>gtsummary<span class="sc">::</span>trial <span class="sc">|&gt;</span></span>
+<span id="cb15-5" class="hljs-ln-code"><a href></a>  <span class="fu">select</span>(trt, age, grade, response) <span class="sc">|&gt;</span></span>
+<span id="cb15-6" class="hljs-ln-code"><a href></a>  <span class="co"># Create the summary table</span></span>
+<span id="cb15-7" class="hljs-ln-code"><a href></a>  <span class="fu">tbl_summary</span>(</span>
+<span id="cb15-8" class="hljs-ln-code"><a href></a>    <span class="at">by =</span> trt, <span class="co"># Split by treatment group</span></span>
+<span id="cb15-9" class="hljs-ln-code"><a href></a>    <span class="at">statistic =</span> <span class="fu">list</span>(<span class="fu">all_continuous</span>() <span class="sc">~</span> <span class="st">&quot;{mean} ({sd})&quot;</span>)</span>
+<span id="cb15-10" class="hljs-ln-code"><a href></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column">
 <div class="cell-output-display">
-<div id="lpysyrkloc" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#lpysyrkloc table {
+<div id="vvhtmxtaqx" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#vvhtmxtaqx table {
 font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 -webkit-font-smoothing: antialiased;
 -moz-osx-font-smoothing: grayscale;
 }
-#lpysyrkloc thead, #lpysyrkloc tbody, #lpysyrkloc tfoot, #lpysyrkloc tr, #lpysyrkloc td, #lpysyrkloc th {
+#vvhtmxtaqx thead, #vvhtmxtaqx tbody, #vvhtmxtaqx tfoot, #vvhtmxtaqx tr, #vvhtmxtaqx td, #vvhtmxtaqx th {
 border-style: none;
 }
-#lpysyrkloc p {
+#vvhtmxtaqx p {
 margin: 0;
 padding: 0;
 }
-#lpysyrkloc .gt_table {
+#vvhtmxtaqx .gt_table {
 display: table;
 border-collapse: collapse;
 line-height: normal;
@@ -26446,11 +26446,11 @@ border-left-style: none;
 border-left-width: 2px;
 border-left-color: #D3D3D3;
 }
-#lpysyrkloc .gt_caption {
+#vvhtmxtaqx .gt_caption {
 padding-top: 4px;
 padding-bottom: 4px;
 }
-#lpysyrkloc .gt_title {
+#vvhtmxtaqx .gt_title {
 color: #333333;
 font-size: 125%;
 font-weight: initial;
@@ -26461,7 +26461,7 @@ padding-right: 5px;
 border-bottom-color: #FFFFFF;
 border-bottom-width: 0;
 }
-#lpysyrkloc .gt_subtitle {
+#vvhtmxtaqx .gt_subtitle {
 color: #333333;
 font-size: 85%;
 font-weight: initial;
@@ -26472,7 +26472,7 @@ padding-right: 5px;
 border-top-color: #FFFFFF;
 border-top-width: 0;
 }
-#lpysyrkloc .gt_heading {
+#vvhtmxtaqx .gt_heading {
 background-color: #FFFFFF;
 text-align: center;
 border-bottom-color: #FFFFFF;
@@ -26483,12 +26483,12 @@ border-right-style: none;
 border-right-width: 1px;
 border-right-color: #D3D3D3;
 }
-#lpysyrkloc .gt_bottom_border {
+#vvhtmxtaqx .gt_bottom_border {
 border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 }
-#lpysyrkloc .gt_col_headings {
+#vvhtmxtaqx .gt_col_headings {
 border-top-style: solid;
 border-top-width: 2px;
 border-top-color: #D3D3D3;
@@ -26502,7 +26502,7 @@ border-right-style: none;
 border-right-width: 1px;
 border-right-color: #D3D3D3;
 }
-#lpysyrkloc .gt_col_heading {
+#vvhtmxtaqx .gt_col_heading {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -26521,7 +26521,7 @@ padding-left: 5px;
 padding-right: 5px;
 overflow-x: hidden;
 }
-#lpysyrkloc .gt_column_spanner_outer {
+#vvhtmxtaqx .gt_column_spanner_outer {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -26532,13 +26532,13 @@ padding-bottom: 0;
 padding-left: 4px;
 padding-right: 4px;
 }
-#lpysyrkloc .gt_column_spanner_outer:first-child {
+#vvhtmxtaqx .gt_column_spanner_outer:first-child {
 padding-left: 0;
 }
-#lpysyrkloc .gt_column_spanner_outer:last-child {
+#vvhtmxtaqx .gt_column_spanner_outer:last-child {
 padding-right: 0;
 }
-#lpysyrkloc .gt_column_spanner {
+#vvhtmxtaqx .gt_column_spanner {
 border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
@@ -26549,10 +26549,10 @@ overflow-x: hidden;
 display: inline-block;
 width: 100%;
 }
-#lpysyrkloc .gt_spanner_row {
+#vvhtmxtaqx .gt_spanner_row {
 border-bottom-style: hidden;
 }
-#lpysyrkloc .gt_group_heading {
+#vvhtmxtaqx .gt_group_heading {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -26577,7 +26577,7 @@ border-right-color: #D3D3D3;
 vertical-align: middle;
 text-align: left;
 }
-#lpysyrkloc .gt_empty_group_heading {
+#vvhtmxtaqx .gt_empty_group_heading {
 padding: 0.5px;
 color: #333333;
 background-color: #FFFFFF;
@@ -26591,13 +26591,13 @@ border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 vertical-align: middle;
 }
-#lpysyrkloc .gt_from_md > :first-child {
+#vvhtmxtaqx .gt_from_md > :first-child {
 margin-top: 0;
 }
-#lpysyrkloc .gt_from_md > :last-child {
+#vvhtmxtaqx .gt_from_md > :last-child {
 margin-bottom: 0;
 }
-#lpysyrkloc .gt_row {
+#vvhtmxtaqx .gt_row {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -26615,7 +26615,7 @@ border-right-color: #D3D3D3;
 vertical-align: middle;
 overflow-x: hidden;
 }
-#lpysyrkloc .gt_stub {
+#vvhtmxtaqx .gt_stub {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -26627,7 +26627,7 @@ border-right-color: #D3D3D3;
 padding-left: 5px;
 padding-right: 5px;
 }
-#lpysyrkloc .gt_stub_row_group {
+#vvhtmxtaqx .gt_stub_row_group {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -26640,13 +26640,13 @@ padding-left: 5px;
 padding-right: 5px;
 vertical-align: top;
 }
-#lpysyrkloc .gt_row_group_first td {
+#vvhtmxtaqx .gt_row_group_first td {
 border-top-width: 2px;
 }
-#lpysyrkloc .gt_row_group_first th {
+#vvhtmxtaqx .gt_row_group_first th {
 border-top-width: 2px;
 }
-#lpysyrkloc .gt_summary_row {
+#vvhtmxtaqx .gt_summary_row {
 color: #333333;
 background-color: #FFFFFF;
 text-transform: inherit;
@@ -26655,14 +26655,14 @@ padding-bottom: 8px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#lpysyrkloc .gt_first_summary_row {
+#vvhtmxtaqx .gt_first_summary_row {
 border-top-style: solid;
 border-top-color: #D3D3D3;
 }
-#lpysyrkloc .gt_first_summary_row.thick {
+#vvhtmxtaqx .gt_first_summary_row.thick {
 border-top-width: 2px;
 }
-#lpysyrkloc .gt_last_summary_row {
+#vvhtmxtaqx .gt_last_summary_row {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -26671,7 +26671,7 @@ border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 }
-#lpysyrkloc .gt_grand_summary_row {
+#vvhtmxtaqx .gt_grand_summary_row {
 color: #333333;
 background-color: #FFFFFF;
 text-transform: inherit;
@@ -26680,7 +26680,7 @@ padding-bottom: 8px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#lpysyrkloc .gt_first_grand_summary_row {
+#vvhtmxtaqx .gt_first_grand_summary_row {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -26689,7 +26689,7 @@ border-top-style: double;
 border-top-width: 6px;
 border-top-color: #D3D3D3;
 }
-#lpysyrkloc .gt_last_grand_summary_row_top {
+#vvhtmxtaqx .gt_last_grand_summary_row_top {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -26698,10 +26698,10 @@ border-bottom-style: double;
 border-bottom-width: 6px;
 border-bottom-color: #D3D3D3;
 }
-#lpysyrkloc .gt_striped {
+#vvhtmxtaqx .gt_striped {
 background-color: rgba(128, 128, 128, 0.05);
 }
-#lpysyrkloc .gt_table_body {
+#vvhtmxtaqx .gt_table_body {
 border-top-style: solid;
 border-top-width: 2px;
 border-top-color: #D3D3D3;
@@ -26709,7 +26709,7 @@ border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 }
-#lpysyrkloc .gt_footnotes {
+#vvhtmxtaqx .gt_footnotes {
 color: #333333;
 background-color: #FFFFFF;
 border-bottom-style: none;
@@ -26722,7 +26722,7 @@ border-right-style: none;
 border-right-width: 2px;
 border-right-color: #D3D3D3;
 }
-#lpysyrkloc .gt_footnote {
+#vvhtmxtaqx .gt_footnote {
 margin: 0px;
 font-size: 90%;
 padding-top: 4px;
@@ -26730,7 +26730,7 @@ padding-bottom: 4px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#lpysyrkloc .gt_sourcenotes {
+#vvhtmxtaqx .gt_sourcenotes {
 color: #333333;
 background-color: #FFFFFF;
 border-bottom-style: none;
@@ -26743,64 +26743,64 @@ border-right-style: none;
 border-right-width: 2px;
 border-right-color: #D3D3D3;
 }
-#lpysyrkloc .gt_sourcenote {
+#vvhtmxtaqx .gt_sourcenote {
 font-size: 90%;
 padding-top: 4px;
 padding-bottom: 4px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#lpysyrkloc .gt_left {
+#vvhtmxtaqx .gt_left {
 text-align: left;
 }
-#lpysyrkloc .gt_center {
+#vvhtmxtaqx .gt_center {
 text-align: center;
 }
-#lpysyrkloc .gt_right {
+#vvhtmxtaqx .gt_right {
 text-align: right;
 font-variant-numeric: tabular-nums;
 }
-#lpysyrkloc .gt_font_normal {
+#vvhtmxtaqx .gt_font_normal {
 font-weight: normal;
 }
-#lpysyrkloc .gt_font_bold {
+#vvhtmxtaqx .gt_font_bold {
 font-weight: bold;
 }
-#lpysyrkloc .gt_font_italic {
+#vvhtmxtaqx .gt_font_italic {
 font-style: italic;
 }
-#lpysyrkloc .gt_super {
+#vvhtmxtaqx .gt_super {
 font-size: 65%;
 }
-#lpysyrkloc .gt_footnote_marks {
+#vvhtmxtaqx .gt_footnote_marks {
 font-size: 75%;
 vertical-align: 0.4em;
 position: initial;
 }
-#lpysyrkloc .gt_asterisk {
+#vvhtmxtaqx .gt_asterisk {
 font-size: 100%;
 vertical-align: 0;
 }
-#lpysyrkloc .gt_indent_1 {
+#vvhtmxtaqx .gt_indent_1 {
 text-indent: 5px;
 }
-#lpysyrkloc .gt_indent_2 {
+#vvhtmxtaqx .gt_indent_2 {
 text-indent: 10px;
 }
-#lpysyrkloc .gt_indent_3 {
+#vvhtmxtaqx .gt_indent_3 {
 text-indent: 15px;
 }
-#lpysyrkloc .gt_indent_4 {
+#vvhtmxtaqx .gt_indent_4 {
 text-indent: 20px;
 }
-#lpysyrkloc .gt_indent_5 {
+#vvhtmxtaqx .gt_indent_5 {
 text-indent: 25px;
 }
-#lpysyrkloc .katex-display {
+#vvhtmxtaqx .katex-display {
 display: inline-flex !important;
 margin-bottom: 0.75em !important;
 }
-#lpysyrkloc div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#vvhtmxtaqx div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
 height: 0px !important;
 }
 </style>
@@ -26875,38 +26875,38 @@ N = 102<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
 </div>
 </div></div>
 </section>
-<section id="section-11" class="slide level2">
-<h2></h2>
+<section id="section-11" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title"></h2>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16" data-code-line-numbers="1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href></a><span class="fu">library</span>(gtsummary)</span>
-<span id="cb16-2"><a href></a></span>
-<span id="cb16-3"><a href></a><span class="co"># Use the built-in &#39;trial&#39; clinical dataset</span></span>
-<span id="cb16-4"><a href></a>gtsummary<span class="sc">::</span>trial <span class="sc">|&gt;</span></span>
-<span id="cb16-5"><a href></a>  <span class="fu">select</span>(trt, age, grade, response) <span class="sc">|&gt;</span></span>
-<span id="cb16-6"><a href></a>  <span class="co"># Create the summary table</span></span>
-<span id="cb16-7"><a href></a>  <span class="fu">tbl_summary</span>(</span>
-<span id="cb16-8"><a href></a>    <span class="at">by =</span> trt, <span class="co"># Split by treatment group</span></span>
-<span id="cb16-9"><a href></a>    <span class="at">statistic =</span> <span class="fu">list</span>(<span class="fu">all_continuous</span>() <span class="sc">~</span> <span class="st">&quot;{mean} ({sd})&quot;</span>)</span>
-<span id="cb16-10"><a href></a>  ) <span class="sc">|&gt;</span></span>
-<span id="cb16-11"><a href></a>  <span class="co"># Add statistical comparison (p-values)</span></span>
-<span id="cb16-12"><a href></a>  <span class="fu">add_p</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16" data-code-line-numbers="1"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb16-1" class="hljs-ln-code"><a href></a><span class="fu">library</span>(gtsummary)</span>
+<span id="cb16-2" class="hljs-ln-code"><a href></a></span>
+<span id="cb16-3" class="hljs-ln-code"><a href></a><span class="co"># Use the built-in &#39;trial&#39; clinical dataset</span></span>
+<span id="cb16-4" class="hljs-ln-code"><a href></a>gtsummary<span class="sc">::</span>trial <span class="sc">|&gt;</span></span>
+<span id="cb16-5" class="hljs-ln-code"><a href></a>  <span class="fu">select</span>(trt, age, grade, response) <span class="sc">|&gt;</span></span>
+<span id="cb16-6" class="hljs-ln-code"><a href></a>  <span class="co"># Create the summary table</span></span>
+<span id="cb16-7" class="hljs-ln-code"><a href></a>  <span class="fu">tbl_summary</span>(</span>
+<span id="cb16-8" class="hljs-ln-code"><a href></a>    <span class="at">by =</span> trt, <span class="co"># Split by treatment group</span></span>
+<span id="cb16-9" class="hljs-ln-code"><a href></a>    <span class="at">statistic =</span> <span class="fu">list</span>(<span class="fu">all_continuous</span>() <span class="sc">~</span> <span class="st">&quot;{mean} ({sd})&quot;</span>)</span>
+<span id="cb16-10" class="hljs-ln-code"><a href></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb16-11" class="hljs-ln-code"><a href></a>  <span class="co"># Add statistical comparison (p-values)</span></span>
+<span id="cb16-12" class="hljs-ln-code"><a href></a>  <span class="fu">add_p</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column">
 <div class="cell-output-display">
-<div id="fsrbtxevwe" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#fsrbtxevwe table {
+<div id="oywogqeqfb" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#oywogqeqfb table {
 font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 -webkit-font-smoothing: antialiased;
 -moz-osx-font-smoothing: grayscale;
 }
-#fsrbtxevwe thead, #fsrbtxevwe tbody, #fsrbtxevwe tfoot, #fsrbtxevwe tr, #fsrbtxevwe td, #fsrbtxevwe th {
+#oywogqeqfb thead, #oywogqeqfb tbody, #oywogqeqfb tfoot, #oywogqeqfb tr, #oywogqeqfb td, #oywogqeqfb th {
 border-style: none;
 }
-#fsrbtxevwe p {
+#oywogqeqfb p {
 margin: 0;
 padding: 0;
 }
-#fsrbtxevwe .gt_table {
+#oywogqeqfb .gt_table {
 display: table;
 border-collapse: collapse;
 line-height: normal;
@@ -26931,11 +26931,11 @@ border-left-style: none;
 border-left-width: 2px;
 border-left-color: #D3D3D3;
 }
-#fsrbtxevwe .gt_caption {
+#oywogqeqfb .gt_caption {
 padding-top: 4px;
 padding-bottom: 4px;
 }
-#fsrbtxevwe .gt_title {
+#oywogqeqfb .gt_title {
 color: #333333;
 font-size: 125%;
 font-weight: initial;
@@ -26946,7 +26946,7 @@ padding-right: 5px;
 border-bottom-color: #FFFFFF;
 border-bottom-width: 0;
 }
-#fsrbtxevwe .gt_subtitle {
+#oywogqeqfb .gt_subtitle {
 color: #333333;
 font-size: 85%;
 font-weight: initial;
@@ -26957,7 +26957,7 @@ padding-right: 5px;
 border-top-color: #FFFFFF;
 border-top-width: 0;
 }
-#fsrbtxevwe .gt_heading {
+#oywogqeqfb .gt_heading {
 background-color: #FFFFFF;
 text-align: center;
 border-bottom-color: #FFFFFF;
@@ -26968,12 +26968,12 @@ border-right-style: none;
 border-right-width: 1px;
 border-right-color: #D3D3D3;
 }
-#fsrbtxevwe .gt_bottom_border {
+#oywogqeqfb .gt_bottom_border {
 border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 }
-#fsrbtxevwe .gt_col_headings {
+#oywogqeqfb .gt_col_headings {
 border-top-style: solid;
 border-top-width: 2px;
 border-top-color: #D3D3D3;
@@ -26987,7 +26987,7 @@ border-right-style: none;
 border-right-width: 1px;
 border-right-color: #D3D3D3;
 }
-#fsrbtxevwe .gt_col_heading {
+#oywogqeqfb .gt_col_heading {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -27006,7 +27006,7 @@ padding-left: 5px;
 padding-right: 5px;
 overflow-x: hidden;
 }
-#fsrbtxevwe .gt_column_spanner_outer {
+#oywogqeqfb .gt_column_spanner_outer {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -27017,13 +27017,13 @@ padding-bottom: 0;
 padding-left: 4px;
 padding-right: 4px;
 }
-#fsrbtxevwe .gt_column_spanner_outer:first-child {
+#oywogqeqfb .gt_column_spanner_outer:first-child {
 padding-left: 0;
 }
-#fsrbtxevwe .gt_column_spanner_outer:last-child {
+#oywogqeqfb .gt_column_spanner_outer:last-child {
 padding-right: 0;
 }
-#fsrbtxevwe .gt_column_spanner {
+#oywogqeqfb .gt_column_spanner {
 border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
@@ -27034,10 +27034,10 @@ overflow-x: hidden;
 display: inline-block;
 width: 100%;
 }
-#fsrbtxevwe .gt_spanner_row {
+#oywogqeqfb .gt_spanner_row {
 border-bottom-style: hidden;
 }
-#fsrbtxevwe .gt_group_heading {
+#oywogqeqfb .gt_group_heading {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -27062,7 +27062,7 @@ border-right-color: #D3D3D3;
 vertical-align: middle;
 text-align: left;
 }
-#fsrbtxevwe .gt_empty_group_heading {
+#oywogqeqfb .gt_empty_group_heading {
 padding: 0.5px;
 color: #333333;
 background-color: #FFFFFF;
@@ -27076,13 +27076,13 @@ border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 vertical-align: middle;
 }
-#fsrbtxevwe .gt_from_md > :first-child {
+#oywogqeqfb .gt_from_md > :first-child {
 margin-top: 0;
 }
-#fsrbtxevwe .gt_from_md > :last-child {
+#oywogqeqfb .gt_from_md > :last-child {
 margin-bottom: 0;
 }
-#fsrbtxevwe .gt_row {
+#oywogqeqfb .gt_row {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -27100,7 +27100,7 @@ border-right-color: #D3D3D3;
 vertical-align: middle;
 overflow-x: hidden;
 }
-#fsrbtxevwe .gt_stub {
+#oywogqeqfb .gt_stub {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -27112,7 +27112,7 @@ border-right-color: #D3D3D3;
 padding-left: 5px;
 padding-right: 5px;
 }
-#fsrbtxevwe .gt_stub_row_group {
+#oywogqeqfb .gt_stub_row_group {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -27125,13 +27125,13 @@ padding-left: 5px;
 padding-right: 5px;
 vertical-align: top;
 }
-#fsrbtxevwe .gt_row_group_first td {
+#oywogqeqfb .gt_row_group_first td {
 border-top-width: 2px;
 }
-#fsrbtxevwe .gt_row_group_first th {
+#oywogqeqfb .gt_row_group_first th {
 border-top-width: 2px;
 }
-#fsrbtxevwe .gt_summary_row {
+#oywogqeqfb .gt_summary_row {
 color: #333333;
 background-color: #FFFFFF;
 text-transform: inherit;
@@ -27140,14 +27140,14 @@ padding-bottom: 8px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#fsrbtxevwe .gt_first_summary_row {
+#oywogqeqfb .gt_first_summary_row {
 border-top-style: solid;
 border-top-color: #D3D3D3;
 }
-#fsrbtxevwe .gt_first_summary_row.thick {
+#oywogqeqfb .gt_first_summary_row.thick {
 border-top-width: 2px;
 }
-#fsrbtxevwe .gt_last_summary_row {
+#oywogqeqfb .gt_last_summary_row {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -27156,7 +27156,7 @@ border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 }
-#fsrbtxevwe .gt_grand_summary_row {
+#oywogqeqfb .gt_grand_summary_row {
 color: #333333;
 background-color: #FFFFFF;
 text-transform: inherit;
@@ -27165,7 +27165,7 @@ padding-bottom: 8px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#fsrbtxevwe .gt_first_grand_summary_row {
+#oywogqeqfb .gt_first_grand_summary_row {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -27174,7 +27174,7 @@ border-top-style: double;
 border-top-width: 6px;
 border-top-color: #D3D3D3;
 }
-#fsrbtxevwe .gt_last_grand_summary_row_top {
+#oywogqeqfb .gt_last_grand_summary_row_top {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -27183,10 +27183,10 @@ border-bottom-style: double;
 border-bottom-width: 6px;
 border-bottom-color: #D3D3D3;
 }
-#fsrbtxevwe .gt_striped {
+#oywogqeqfb .gt_striped {
 background-color: rgba(128, 128, 128, 0.05);
 }
-#fsrbtxevwe .gt_table_body {
+#oywogqeqfb .gt_table_body {
 border-top-style: solid;
 border-top-width: 2px;
 border-top-color: #D3D3D3;
@@ -27194,7 +27194,7 @@ border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 }
-#fsrbtxevwe .gt_footnotes {
+#oywogqeqfb .gt_footnotes {
 color: #333333;
 background-color: #FFFFFF;
 border-bottom-style: none;
@@ -27207,7 +27207,7 @@ border-right-style: none;
 border-right-width: 2px;
 border-right-color: #D3D3D3;
 }
-#fsrbtxevwe .gt_footnote {
+#oywogqeqfb .gt_footnote {
 margin: 0px;
 font-size: 90%;
 padding-top: 4px;
@@ -27215,7 +27215,7 @@ padding-bottom: 4px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#fsrbtxevwe .gt_sourcenotes {
+#oywogqeqfb .gt_sourcenotes {
 color: #333333;
 background-color: #FFFFFF;
 border-bottom-style: none;
@@ -27228,64 +27228,64 @@ border-right-style: none;
 border-right-width: 2px;
 border-right-color: #D3D3D3;
 }
-#fsrbtxevwe .gt_sourcenote {
+#oywogqeqfb .gt_sourcenote {
 font-size: 90%;
 padding-top: 4px;
 padding-bottom: 4px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#fsrbtxevwe .gt_left {
+#oywogqeqfb .gt_left {
 text-align: left;
 }
-#fsrbtxevwe .gt_center {
+#oywogqeqfb .gt_center {
 text-align: center;
 }
-#fsrbtxevwe .gt_right {
+#oywogqeqfb .gt_right {
 text-align: right;
 font-variant-numeric: tabular-nums;
 }
-#fsrbtxevwe .gt_font_normal {
+#oywogqeqfb .gt_font_normal {
 font-weight: normal;
 }
-#fsrbtxevwe .gt_font_bold {
+#oywogqeqfb .gt_font_bold {
 font-weight: bold;
 }
-#fsrbtxevwe .gt_font_italic {
+#oywogqeqfb .gt_font_italic {
 font-style: italic;
 }
-#fsrbtxevwe .gt_super {
+#oywogqeqfb .gt_super {
 font-size: 65%;
 }
-#fsrbtxevwe .gt_footnote_marks {
+#oywogqeqfb .gt_footnote_marks {
 font-size: 75%;
 vertical-align: 0.4em;
 position: initial;
 }
-#fsrbtxevwe .gt_asterisk {
+#oywogqeqfb .gt_asterisk {
 font-size: 100%;
 vertical-align: 0;
 }
-#fsrbtxevwe .gt_indent_1 {
+#oywogqeqfb .gt_indent_1 {
 text-indent: 5px;
 }
-#fsrbtxevwe .gt_indent_2 {
+#oywogqeqfb .gt_indent_2 {
 text-indent: 10px;
 }
-#fsrbtxevwe .gt_indent_3 {
+#oywogqeqfb .gt_indent_3 {
 text-indent: 15px;
 }
-#fsrbtxevwe .gt_indent_4 {
+#oywogqeqfb .gt_indent_4 {
 text-indent: 20px;
 }
-#fsrbtxevwe .gt_indent_5 {
+#oywogqeqfb .gt_indent_5 {
 text-indent: 25px;
 }
-#fsrbtxevwe .katex-display {
+#oywogqeqfb .katex-display {
 display: inline-flex !important;
 margin-bottom: 0.75em !important;
 }
-#fsrbtxevwe div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#oywogqeqfb div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
 height: 0px !important;
 }
 </style>
@@ -27378,40 +27378,40 @@ N = 102<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
 </div>
 </div></div>
 </section>
-<section id="section-12" class="slide level2">
-<h2></h2>
+<section id="section-12" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title"></h2>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17" data-code-line-numbers="1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href></a><span class="fu">library</span>(gtsummary)</span>
-<span id="cb17-2"><a href></a></span>
-<span id="cb17-3"><a href></a><span class="co"># Use the built-in &#39;trial&#39; clinical dataset</span></span>
-<span id="cb17-4"><a href></a>gtsummary<span class="sc">::</span>trial <span class="sc">|&gt;</span></span>
-<span id="cb17-5"><a href></a>  <span class="fu">select</span>(trt, age, grade, response) <span class="sc">|&gt;</span></span>
-<span id="cb17-6"><a href></a>  <span class="co"># Create the summary table</span></span>
-<span id="cb17-7"><a href></a>  <span class="fu">tbl_summary</span>(</span>
-<span id="cb17-8"><a href></a>    <span class="at">by =</span> trt, <span class="co"># Split by treatment group</span></span>
-<span id="cb17-9"><a href></a>    <span class="at">statistic =</span> <span class="fu">list</span>(<span class="fu">all_continuous</span>() <span class="sc">~</span> <span class="st">&quot;{mean} ({sd})&quot;</span>)</span>
-<span id="cb17-10"><a href></a>  ) <span class="sc">|&gt;</span></span>
-<span id="cb17-11"><a href></a>  <span class="co"># Add statistical comparison (p-values)</span></span>
-<span id="cb17-12"><a href></a>  <span class="fu">add_p</span>() <span class="sc">|&gt;</span></span>
-<span id="cb17-13"><a href></a>  <span class="co"># Add a &quot;Total&quot; column</span></span>
-<span id="cb17-14"><a href></a>  <span class="fu">add_overall</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17" data-code-line-numbers="1"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb17-1" class="hljs-ln-code"><a href></a><span class="fu">library</span>(gtsummary)</span>
+<span id="cb17-2" class="hljs-ln-code"><a href></a></span>
+<span id="cb17-3" class="hljs-ln-code"><a href></a><span class="co"># Use the built-in &#39;trial&#39; clinical dataset</span></span>
+<span id="cb17-4" class="hljs-ln-code"><a href></a>gtsummary<span class="sc">::</span>trial <span class="sc">|&gt;</span></span>
+<span id="cb17-5" class="hljs-ln-code"><a href></a>  <span class="fu">select</span>(trt, age, grade, response) <span class="sc">|&gt;</span></span>
+<span id="cb17-6" class="hljs-ln-code"><a href></a>  <span class="co"># Create the summary table</span></span>
+<span id="cb17-7" class="hljs-ln-code"><a href></a>  <span class="fu">tbl_summary</span>(</span>
+<span id="cb17-8" class="hljs-ln-code"><a href></a>    <span class="at">by =</span> trt, <span class="co"># Split by treatment group</span></span>
+<span id="cb17-9" class="hljs-ln-code"><a href></a>    <span class="at">statistic =</span> <span class="fu">list</span>(<span class="fu">all_continuous</span>() <span class="sc">~</span> <span class="st">&quot;{mean} ({sd})&quot;</span>)</span>
+<span id="cb17-10" class="hljs-ln-code"><a href></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb17-11" class="hljs-ln-code"><a href></a>  <span class="co"># Add statistical comparison (p-values)</span></span>
+<span id="cb17-12" class="hljs-ln-code"><a href></a>  <span class="fu">add_p</span>() <span class="sc">|&gt;</span></span>
+<span id="cb17-13" class="hljs-ln-code"><a href></a>  <span class="co"># Add a &quot;Total&quot; column</span></span>
+<span id="cb17-14" class="hljs-ln-code"><a href></a>  <span class="fu">add_overall</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column">
 <div class="cell-output-display">
-<div id="khogncevok" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#khogncevok table {
+<div id="ttojhoiibt" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#ttojhoiibt table {
 font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 -webkit-font-smoothing: antialiased;
 -moz-osx-font-smoothing: grayscale;
 }
-#khogncevok thead, #khogncevok tbody, #khogncevok tfoot, #khogncevok tr, #khogncevok td, #khogncevok th {
+#ttojhoiibt thead, #ttojhoiibt tbody, #ttojhoiibt tfoot, #ttojhoiibt tr, #ttojhoiibt td, #ttojhoiibt th {
 border-style: none;
 }
-#khogncevok p {
+#ttojhoiibt p {
 margin: 0;
 padding: 0;
 }
-#khogncevok .gt_table {
+#ttojhoiibt .gt_table {
 display: table;
 border-collapse: collapse;
 line-height: normal;
@@ -27436,11 +27436,11 @@ border-left-style: none;
 border-left-width: 2px;
 border-left-color: #D3D3D3;
 }
-#khogncevok .gt_caption {
+#ttojhoiibt .gt_caption {
 padding-top: 4px;
 padding-bottom: 4px;
 }
-#khogncevok .gt_title {
+#ttojhoiibt .gt_title {
 color: #333333;
 font-size: 125%;
 font-weight: initial;
@@ -27451,7 +27451,7 @@ padding-right: 5px;
 border-bottom-color: #FFFFFF;
 border-bottom-width: 0;
 }
-#khogncevok .gt_subtitle {
+#ttojhoiibt .gt_subtitle {
 color: #333333;
 font-size: 85%;
 font-weight: initial;
@@ -27462,7 +27462,7 @@ padding-right: 5px;
 border-top-color: #FFFFFF;
 border-top-width: 0;
 }
-#khogncevok .gt_heading {
+#ttojhoiibt .gt_heading {
 background-color: #FFFFFF;
 text-align: center;
 border-bottom-color: #FFFFFF;
@@ -27473,12 +27473,12 @@ border-right-style: none;
 border-right-width: 1px;
 border-right-color: #D3D3D3;
 }
-#khogncevok .gt_bottom_border {
+#ttojhoiibt .gt_bottom_border {
 border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 }
-#khogncevok .gt_col_headings {
+#ttojhoiibt .gt_col_headings {
 border-top-style: solid;
 border-top-width: 2px;
 border-top-color: #D3D3D3;
@@ -27492,7 +27492,7 @@ border-right-style: none;
 border-right-width: 1px;
 border-right-color: #D3D3D3;
 }
-#khogncevok .gt_col_heading {
+#ttojhoiibt .gt_col_heading {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -27511,7 +27511,7 @@ padding-left: 5px;
 padding-right: 5px;
 overflow-x: hidden;
 }
-#khogncevok .gt_column_spanner_outer {
+#ttojhoiibt .gt_column_spanner_outer {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -27522,13 +27522,13 @@ padding-bottom: 0;
 padding-left: 4px;
 padding-right: 4px;
 }
-#khogncevok .gt_column_spanner_outer:first-child {
+#ttojhoiibt .gt_column_spanner_outer:first-child {
 padding-left: 0;
 }
-#khogncevok .gt_column_spanner_outer:last-child {
+#ttojhoiibt .gt_column_spanner_outer:last-child {
 padding-right: 0;
 }
-#khogncevok .gt_column_spanner {
+#ttojhoiibt .gt_column_spanner {
 border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
@@ -27539,10 +27539,10 @@ overflow-x: hidden;
 display: inline-block;
 width: 100%;
 }
-#khogncevok .gt_spanner_row {
+#ttojhoiibt .gt_spanner_row {
 border-bottom-style: hidden;
 }
-#khogncevok .gt_group_heading {
+#ttojhoiibt .gt_group_heading {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -27567,7 +27567,7 @@ border-right-color: #D3D3D3;
 vertical-align: middle;
 text-align: left;
 }
-#khogncevok .gt_empty_group_heading {
+#ttojhoiibt .gt_empty_group_heading {
 padding: 0.5px;
 color: #333333;
 background-color: #FFFFFF;
@@ -27581,13 +27581,13 @@ border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 vertical-align: middle;
 }
-#khogncevok .gt_from_md > :first-child {
+#ttojhoiibt .gt_from_md > :first-child {
 margin-top: 0;
 }
-#khogncevok .gt_from_md > :last-child {
+#ttojhoiibt .gt_from_md > :last-child {
 margin-bottom: 0;
 }
-#khogncevok .gt_row {
+#ttojhoiibt .gt_row {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -27605,7 +27605,7 @@ border-right-color: #D3D3D3;
 vertical-align: middle;
 overflow-x: hidden;
 }
-#khogncevok .gt_stub {
+#ttojhoiibt .gt_stub {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -27617,7 +27617,7 @@ border-right-color: #D3D3D3;
 padding-left: 5px;
 padding-right: 5px;
 }
-#khogncevok .gt_stub_row_group {
+#ttojhoiibt .gt_stub_row_group {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -27630,13 +27630,13 @@ padding-left: 5px;
 padding-right: 5px;
 vertical-align: top;
 }
-#khogncevok .gt_row_group_first td {
+#ttojhoiibt .gt_row_group_first td {
 border-top-width: 2px;
 }
-#khogncevok .gt_row_group_first th {
+#ttojhoiibt .gt_row_group_first th {
 border-top-width: 2px;
 }
-#khogncevok .gt_summary_row {
+#ttojhoiibt .gt_summary_row {
 color: #333333;
 background-color: #FFFFFF;
 text-transform: inherit;
@@ -27645,14 +27645,14 @@ padding-bottom: 8px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#khogncevok .gt_first_summary_row {
+#ttojhoiibt .gt_first_summary_row {
 border-top-style: solid;
 border-top-color: #D3D3D3;
 }
-#khogncevok .gt_first_summary_row.thick {
+#ttojhoiibt .gt_first_summary_row.thick {
 border-top-width: 2px;
 }
-#khogncevok .gt_last_summary_row {
+#ttojhoiibt .gt_last_summary_row {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -27661,7 +27661,7 @@ border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 }
-#khogncevok .gt_grand_summary_row {
+#ttojhoiibt .gt_grand_summary_row {
 color: #333333;
 background-color: #FFFFFF;
 text-transform: inherit;
@@ -27670,7 +27670,7 @@ padding-bottom: 8px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#khogncevok .gt_first_grand_summary_row {
+#ttojhoiibt .gt_first_grand_summary_row {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -27679,7 +27679,7 @@ border-top-style: double;
 border-top-width: 6px;
 border-top-color: #D3D3D3;
 }
-#khogncevok .gt_last_grand_summary_row_top {
+#ttojhoiibt .gt_last_grand_summary_row_top {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -27688,10 +27688,10 @@ border-bottom-style: double;
 border-bottom-width: 6px;
 border-bottom-color: #D3D3D3;
 }
-#khogncevok .gt_striped {
+#ttojhoiibt .gt_striped {
 background-color: rgba(128, 128, 128, 0.05);
 }
-#khogncevok .gt_table_body {
+#ttojhoiibt .gt_table_body {
 border-top-style: solid;
 border-top-width: 2px;
 border-top-color: #D3D3D3;
@@ -27699,7 +27699,7 @@ border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 }
-#khogncevok .gt_footnotes {
+#ttojhoiibt .gt_footnotes {
 color: #333333;
 background-color: #FFFFFF;
 border-bottom-style: none;
@@ -27712,7 +27712,7 @@ border-right-style: none;
 border-right-width: 2px;
 border-right-color: #D3D3D3;
 }
-#khogncevok .gt_footnote {
+#ttojhoiibt .gt_footnote {
 margin: 0px;
 font-size: 90%;
 padding-top: 4px;
@@ -27720,7 +27720,7 @@ padding-bottom: 4px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#khogncevok .gt_sourcenotes {
+#ttojhoiibt .gt_sourcenotes {
 color: #333333;
 background-color: #FFFFFF;
 border-bottom-style: none;
@@ -27733,64 +27733,64 @@ border-right-style: none;
 border-right-width: 2px;
 border-right-color: #D3D3D3;
 }
-#khogncevok .gt_sourcenote {
+#ttojhoiibt .gt_sourcenote {
 font-size: 90%;
 padding-top: 4px;
 padding-bottom: 4px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#khogncevok .gt_left {
+#ttojhoiibt .gt_left {
 text-align: left;
 }
-#khogncevok .gt_center {
+#ttojhoiibt .gt_center {
 text-align: center;
 }
-#khogncevok .gt_right {
+#ttojhoiibt .gt_right {
 text-align: right;
 font-variant-numeric: tabular-nums;
 }
-#khogncevok .gt_font_normal {
+#ttojhoiibt .gt_font_normal {
 font-weight: normal;
 }
-#khogncevok .gt_font_bold {
+#ttojhoiibt .gt_font_bold {
 font-weight: bold;
 }
-#khogncevok .gt_font_italic {
+#ttojhoiibt .gt_font_italic {
 font-style: italic;
 }
-#khogncevok .gt_super {
+#ttojhoiibt .gt_super {
 font-size: 65%;
 }
-#khogncevok .gt_footnote_marks {
+#ttojhoiibt .gt_footnote_marks {
 font-size: 75%;
 vertical-align: 0.4em;
 position: initial;
 }
-#khogncevok .gt_asterisk {
+#ttojhoiibt .gt_asterisk {
 font-size: 100%;
 vertical-align: 0;
 }
-#khogncevok .gt_indent_1 {
+#ttojhoiibt .gt_indent_1 {
 text-indent: 5px;
 }
-#khogncevok .gt_indent_2 {
+#ttojhoiibt .gt_indent_2 {
 text-indent: 10px;
 }
-#khogncevok .gt_indent_3 {
+#ttojhoiibt .gt_indent_3 {
 text-indent: 15px;
 }
-#khogncevok .gt_indent_4 {
+#ttojhoiibt .gt_indent_4 {
 text-indent: 20px;
 }
-#khogncevok .gt_indent_5 {
+#ttojhoiibt .gt_indent_5 {
 text-indent: 25px;
 }
-#khogncevok .katex-display {
+#ttojhoiibt .katex-display {
 display: inline-flex !important;
 margin-bottom: 0.75em !important;
 }
-#khogncevok div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#ttojhoiibt div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
 height: 0px !important;
 }
 </style>
@@ -27895,48 +27895,48 @@ N = 102<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
 </div>
 </div></div>
 </section>
-<section id="section-13" class="slide level2">
-<h2></h2>
+<section id="section-13" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title"></h2>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18" data-code-line-numbers="1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href></a><span class="fu">library</span>(gtsummary)</span>
-<span id="cb18-2"><a href></a></span>
-<span id="cb18-3"><a href></a><span class="co"># Use the built-in &#39;trial&#39; clinical dataset</span></span>
-<span id="cb18-4"><a href></a>gtsummary<span class="sc">::</span>trial <span class="sc">|&gt;</span></span>
-<span id="cb18-5"><a href></a>  <span class="fu">select</span>(trt, age, grade, response) <span class="sc">|&gt;</span></span>
-<span id="cb18-6"><a href></a>  <span class="co"># Create the summary table</span></span>
-<span id="cb18-7"><a href></a>  <span class="fu">tbl_summary</span>(</span>
-<span id="cb18-8"><a href></a>    <span class="at">by =</span> trt, <span class="co"># Split by treatment group</span></span>
-<span id="cb18-9"><a href></a>    <span class="at">label =</span> <span class="fu">list</span>(</span>
-<span id="cb18-10"><a href></a>      age <span class="sc">~</span> <span class="st">&quot;Patient Age&quot;</span>,</span>
-<span id="cb18-11"><a href></a>      grade <span class="sc">~</span> <span class="st">&quot;Tumor Grade&quot;</span>,</span>
-<span id="cb18-12"><a href></a>      response <span class="sc">~</span> <span class="st">&quot;Treatment Response&quot;</span></span>
-<span id="cb18-13"><a href></a>    ),</span>
-<span id="cb18-14"><a href></a>    <span class="at">statistic =</span> <span class="fu">list</span>(<span class="fu">all_continuous</span>() <span class="sc">~</span> <span class="st">&quot;{mean} ({sd})&quot;</span>)</span>
-<span id="cb18-15"><a href></a>  ) <span class="sc">|&gt;</span></span>
-<span id="cb18-16"><a href></a>  <span class="co"># Add statistical comparison (p-values)</span></span>
-<span id="cb18-17"><a href></a>  <span class="fu">add_p</span>() <span class="sc">|&gt;</span></span>
-<span id="cb18-18"><a href></a>  <span class="co"># Add a &quot;Total&quot; column</span></span>
-<span id="cb18-19"><a href></a>  <span class="fu">add_overall</span>() <span class="sc">|&gt;</span></span>
-<span id="cb18-20"><a href></a>  <span class="co"># Make it look professional</span></span>
-<span id="cb18-21"><a href></a>  <span class="fu">bold_labels</span>() <span class="sc">|&gt;</span></span>
-<span id="cb18-22"><a href></a>  <span class="fu">modify_header</span>(<span class="at">label =</span> <span class="st">&quot;**Variable**&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18" data-code-line-numbers="1"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb18-1" class="hljs-ln-code"><a href></a><span class="fu">library</span>(gtsummary)</span>
+<span id="cb18-2" class="hljs-ln-code"><a href></a></span>
+<span id="cb18-3" class="hljs-ln-code"><a href></a><span class="co"># Use the built-in &#39;trial&#39; clinical dataset</span></span>
+<span id="cb18-4" class="hljs-ln-code"><a href></a>gtsummary<span class="sc">::</span>trial <span class="sc">|&gt;</span></span>
+<span id="cb18-5" class="hljs-ln-code"><a href></a>  <span class="fu">select</span>(trt, age, grade, response) <span class="sc">|&gt;</span></span>
+<span id="cb18-6" class="hljs-ln-code"><a href></a>  <span class="co"># Create the summary table</span></span>
+<span id="cb18-7" class="hljs-ln-code"><a href></a>  <span class="fu">tbl_summary</span>(</span>
+<span id="cb18-8" class="hljs-ln-code"><a href></a>    <span class="at">by =</span> trt, <span class="co"># Split by treatment group</span></span>
+<span id="cb18-9" class="hljs-ln-code"><a href></a>    <span class="at">label =</span> <span class="fu">list</span>(</span>
+<span id="cb18-10" class="hljs-ln-code"><a href></a>      age <span class="sc">~</span> <span class="st">&quot;Patient Age&quot;</span>,</span>
+<span id="cb18-11" class="hljs-ln-code"><a href></a>      grade <span class="sc">~</span> <span class="st">&quot;Tumor Grade&quot;</span>,</span>
+<span id="cb18-12" class="hljs-ln-code"><a href></a>      response <span class="sc">~</span> <span class="st">&quot;Treatment Response&quot;</span></span>
+<span id="cb18-13" class="hljs-ln-code"><a href></a>    ),</span>
+<span id="cb18-14" class="hljs-ln-code"><a href></a>    <span class="at">statistic =</span> <span class="fu">list</span>(<span class="fu">all_continuous</span>() <span class="sc">~</span> <span class="st">&quot;{mean} ({sd})&quot;</span>)</span>
+<span id="cb18-15" class="hljs-ln-code"><a href></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb18-16" class="hljs-ln-code"><a href></a>  <span class="co"># Add statistical comparison (p-values)</span></span>
+<span id="cb18-17" class="hljs-ln-code"><a href></a>  <span class="fu">add_p</span>() <span class="sc">|&gt;</span></span>
+<span id="cb18-18" class="hljs-ln-code"><a href></a>  <span class="co"># Add a &quot;Total&quot; column</span></span>
+<span id="cb18-19" class="hljs-ln-code"><a href></a>  <span class="fu">add_overall</span>() <span class="sc">|&gt;</span></span>
+<span id="cb18-20" class="hljs-ln-code"><a href></a>  <span class="co"># Make it look professional</span></span>
+<span id="cb18-21" class="hljs-ln-code"><a href></a>  <span class="fu">bold_labels</span>() <span class="sc">|&gt;</span></span>
+<span id="cb18-22" class="hljs-ln-code"><a href></a>  <span class="fu">modify_header</span>(<span class="at">label =</span> <span class="st">&quot;**Variable**&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column">
 <div class="cell-output-display">
-<div id="wtgjttyiac" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#wtgjttyiac table {
+<div id="najwkkobxn" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#najwkkobxn table {
 font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 -webkit-font-smoothing: antialiased;
 -moz-osx-font-smoothing: grayscale;
 }
-#wtgjttyiac thead, #wtgjttyiac tbody, #wtgjttyiac tfoot, #wtgjttyiac tr, #wtgjttyiac td, #wtgjttyiac th {
+#najwkkobxn thead, #najwkkobxn tbody, #najwkkobxn tfoot, #najwkkobxn tr, #najwkkobxn td, #najwkkobxn th {
 border-style: none;
 }
-#wtgjttyiac p {
+#najwkkobxn p {
 margin: 0;
 padding: 0;
 }
-#wtgjttyiac .gt_table {
+#najwkkobxn .gt_table {
 display: table;
 border-collapse: collapse;
 line-height: normal;
@@ -27961,11 +27961,11 @@ border-left-style: none;
 border-left-width: 2px;
 border-left-color: #D3D3D3;
 }
-#wtgjttyiac .gt_caption {
+#najwkkobxn .gt_caption {
 padding-top: 4px;
 padding-bottom: 4px;
 }
-#wtgjttyiac .gt_title {
+#najwkkobxn .gt_title {
 color: #333333;
 font-size: 125%;
 font-weight: initial;
@@ -27976,7 +27976,7 @@ padding-right: 5px;
 border-bottom-color: #FFFFFF;
 border-bottom-width: 0;
 }
-#wtgjttyiac .gt_subtitle {
+#najwkkobxn .gt_subtitle {
 color: #333333;
 font-size: 85%;
 font-weight: initial;
@@ -27987,7 +27987,7 @@ padding-right: 5px;
 border-top-color: #FFFFFF;
 border-top-width: 0;
 }
-#wtgjttyiac .gt_heading {
+#najwkkobxn .gt_heading {
 background-color: #FFFFFF;
 text-align: center;
 border-bottom-color: #FFFFFF;
@@ -27998,12 +27998,12 @@ border-right-style: none;
 border-right-width: 1px;
 border-right-color: #D3D3D3;
 }
-#wtgjttyiac .gt_bottom_border {
+#najwkkobxn .gt_bottom_border {
 border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 }
-#wtgjttyiac .gt_col_headings {
+#najwkkobxn .gt_col_headings {
 border-top-style: solid;
 border-top-width: 2px;
 border-top-color: #D3D3D3;
@@ -28017,7 +28017,7 @@ border-right-style: none;
 border-right-width: 1px;
 border-right-color: #D3D3D3;
 }
-#wtgjttyiac .gt_col_heading {
+#najwkkobxn .gt_col_heading {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -28036,7 +28036,7 @@ padding-left: 5px;
 padding-right: 5px;
 overflow-x: hidden;
 }
-#wtgjttyiac .gt_column_spanner_outer {
+#najwkkobxn .gt_column_spanner_outer {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -28047,13 +28047,13 @@ padding-bottom: 0;
 padding-left: 4px;
 padding-right: 4px;
 }
-#wtgjttyiac .gt_column_spanner_outer:first-child {
+#najwkkobxn .gt_column_spanner_outer:first-child {
 padding-left: 0;
 }
-#wtgjttyiac .gt_column_spanner_outer:last-child {
+#najwkkobxn .gt_column_spanner_outer:last-child {
 padding-right: 0;
 }
-#wtgjttyiac .gt_column_spanner {
+#najwkkobxn .gt_column_spanner {
 border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
@@ -28064,10 +28064,10 @@ overflow-x: hidden;
 display: inline-block;
 width: 100%;
 }
-#wtgjttyiac .gt_spanner_row {
+#najwkkobxn .gt_spanner_row {
 border-bottom-style: hidden;
 }
-#wtgjttyiac .gt_group_heading {
+#najwkkobxn .gt_group_heading {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -28092,7 +28092,7 @@ border-right-color: #D3D3D3;
 vertical-align: middle;
 text-align: left;
 }
-#wtgjttyiac .gt_empty_group_heading {
+#najwkkobxn .gt_empty_group_heading {
 padding: 0.5px;
 color: #333333;
 background-color: #FFFFFF;
@@ -28106,13 +28106,13 @@ border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 vertical-align: middle;
 }
-#wtgjttyiac .gt_from_md > :first-child {
+#najwkkobxn .gt_from_md > :first-child {
 margin-top: 0;
 }
-#wtgjttyiac .gt_from_md > :last-child {
+#najwkkobxn .gt_from_md > :last-child {
 margin-bottom: 0;
 }
-#wtgjttyiac .gt_row {
+#najwkkobxn .gt_row {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -28130,7 +28130,7 @@ border-right-color: #D3D3D3;
 vertical-align: middle;
 overflow-x: hidden;
 }
-#wtgjttyiac .gt_stub {
+#najwkkobxn .gt_stub {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -28142,7 +28142,7 @@ border-right-color: #D3D3D3;
 padding-left: 5px;
 padding-right: 5px;
 }
-#wtgjttyiac .gt_stub_row_group {
+#najwkkobxn .gt_stub_row_group {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -28155,13 +28155,13 @@ padding-left: 5px;
 padding-right: 5px;
 vertical-align: top;
 }
-#wtgjttyiac .gt_row_group_first td {
+#najwkkobxn .gt_row_group_first td {
 border-top-width: 2px;
 }
-#wtgjttyiac .gt_row_group_first th {
+#najwkkobxn .gt_row_group_first th {
 border-top-width: 2px;
 }
-#wtgjttyiac .gt_summary_row {
+#najwkkobxn .gt_summary_row {
 color: #333333;
 background-color: #FFFFFF;
 text-transform: inherit;
@@ -28170,14 +28170,14 @@ padding-bottom: 8px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#wtgjttyiac .gt_first_summary_row {
+#najwkkobxn .gt_first_summary_row {
 border-top-style: solid;
 border-top-color: #D3D3D3;
 }
-#wtgjttyiac .gt_first_summary_row.thick {
+#najwkkobxn .gt_first_summary_row.thick {
 border-top-width: 2px;
 }
-#wtgjttyiac .gt_last_summary_row {
+#najwkkobxn .gt_last_summary_row {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -28186,7 +28186,7 @@ border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 }
-#wtgjttyiac .gt_grand_summary_row {
+#najwkkobxn .gt_grand_summary_row {
 color: #333333;
 background-color: #FFFFFF;
 text-transform: inherit;
@@ -28195,7 +28195,7 @@ padding-bottom: 8px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#wtgjttyiac .gt_first_grand_summary_row {
+#najwkkobxn .gt_first_grand_summary_row {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -28204,7 +28204,7 @@ border-top-style: double;
 border-top-width: 6px;
 border-top-color: #D3D3D3;
 }
-#wtgjttyiac .gt_last_grand_summary_row_top {
+#najwkkobxn .gt_last_grand_summary_row_top {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -28213,10 +28213,10 @@ border-bottom-style: double;
 border-bottom-width: 6px;
 border-bottom-color: #D3D3D3;
 }
-#wtgjttyiac .gt_striped {
+#najwkkobxn .gt_striped {
 background-color: rgba(128, 128, 128, 0.05);
 }
-#wtgjttyiac .gt_table_body {
+#najwkkobxn .gt_table_body {
 border-top-style: solid;
 border-top-width: 2px;
 border-top-color: #D3D3D3;
@@ -28224,7 +28224,7 @@ border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 }
-#wtgjttyiac .gt_footnotes {
+#najwkkobxn .gt_footnotes {
 color: #333333;
 background-color: #FFFFFF;
 border-bottom-style: none;
@@ -28237,7 +28237,7 @@ border-right-style: none;
 border-right-width: 2px;
 border-right-color: #D3D3D3;
 }
-#wtgjttyiac .gt_footnote {
+#najwkkobxn .gt_footnote {
 margin: 0px;
 font-size: 90%;
 padding-top: 4px;
@@ -28245,7 +28245,7 @@ padding-bottom: 4px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#wtgjttyiac .gt_sourcenotes {
+#najwkkobxn .gt_sourcenotes {
 color: #333333;
 background-color: #FFFFFF;
 border-bottom-style: none;
@@ -28258,64 +28258,64 @@ border-right-style: none;
 border-right-width: 2px;
 border-right-color: #D3D3D3;
 }
-#wtgjttyiac .gt_sourcenote {
+#najwkkobxn .gt_sourcenote {
 font-size: 90%;
 padding-top: 4px;
 padding-bottom: 4px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#wtgjttyiac .gt_left {
+#najwkkobxn .gt_left {
 text-align: left;
 }
-#wtgjttyiac .gt_center {
+#najwkkobxn .gt_center {
 text-align: center;
 }
-#wtgjttyiac .gt_right {
+#najwkkobxn .gt_right {
 text-align: right;
 font-variant-numeric: tabular-nums;
 }
-#wtgjttyiac .gt_font_normal {
+#najwkkobxn .gt_font_normal {
 font-weight: normal;
 }
-#wtgjttyiac .gt_font_bold {
+#najwkkobxn .gt_font_bold {
 font-weight: bold;
 }
-#wtgjttyiac .gt_font_italic {
+#najwkkobxn .gt_font_italic {
 font-style: italic;
 }
-#wtgjttyiac .gt_super {
+#najwkkobxn .gt_super {
 font-size: 65%;
 }
-#wtgjttyiac .gt_footnote_marks {
+#najwkkobxn .gt_footnote_marks {
 font-size: 75%;
 vertical-align: 0.4em;
 position: initial;
 }
-#wtgjttyiac .gt_asterisk {
+#najwkkobxn .gt_asterisk {
 font-size: 100%;
 vertical-align: 0;
 }
-#wtgjttyiac .gt_indent_1 {
+#najwkkobxn .gt_indent_1 {
 text-indent: 5px;
 }
-#wtgjttyiac .gt_indent_2 {
+#najwkkobxn .gt_indent_2 {
 text-indent: 10px;
 }
-#wtgjttyiac .gt_indent_3 {
+#najwkkobxn .gt_indent_3 {
 text-indent: 15px;
 }
-#wtgjttyiac .gt_indent_4 {
+#najwkkobxn .gt_indent_4 {
 text-indent: 20px;
 }
-#wtgjttyiac .gt_indent_5 {
+#najwkkobxn .gt_indent_5 {
 text-indent: 25px;
 }
-#wtgjttyiac .katex-display {
+#najwkkobxn .katex-display {
 display: inline-flex !important;
 margin-bottom: 0.75em !important;
 }
-#wtgjttyiac div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#najwkkobxn div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
 height: 0px !important;
 }
 </style>
@@ -28431,7 +28431,7 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImV4ZXJjaXNlIjoibWVkZXgiLCJzZXR1cCI6
 </div>
 </div>
 </section>
-<section id="exercise-1-isolate-high-grade-tumors" class="slide level2 smaller">
+<section id="exercise-1-isolate-high-grade-tumors" class="slide level2 scrollable">
 <h2>Exercise 1: Isolate High-Grade Tumors</h2>
 <p>The <code>blood_storage</code> dataset contains a <code>Grade</code> variable (1-4). Filter the data to show only the most aggressive tumors (Grade 4) and assign it to <code>high_grade_cancers</code>.</p>
 <div class="fragment">
@@ -28478,12 +28478,7 @@ eyJhdHRyIjp7ImNoZWNrIjp0cnVlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJleGVyY2lzZSI6Im1l
 </div>
 </div>
 </section>
-<section class="slide level2">
-
-<h3 id="exercise-2-mutate-and-clinical-thresholds-intermediate">Exercise 2: Mutate and Clinical Thresholds (Intermediate)</h3>
-<p><strong>Goal:</strong> Practice the “Rectangle Rule” by adding a new logical “Flag” column to indicate a clinical threshold (PSA level), as described in the Chen and Brown text.</p>
-</section>
-<section id="exercise-2-defining-clinical-risk" class="slide level2 smaller">
+<section id="exercise-2-defining-clinical-risk" class="slide level2 scrollable">
 <h2>Exercise 2: Defining Clinical Risk</h2>
 <p>A PSA (Prostate Specific Antigen) level <span class="math inline">\(\ge\)</span> 10 is often considered high risk. Use <code>mutate()</code> to create a new column called <code>high_psa</code> that is <code>TRUE</code> if <code>PreopPSA</code> is 10 or greater.</p>
 <div class="fragment">
@@ -28530,12 +28525,7 @@ eyJhdHRyIjp7ImNoZWNrIjp0cnVlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJleGVyY2lzZSI6Im1l
 </div>
 </div>
 </section>
-<section class="slide level2">
-
-<h3 id="exercise-3-the-multi-step-pipeline-advanced">Exercise 3: The Multi-Step Pipeline (Advanced)</h3>
-<p><strong>Goal:</strong> Combine multiple operations to prepare a dataset for a “Table 1” or summary report. This reinforces the idea that data cleaning is a series of explicit “recipe” steps.</p>
-</section>
-<section id="exercise-3-complex-data-preparation" class="slide level2 smaller">
+<section id="exercise-3-complex-data-preparation" class="slide level2 scrollable">
 <h2>Exercise 3: Complex Data Preparation</h2>
 <p>The PI wants to look at younger patients (Age <span class="math inline">\(\le\)</span> 60) who had a cancer recurrence (<code>Recurrence == 1</code>). Select only those patients and calculate their average PSA.</p>
 <div class="fragment">
