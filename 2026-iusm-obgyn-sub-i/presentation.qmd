@@ -326,6 +326,8 @@ The minimally invasive nature of UAE translates into a different periprocedural 
 
 - Readmission rates: Uae results in lower readmission rates
 
+[](images/srma-reintervention.png){.scrollable}
+
 ## Fertility
 
 The effect of UAE on future fertility is one of the most debated aspects of the procedure. While successful pregnancies are well-documented post-UAE, significant  uncertanties remain.
@@ -375,7 +377,7 @@ Despite a preference for non-surgical and uterine-sparing treatments, particular
 :::
 :::
 
-Multidisciplinary Approach
+## Multidisciplinary Approach
 
 ::: {.columns}
 ::: {.column}
