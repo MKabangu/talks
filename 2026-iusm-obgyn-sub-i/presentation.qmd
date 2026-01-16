@@ -57,53 +57,6 @@ Uterine fibroids are the most common benign neoplasia of reproductive age, creat
 :::
 :::
 
-## Treatment Gap Between Patient Preferences and Clinical Reality
-
-Despite a preference for non-surgical and uterine-sparing treatments, particularly among Black women, hysterectomy remains a dominant therapy.
-
-::: {.columns}
-::: {.column}
-![](images/procedures.png){.lightbox}
-:::
-::: {.column}
-- Hysterectomy is the only definitive, but most invasive treatment and results in infertility. Myomectomy preserves the uterus but involves myometrial traua and adhesions.
-
-- Women with lower socioeconomic status are more likely to receive invasive treatments. This may be due to delaying care until symptoms are severe, limiting less invasive options.
-:::
-:::
-
-## Treatment Gap Between Patient Preferences and Clinical Reality
-
-Despite a preference for non-surgical and uterine-sparing treatments, particularly among Black women, hysterectomy remains a dominant therapy.
-
-::: {.columns}
-::: {.column}
-![](images/se-gradient.jpg){.lightbox}
-:::
-::: {.column}
-- Hysterectomy is the only definitive, but most invasive treatment and results in infertility. Myomectomy preserves the uterus but involves myometrial traua and adhesions.
-
-- Women with lower socioeconomic status are more likely to receive invasive treatments. This may be due to delaying care until symptoms are severe, limiting less invasive options.
-:::
-:::
-
-## Enter Interventional Radiology
-
-- Modern IR began on January 16, 1964, when Dr. Charles T. Dotter performed the first transluminal angioplasty.
-
-- Uterine artery embolization is introduced in the 1970s as a life-saving procedure to control intractable postpartum hemorrhage as an alternative to emergency hysterectomy
-
-- In a landmark 1995 paper in The Lancet, French gynecologist Dr. J.H. Ravina and his IR colleagues proposed that if embolization could safely control acute hemorrhage, it could probably also be used to cut off blood supply to hypervascular fibroids.
-
-**Key findings from 16 patients:**
-
-- 20-80% reduction in volume in 12 patients
-
-- 6-12 hours of post-embolization pain in 14 patients 
-
-
-# A Glimpse into the Angio Suite
-
 ## Uterine fibroid types {auto-animate="true" auto-animate-easing="ease-in-out"}
 
 ::::: columns
@@ -135,6 +88,20 @@ Despite a preference for non-surgical and uterine-sparing treatments, particular
 -   Type 8: other, e.g. cervical, parasitic
 :::
 :::::
+
+## Enter Interventional Radiology
+
+- Modern IR began on January 16, 1964, when Dr. Charles T. Dotter performed the first transluminal angioplasty.
+
+- Uterine artery embolization is introduced in the 1970s as a life-saving procedure to control intractable postpartum hemorrhage as an alternative to emergency hysterectomy
+
+- In a landmark 1995 paper in The Lancet, French gynecologist Dr. J.H. Ravina and his IR colleagues proposed that if embolization could safely control acute hemorrhage, it could probably also be used to cut off blood supply to hypervascular fibroids.
+
+**Key findings from 16 patients:**
+
+- 20-80% reduction in volume in 12 patients
+
+- 6-12 hours of post-embolization pain in 14 patients 
 
 ## Ultrasound {background-color="black" auto-animate="true" auto-animate-easing="ease-in-out"}
 
@@ -225,7 +192,7 @@ Path
 
 ::: {.columns}
 ::: {.column}
-![](images/technique-aortic-arch.png){.lightbox}
+![](images/ufe-proc-overview.jpg){.lightbox}
 :::
 ::: {.column}
 Vascular access: 
@@ -237,7 +204,25 @@ Vascular access:
 Path
 
 - Aorta -> Common Iliac -> Internal Iliac -> Anterior Division -> Uterine Artery
+:::
+:::
 
+## Procedure
+
+::: {.columns}
+::: {.column}
+![](images/uae-histo.jpeg){.lightbox}
+:::
+::: {.column}
+Vascular access: 
+
+- Common femoral artery (traditional)
+
+- Radial artery (newer)
+
+Path
+
+- Aorta -> Common Iliac -> Internal Iliac -> Anterior Division -> Uterine Artery
 :::
 :::
 
@@ -264,11 +249,7 @@ Pain Protocol:
 :::
 ::: 
 
-##
-
-::: {.column}
-
-:::
+## Discharge and Follow-Up
 
 ::: {.columns}
 ::: {.column}
@@ -284,6 +265,7 @@ DC and Follow-up
 - US in 2 weeks to assess the uterine size
 :::
 :::
+
 ## Complications
 
 ::: {.r-stack}
@@ -302,32 +284,18 @@ DC and Follow-up
 
 - Vaginal artery: risk of necrosis
 
-## Case {background-video="images/access.mp4 "background-video-loop="true" background-size="cover"}
-
-## Case {background-video="images/aorta.mp4 "background-video-loop="true" background-size="cover"}
-
-## Case {background-video="images/iliac.mp4 "background-video-loop="true" background-size="cover"}
-
-## Case {background-video="images/selective.mp4 "background-video-loop="true" background-size="cover"}
-
-## Case {background-video="images/delivery.mp4 "background-video-loop="true" background-size="cover"}
-
-## Case {background-video="images/occlusion.mp4 "background-video-loop="true" background-size="cover"}
-
-# Evolution of the Procedure
+# Research
 
 ## Research
 Over the past two decades, UAE has been rigorously evaluated in numerous randomized control trials. It is has now advanced to Stage 4 (Long-Term Follow-Up) of the IDEAL framework. We now have a robust evidence base to understand its role in modern fibroid care.
 
-[](images/evolution.jpg)
+[](images/evolution.jpg){width="400"}
 
-## Quality of Life and Symptom Control
+## Quality of Life and Symptom Control {.scrollable}
 
 Multiple meta-analyses of RCTs have compared patient-reported outcomes between UAE and myomectomy.
 
 - Quality of Life: Both procedures lead to substantial improvements in health-related quality of life, with little to no significant difference between the two at 2- and 4-year follow-up.
-
-- Symptom severity: While both are effective, myomectomy shows a statistically significant advantage in improving symptom severity scores at 2- and 4-years post-procedure.
 
 ![](images/srma-qol.png)
 
@@ -335,7 +303,7 @@ Multiple meta-analyses of RCTs have compared patient-reported outcomes between U
 Tzanis et al. 2024, de Smit et al. 2025, Peng et al. 2024
 :::
 
-## Durability
+## Durability {.scrollable}
 
 - Meta-analyses consistently show that myomectomy is associated with significantly lower risk of reintervention compared to UAE. (RR 0.32 favoring myomectomy).
 
@@ -374,6 +342,55 @@ The effect of UAE on future fertility is one of the most debated aspects of the 
 :::
 ::: {.column}
 ![](images/soc.jpg)
+:::
+:::
+
+## Treatment Gap Between Patient Preferences and Clinical Reality
+
+Despite a preference for non-surgical and uterine-sparing treatments, particularly among Black women, hysterectomy remains a dominant therapy.
+
+::: {.columns}
+::: {.column}
+![](images/procedures.png){.lightbox}
+:::
+::: {.column}
+- Hysterectomy is the only definitive, but most invasive treatment and results in infertility. Myomectomy preserves the uterus but involves myometrial traua and adhesions.
+
+- Women with lower socioeconomic status are more likely to receive invasive treatments. This may be due to delaying care until symptoms are severe, limiting less invasive options.
+:::
+:::
+
+## Treatment Gap Between Patient Preferences and Clinical Reality
+
+Despite a preference for non-surgical and uterine-sparing treatments, particularly among Black women, hysterectomy remains a dominant therapy.
+
+::: {.columns}
+::: {.column}
+![](images/se-gradient.jpg){.lightbox}
+:::
+::: {.column}
+- Hysterectomy is the only definitive, but most invasive treatment and results in infertility. Myomectomy preserves the uterus but involves myometrial traua and adhesions.
+
+- Women with lower socioeconomic status are more likely to receive invasive treatments. This may be due to delaying care until symptoms are severe, limiting less invasive options.
+:::
+:::
+
+Multidisciplinary Approach
+
+::: {.columns}
+::: {.column}
+**When to Call IR**
+
+- Desire for uterine preservation
+
+- Poor surgical candidate (BMI > 40, adhesions, anticoagulation)
+
+- Recurrent fibroids post-myomectomy
+:::
+::: {.column}
+**Shared Decision Making**
+
+- Patients benefit from hearing from both OBGYNs and IRs
 :::
 :::
 
