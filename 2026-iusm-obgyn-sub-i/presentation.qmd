@@ -136,7 +136,7 @@ Doubilet PM, et al. Atlas of Ultrasound in Obstetrics and Gynecology: A Multimed
 :::::
 
 ::: aside
-Case courtesy of Hani M. Al Salam, Radiopaedia.org, rID: 12507
+Hani M. Al Salam, Radiopaedia.org, rID: 12507
 :::
 
 ::: aside
@@ -206,6 +206,10 @@ Path
 - Aorta -> Common Iliac -> Internal Iliac -> Anterior Division -> Uterine Artery
 :::
 :::
+
+## Procedure
+
+{{< video https://youtu.be/SwkCXyTV8b0?si=MjPXCaai6sbH3UHg&t=17 start="17" width="100%" height="85%" >}}
 
 ## Procedure
 
