@@ -85,7 +85,7 @@ Essential labs for most IR procedures (within 30 days unless acute change):
 :::
 :::
 
-## Antiplatelet Agents: Aspirin and P2Y12 Inhibitors
+## Antiplatelet Agents: Aspirin
 
 *aspirin*
 
@@ -117,7 +117,9 @@ High Bleeding Risk: e.g., liver biopsy, nephrostomy, arterial interventions
 
 ## Case 1: Paracentesis in a Cirrhotic Patient
 
-**Scenario**: 65-year-old with cirrhosis, tense ascites, INR 1.8, platelets 70. On no acticoagulants.
+**Scenario**: 65-year-old with cirrhosis, tense ascites, INR 1.8, platelets 70. On no anticoagulants.
+
+![](images/ascites.jpeg){.lightbox height="400"}
 
 ## Case 1: Paracentesis in a Cirrhotic Patient
 
@@ -132,6 +134,8 @@ High Bleeding Risk: e.g., liver biopsy, nephrostomy, arterial interventions
 ## Case 2: Liver Biopsy on Warfarin
 
 **Scenario**: 62F with hepatitis C, needs liver biopsy. On warfarin for AFib (CHADS2‑VASc 3). INR 2.8.
+
+![](images/hepatitis-c.jpg){.lightbox height="400"}
 
 ## Case 2: Liver Biopsy on Warfarin
 
@@ -151,6 +155,8 @@ High Bleeding Risk: e.g., liver biopsy, nephrostomy, arterial interventions
 ## Case 3: Nephrostomy on Apixaban
 
 **Scenario**: 70M with obstructing stone, febrile, pyonephrosis. On apixaban for DVT (CrCl 40).
+
+![](images/nephrolithiasis.jpg){.lightbox height="400"}
 
 ## Case 3: Nephrostomy on Apixaban
 
