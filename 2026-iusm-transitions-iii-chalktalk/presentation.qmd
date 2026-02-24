@@ -26,26 +26,15 @@ execute:
   cache: false
 ---
 
-## Welcome to the IR Chalk Talk [^1]
+## Welcome to the IR Chalk Talk
 
-[^1]: Adapted from Patel et al., SIR Consensus Guidelines 2019
-
-::: {.callout-tip icon=false}
-
-"We love to stop bleeding – but we'd rather not start it."
-:::
-
-## Why does IR care about anticoagulation?
+![](images/interventional_radiology_outline_diagram-1.jpg)
 
 Every needle stick, catheter, or wire can cause bleeding.
 
-We need to balance thrombotic risk (why patient is anticoagulated) vs bleeding risk (from procedure) .
+We need to balance thrombotic risk (why patient is anticoagulated) vs bleeding risk (from procedure)
 
-Today: How to evaluate, when to hold, how to correct, and when to bridge.
-
-Let's draw the roadmap.
-
-## Pre-Procedure Coagulation Labs: The Basics [^1]
+## Pre-Procedure Coagulation Labs: The Basics
 
 Essential labs for most IR procedures (within 30 days unless acute change):
 
@@ -59,11 +48,7 @@ Essential labs for most IR procedures (within 30 days unless acute change):
 
 - **Creatinine**: for DOAC dosing and clearance; affects hold times
 
-::: aside
-[^1]: Based on SIR 2019 Consensus Guidelines
-:::
-
-## Common Anticoagulants: Warfarin [^3]
+## Common Anticoagulants: Warfarin
 
 *coumadin*
 
@@ -72,10 +57,6 @@ Essential labs for most IR procedures (within 30 days unless acute change):
 **Half‑life**: 36-40 hours 
 
 **Reversal**: Vitamin K (oral/IV), FFP, PCC (4‑factor) 
-
-::: aside
-[^3]: Based on ACCP and SIR guidance
-:::
 
 ## Common Anticoagulants: DOACs
 
@@ -213,10 +194,10 @@ High Bleeding Risk: e.g., liver biopsy, nephrostomy, arterial interventions
 
 **When not to bridge**:
 
-- BRIDGE trial [^4] showed increased bleeding without significant reduction in thrombotic events for AFib patients with moderate stroke risk (CHADS2‑VASc ≤4)
+- BRIDGE trial [^1] showed increased bleeding without significant reduction in thrombotic events for AFib patients with moderate stroke risk (CHADS2‑VASc ≤4)
 
 ::: aside
-[^4]: BRIDGE Trial, NEJM 2015
+[^1]: BRIDGE Trial, NEJM 2015
 :::
 
 ## Works Cited {.scrollable}
