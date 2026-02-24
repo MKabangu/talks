@@ -1,0 +1,207 @@
+---
+title: "Testing"
+subtitle: "Testing"
+format: 
+  revealjs:
+    theme: simple
+    smaller: true
+---
+
+## {background-color="#E37222" visibility="uncounted"}
+
+::: {style="text-align: center; color: white; font-size: 1.5em; font-weight: bold; margin-top: 10px;"}
+JAMA Surgery
+:::
+
+
+## Slide
+
+#### Postoperative 20% Albumin Infusion and Acute Kidney Injury
+
+## Slide
+
+#### Postoperative 20% Albumin Infusion and Acute Kidney Injury
+
+::: {.columns style="display: flex; height: 500px;"}
+
+::: {.column style="display: flex; flex-direction: column; width: 27.5%;"}
+
+::: {.callout-note appearance="simple" icon="false" style="font-size: .5em; flex: 1;"}
+### POPULATION
+**611 Participants**
+
+* 444 Men, 167 Women
+* On-pump cardiac surgery
+* High risk of AKI
+* Mean age, 69 y
+:::
+
+::: {.callout-note appearance="simple" icon="false" style="font-size: .5em; flex: 1;"}
+### SETTINGS
+**7 Centers** in Australia and Italy
+:::
+
+:::
+
+::: {.column style="display: flex; flex-direction: column; width: 27.5%;"}
+
+::: {.callout-important appearance="simple" icon="false" style="font-size: .5em; flex: 1;"}
+### INTERVENTION
+**Usual Care (n=304)** Routine care at clinician discretion.
+
+**Albumin (n=307)** 300 mL of 20% albumin given over 15 h post-op.
+:::
+
+::: {.callout-important appearance="simple" icon="false" style="font-size: .5em; flex: 1;"}
+### PRIMARY OUTCOME
+Occurrence of AKI within 48h (creatinine) or 7d (baseline).
+:::
+
+:::
+
+::: {.column style="display: flex; flex-direction: column; width: 45%;"}
+
+::: {.callout-tip appearance="simple" icon="false" style="font-size: .5em; flex: 1;"}
+### FINDINGS
+Significant **12% increase** in risk of AKI for the 20% albumin group.
+
+
+
+```{r}
+#| echo: false
+#| fig-width: 5.5
+#| fig-height: 4.5
+library(ggplot2)
+
+df <- data.frame(
+  Group = factor(
+    c("All", "eGFR <60", "eGFR ≥60"),
+    levels = c("eGFR ≥60", "eGFR <60", "All")
+  ),
+  RR = c(1.12, 1.15, 1.08),
+  L = c(1.04, 1.07, 0.82),
+  U = c(1.21, 1.23, 1.42)
+)
+
+ggplot(df, aes(x = RR, y = Group)) +
+  geom_vline(xintercept = 1, linetype = "dashed", color = "grey50") +
+  geom_errorbarh(
+    aes(xmin = L, xmax = U),
+    height = 0.2,
+    color = "#E37222",
+    linewidth = 1.2
+  ) +
+  geom_point(size = 5, shape = 15, color = "#E37222") +
+  theme_minimal(base_size = 14) +
+  labs(x = "Relative Risk (95% CI)", y = NULL) +
+  theme(
+    panel.grid.minor = element_blank(),
+    panel.grid.major.y = element_blank(),
+    plot.background = element_rect(fill = "transparent", color = NA),
+    panel.background = element_rect(fill = "transparent", color = NA)
+  )
+```
+
+:::
+
+:::
+
+:::
+
+::: {style="font-size: 0.5em; color: #666; padding-left: 20px;"} 
+Shehabi Y, et al. JAMA Surg. Published online June 11, 2025. 
+:::
+
+## Slide
+
+::::: {layout="[[1, 1, 2]]"}
+
+:::: {#left-column}
+
+::: {#population style="font-size: .5em; background-color: #f3f0f0ff; margin-bottom: 20px;padding: 20px; height: 300px;"}
+#### POPULATION
+**611 Participants**
+
+(444 Men, 167 Women)
+
+Hospitalized adults undergoing on-pump cardiac surgery at high risk of AKI.
+:::
+
+::: {#settings style="font-size: .5em; background-color: #f3f0f0ff; padding: 20px; height: 200px;"}
+#### SETTINGS
+**7 Centers** in Australia and Italy
+:::
+
+::::
+
+:::: {#mid-column}
+
+::: {#intervention style="font-size: .5em; background-color: #f3f0f0ff; margin-bottom: 20px; padding: 20px; height: 300px;"}
+#### INTERVENTION
+**Usual Care (n=304)**
+
+Routine resuscitation
+
+**Albumin (n=307)**
+
+300 mL of 20% albumin
+:::
+
+::: {#outcome style="font-size: .5em; background-color: #f3f0f0ff; padding: 20px; height: 200px;"}
+#### PRIMARY OUTCOME
+Occurrence of AKI within 48h (creatinine) or 7d (baseline).
+:::
+
+::::
+
+:::: {#right-column}
+
+::: {#findings style="font-size: .5em; background-color: #f3f0f0ff; padding: 20px; height: 560px;"}
+#### FINDINGS
+Significant **12% increase** in risk of AKI for the 20% albumin group.
+
+```{r}
+#| echo: false
+#| fig-width: 5.5
+#| fig-height: 4.5
+library(ggplot2)
+
+df <- data.frame(
+  Group = factor(
+    c("All", "eGFR <60", "eGFR ≥60"),
+    levels = c("eGFR ≥60", "eGFR <60", "All")
+  ),
+  RR = c(1.12, 1.15, 1.08),
+  L = c(1.04, 1.07, 0.82),
+  U = c(1.21, 1.23, 1.42)
+)
+
+ggplot(df, aes(x = RR, y = Group)) +
+  geom_vline(xintercept = 1, linetype = "dashed", color = "grey50") +
+  geom_errorbarh(
+    aes(xmin = L, xmax = U),
+    height = 0.2,
+    color = "#E37222",
+    linewidth = 1.2
+  ) +
+  geom_point(size = 5, shape = 15, color = "#E37222") +
+  theme_minimal(base_size = 14) +
+  labs(x = "Relative Risk (95% CI)", y = NULL) +
+  theme(
+    plot.background = element_rect(fill = "#f3f0f0ff", color = "#f3f0f0ff"),
+    panel.border = element_rect(fill = "#f3f0f0ff", color = "#f3f0f0ff"),
+    panel.background = element_rect(fill = "#f3f0f0ff", color = "#f3f0f0ff"),
+    panel.grid.minor = element_blank(),
+    panel.grid.major.y = element_blank()
+  )
+```
+
+:::
+
+::::
+
+:::::
+
+::: {style="font-size: 0.5em; color: #666; border-top: 1px solid #ddd;"}
+Shehabi Y, et al. JAMA Surg. Published online June 11, 2025. 
+:::

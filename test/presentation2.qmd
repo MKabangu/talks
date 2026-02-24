@@ -1,0 +1,200 @@
+---
+from: markdown+emoji
+execute: 
+  cache: true
+format: 
+  revealjs:
+    css: [custom.css, hex.css, timeline.css]
+    progress: false
+    menu: false
+    width: 1280
+    height: 720
+callout-appearance: simple
+bibliography: citations.bib
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r}
+#| include: false
+library(tidyverse)
+library(fable)
+```
+
+## {}
+
+::: columns
+::: {.column width="40%"}
+![](resources/forecast-to-fable.svg){.sticker-float-left}
+:::
+::: {.column width="60%"}
+
+::: {.title data-id="title"}
+From forecast to fable, design decisions for statistical software.
+:::
+
+::: {.dateplace}
+13th July 2023 @ NYR 2023
+:::
+
+##### Mitchell O'Hara-Wild, Nectric
+
+::: {.callout-link}
+
+## Useful links
+
+![](resources/forum.svg){.icon} [social.mitchelloharawild.com](https://social.mitchelloharawild.com/)
+
+![](resources/projector-screen-outline.svg){.icon} [slides.mitchelloharawild.com/nyr2023](https://slides.mitchelloharawild.com/nyr2023)
+
+![](resources/github.svg){.icon} [mitchelloharawild/talk-forecast-to-fable](https://github.com/mitchelloharawild/talk-forecast-to-fable)
+
+:::
+
+:::
+:::
+
+![](backgrounds/amjd-rdwan--MDJDYKQz6E-unsplash.jpg){.image-left}
+
+## {.fragment-remove}
+
+<!-- Talk Abstract: I will reflect on 30+ years of experience in producing open-source software and open-access resources. We'll explore the many benefits of working openly and publicly, including academic, commercial, and social good advantages. Discover how adopting an open mindset can lead to increased collaboration and innovation, as developers and users work together to enhance software and other resources to meet their needs. Open-source software is also more secure and reliable, thanks to the collective review of code by many eyes. We'll also explore the benefits of open-access resources, such as educational materials, research papers, and datasets. By making these resources openly available, we can promote access to knowledge and encourage collaboration among researchers and educators. Move beyond using open-source materials to be a developer of open resources, and help make the world more collaborative, innovative, and equitable. -->
+
+::: {.fragment .fade-out fragment-index=1}
+### A brief history of forecasting in R
+:::
+
+
+::: columns
+::: {.column width="60%"}
+
+::: {.container .fragment .fade-up fragment-index=1}
+::: {.timeline .timeline-left style="height: 720px;"}
+
+
+
+::: {.timeline-block}
+::: {.timeline-icon}
+![](resources/Rlogo.svg)
+:::
+::: {.timeline-content}
+The `ts` package is added to R v0.65
+
+::: {.timeline-details .fragment .fade-out fragment-index=2}
+
+[Time-series functionality from S-PLUS in R.]{style="padding-top:20px;display:block;"}
+
+[Adds many great functions, including `ts()`, `stl()`, `arima()` and... `filter()`!]{style="padding-top:20px;display:block;"}
+
+:::
+::: {.timeline-date}
+Jul 1999
+:::
+:::
+:::
+
+
+
+::: {.timeline-block .fragment .fade-up fragment-index=2}
+::: {.timeline-icon}
+![](resources/forecast.svg)
+:::
+::: {.timeline-content}
+Rob creates the `forecast` package
+
+::: {.timeline-details .fragment .fade-out fragment-index=3}
+![](images/rob.png){style="height:160px;float:right;padding-left:10px"}
+[The package extends `{ts}` with various functions used by Rob in his time-series consulting projects, such as `ets()` and `thetaf()`.]{style="padding-top:20px;display:block;"}
+:::
+::: {.timeline-date}
+Jul 2003
+:::
+:::
+:::
+
+
+
+::: {.timeline-block .fragment .fade-up fragment-index=3}
+::: {.timeline-icon}
+![](resources/forecast.svg)
+:::
+::: {.timeline-content}
+I start working on the `forecast` package
+
+::: {.timeline-details .fragment .fade-out fragment-index=4}
+![](images/mitch.png){style="height:160px;float:right;padding-left:10px"}
+[Working with Rob at Monash University, I start fixing bugs, improving forecasting workflows and adding 'tidy' features to the package.]{style="padding-top:20px;display:block;"}
+:::
+::: {.timeline-date}
+Dec 2015
+:::
+:::
+:::
+
+
+
+::: {.timeline-block .fragment .fade-up fragment-index=4}
+::: {.timeline-icon}
+![](resources/tsibble.svg)
+:::
+::: {.timeline-content}
+Earo creates the `tsibble` package
+
+::: {.timeline-details .fragment .fade-out fragment-index=5}
+![](images/earo.png){style="height:160px;float:right;padding-left:10px"}
+[As part of her PhD, Earo creates `tsibble` - a rectangular and tidyverse compatible time series data alternative to `ts()`.]{style="padding-top:20px;display:block;"}
+
+:::
+::: {.timeline-date}
+Jul 2017
+:::
+:::
+:::
+
+::: {.timeline-block .fragment .fade-up fragment-index=5}
+::: {.timeline-icon}
+![](resources/fable.svg)
+:::
+::: {.timeline-content}
+Mitchell creates the `fable` package
+
+::: {.timeline-details .fragment .fade-out fragment-index=6}
+![](images/mitch.png){style="height:160px;float:right;padding-left:10px"}
+[Building upon `tsibble`, I create `fable` - the tidy time series forecasting successor to the `forecast` package.]{style="padding-top:20px;display:block;"}
+
+:::
+::: {.timeline-date}
+Feb 2018
+:::
+:::
+:::
+
+
+
+::: {.timeline-block .fragment .fade-up fragment-index=6}
+::: {.timeline-icon}
+![](resources/forecast-gray.svg)
+:::
+::: {.timeline-content}
+The `forecast` package is retired
+
+::: {.timeline-details}
+[Still maintained, but no new features.]{style="padding-top:20px;display:block;"}
+
+:::
+::: {.timeline-date}
+Sep 2019
+:::
+:::
+:::
+
+
+
+:::
+:::
+
+
+:::
+:::
+
+![](backgrounds/henry-be-lc7xcWebECc-unsplash.jpg){.image-right}
