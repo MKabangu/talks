@@ -28,7 +28,7 @@ execute:
 
 ## Welcome to the IR Chalk Talk
 
-![](images/interventional_radiology_outline_diagram-1.jpg)
+![](images/interventional_radiology_outline_diagram-1.jpg){.lightbox height="300"}
 
 Every needle stick, catheter, or wire can cause bleeding.
 
@@ -52,16 +52,26 @@ Essential labs for most IR procedures (within 30 days unless acute change):
 
 *coumadin*
 
+:::::: {.columns}
+::: {.column}
 **Mechanism**: inhibits vitamin K–dependent factors (II, VII, IX, X, proteins C and S)
 
 **Half‑life**: 36-40 hours 
 
 **Reversal**: Vitamin K (oral/IV), FFP, PCC (4‑factor) 
+:::
+::: {.column width="30%"}
+![](images/nejme2414209_f1.jpg){.lightbox}
+:::
+:::
+
 
 ## Common Anticoagulants: DOACs
 
 *apixaban, rivaroxaban, edoxaban, dabigatran*
 
+:::::: {.columns}
+::: {.column}
 **Mechanism**: Direct factor Xa or IIa inhibitors
 
 **Half‑life**: 5‑15 hours (renal dependent) 
@@ -69,6 +79,11 @@ Essential labs for most IR procedures (within 30 days unless acute change):
 **Reversal**: Andexanet alfa (Xa), idarucizumab (dabigatran), or PCC 25-50 U/kg off‑label 
 
 **Note**: DOACs have shorter half-lives than warfarin, but renal impairment can prolong clearance
+:::
+::: {.column width="30%"}
+![](images/nejme2414209_f1.jpg){.lightbox}
+:::
+:::
 
 ## Antiplatelet Agents: Aspirin and P2Y12 Inhibitors
 
