@@ -9,6 +9,7 @@ format:
     logo: images/iu-logo.png
     theme: [default]
     incremental: false
+    smaller: true
 engine: knitr
 webr:
   render-df: paged-table
@@ -22,34 +23,120 @@ webr:
 
 ## Instructor
 
+::: {.columns}
+::: {.column}
+![](images/grad.jpg)
+:::
+::: {.column}
 Mirindi Kabangu
+
+MD Candidate | Indiana University School of Medicine
+
+- Member, Student National Medical Association (SNMA)
+- Research interests: clinical data science, health equity
+- Contact: [mkabangu@iu.edu](mailto:mkabangu@iu.edu)
+:::
+:::
 
 ## 
 ![](images/excel-pengu.gif){width="100%" fig-align="center"}
 
 ## Scope
 
-::: aside
+By the end of this session, you will be able to:
 
-Taming the Data Beast, by Allison Horst
+::: {.incremental}
+- **Wrangle** messy clinical data using `dplyr` and `tidyr`
+- **Summarize** patient data into publication-ready tables with `gtsummary`
+- **Visualize** results with `ggplot2`
+- **Apply** these skills hands-on using real medical datasets
+:::
+
+::: aside
+*Taming the Data Beast*, by Allison Horst
 :::
 
 ## Overview
 
+| Section | What You'll Learn |
+|---|---|
+| 🧹 **Data Cleaning** | Separating columns, fixing types, adding flags |
+| 📊 **Summary Tables** | `tbl_summary()` with p-values and group comparisons |
+| 💻 **Your Turn** | 3 exercises using the `blood_storage` cancer dataset |
+
+## Why R? {.center}
+
+::: {.incremental}
+- You've probably already done this in Excel 👇
+  - Sort by a column, delete some rows, calculate a mean, make a chart
+- R does **all of that** — in about 3 lines of code
+- And unlike Excel, your work is **reproducible, shareable, and reviewable**
+:::
+
+## The Lego Brick: One Line of R
+
+```{r}
+#| label: cleaning-demo-0
+#| echo: true
+#| output-location: column
+#| code-line-numbers: "1"
+
+library(medicaldata)
+
+blood_storage
+```
+
+::: {.fragment}
+That's it. That prints your dataset. R is just **instructions in plain English-ish**.
+:::
+
+::: {.incremental}
+- `filter(Age > 60)` → keep rows where Age is over 60
+- `mutate(high_psa = PreopPSA >= 10)` → add a new column
+- `select(Age, Grade)` → keep only those two columns
+:::
+
+## The Pipe `|>` {.center}
+
+The pipe reads as **"and then"**. It chains steps together:
+
+```r
+blood_storage |>         # start with the data, and then...
+  filter(Age > 60) |>   # keep older patients, and then...
+  select(Age, Grade)    # show just these two columns
+```
+
+## You Already Know More Than You Think
+
+Most of the R you'll use today maps directly to questions you already ask:
+
+| English question | R code |
+|---|---|
+| "Show me only Grade 4 patients" | `filter(Grade == 4)` |
+| "Add a column for high PSA" | `mutate(high_psa = PreopPSA >= 10)` |
+| "What's the average age?" | `summarize(mean_age = mean(Age))` |
+| "Make a table by treatment group" | `tbl_summary(by = trt)` |
+
+::: {.fragment}
+Today's goal isn't memorization — it's **pattern recognition**.
+:::
+
+::: {.callout-note}
+All code runs **live in your browser** — no R installation needed today!
+:::
+
 ## The "Real-World" Medical Researcher Problem
 
-You are a resident on a busy clinical rotation. You’ve been handed a
+You are a resident on a busy clinical rotation. You've been handed a
 messy Vital Signs log from a 3-patient pilot study.
 
--   The Data:
--   The Goal:
-    -   Download the CSV
-    -   Split blood pressure into two columns
-    -   Remove the "F" from Temperature
-    -   Create a "Flag" column for any patient with a systolic BP \>
-        140.5
-    -   Make a bar chart of all the Systolic BPs
--   You have 2 minutes
+- **The Data:** A CSV with blood pressure stored as `"128/78"` and temperatures like `"98.6F"`
+- **The Goal:**
+  - Split blood pressure into systolic and diastolic columns
+  - Remove the `"F"` from Temperature
+  - Flag any patient with systolic BP ≥ 140
+  - Make a bar chart of all Systolic BPs
+- ⏱️ **You have 2 minutes**
 
 ## 
 
@@ -83,10 +170,10 @@ print(messy_vitals)
 #| label: cleaning-demo-2
 #| echo: true
 #| output-location: column
-#| code-line-numbers: "1-3"
+#| code-line-numbers: "2-3"
 
 messy_vitals |>
-  # Separate BP into two numbers
+  # Separate BP into systolic and diastolic
   separate(bp, into = c("sys", "dia"), sep = "/")
 ```
 
@@ -99,9 +186,9 @@ messy_vitals |>
 #| code-line-numbers: "4-5"
 
 messy_vitals |>
-  # Separate BP into two numbers
+  # Separate BP into systolic and diastolic
   separate(bp, into = c("sys", "dia"), sep = "/") |>
-  # Clean Temp units
+  # Strip the "F" unit from temperature
   mutate(temp = parse_number(temp))
 ```
 
@@ -114,11 +201,11 @@ messy_vitals |>
 #| code-line-numbers: "6-7"
 
 messy_vitals |>
-  # Separate BP into two numbers
+  # Separate BP into systolic and diastolic
   separate(bp, into = c("sys", "dia"), sep = "/") |>
-  # Clean Temp units
+  # Strip the "F" unit from temperature
   mutate(temp = parse_number(temp)) |>
-  # Convert types
+  # Convert BP columns from character to numeric
   mutate(across(c(sys, dia), as.numeric))
 ```
 
@@ -131,13 +218,13 @@ messy_vitals |>
 #| code-line-numbers: "8-9"
 
 messy_vitals |>
-  # Separate BP into two numbers
+  # Separate BP into systolic and diastolic
   separate(bp, into = c("sys", "dia"), sep = "/") |>
-  # Clean Temp units
+  # Strip the "F" unit from temperature
   mutate(temp = parse_number(temp)) |>
-  # Convert types
+  # Convert BP columns from character to numeric
   mutate(across(c(sys, dia), as.numeric)) |>
-  # Add the Clinical Flag
+  # Flag patients with elevated systolic BP (≥ 140)
   mutate(flag = sys >= 140)
 ```
 
@@ -150,15 +237,15 @@ messy_vitals |>
 #| code-line-numbers: "10-12"
 
 messy_vitals |>
-  # Separate BP into two numbers
+  # Separate BP into systolic and diastolic
   separate(bp, into = c("sys", "dia"), sep = "/") |>
-  # Clean Temp units
+  # Strip the "F" unit from temperature
   mutate(temp = parse_number(temp)) |>
-  # Convert types
+  # Convert BP columns from character to numeric
   mutate(across(c(sys, dia), as.numeric)) |>
-  # Add the Clinical Flag
+  # Flag patients with elevated systolic BP (≥ 140)
   mutate(flag = sys >= 140) |>
-  # Instant Visualization
+  # Visualize
   ggplot(aes(x = patient, y = sys, fill = flag)) +
   geom_col()
 ```
@@ -172,15 +259,15 @@ messy_vitals |>
 #| code-line-numbers: "13-14"
 
 messy_vitals |>
-  # Separate BP into two numbers
+  # Separate BP into systolic and diastolic
   separate(bp, into = c("sys", "dia"), sep = "/") |>
-  # Clean Temp units
+  # Strip the "F" unit from temperature
   mutate(temp = parse_number(temp)) |>
-  # Convert types
+  # Convert BP columns from character to numeric
   mutate(across(c(sys, dia), as.numeric)) |>
-  # Add the Clinical Flag
+  # Flag patients with elevated systolic BP (≥ 140)
   mutate(flag = sys >= 140) |>
-  # Instant Visualization
+  # Visualize
   ggplot(aes(x = patient, y = sys, fill = flag)) +
   geom_col() +
   scale_fill_manual(values = c("gray", "#990000")) + # IU Crimson!
@@ -189,14 +276,16 @@ messy_vitals |>
 
 ## Another Challenge
 
-You are a resident on a busy clinical rotation. You’ve been handed a
-messy of cancer treatement data.
+You are a resident on a busy clinical rotation. You've been handed a
+messy cancer treatment outcomes dataset.
 
-- The Data
-- The Goal:
-    - Download the CSV
-    - Calculate the mean and standard deviations for each row
-    - Calculate the p-values
+- **The Data:** The `trial` dataset — 200 patients, 2 treatment arms
+- **The Goal:**
+  - Summarize patient characteristics (age, tumor grade, treatment response)
+  - Split summaries by treatment group
+  - Report mean ± SD for continuous variables
+  - Calculate p-values for group comparisons
+- ⏱️ **You have 2 minutes**
 
 ## {auto-animate="true"} 
 
@@ -204,7 +293,7 @@ messy of cancer treatement data.
 #| label: table-demo-1
 #| echo: true
 #| output-location: column
-#| code-line-numbers: "1"
+#| code-line-numbers: "4-7"
 
 library(gtsummary)
 
@@ -221,7 +310,7 @@ gtsummary::trial |>
 #| label: table-demo-2
 #| echo: true
 #| output-location: column
-#| code-line-numbers: "1"
+#| code-line-numbers: "8-9"
 
 library(gtsummary)
 
@@ -230,7 +319,8 @@ gtsummary::trial |>
   select(trt, age, grade, response) |>
   # Create the summary table
   tbl_summary(
-    by = trt, # Split by treatment group
+    # Split by treatment group
+    by = trt,
   )
 ```
 
@@ -240,7 +330,7 @@ gtsummary::trial |>
 #| label: table-demo-3
 #| echo: true
 #| output-location: column
-#| code-line-numbers: "1"
+#| code-line-numbers: "10-11"
 
 library(gtsummary)
 
@@ -249,7 +339,9 @@ gtsummary::trial |>
   select(trt, age, grade, response) |>
   # Create the summary table
   tbl_summary(
-    by = trt, # Split by treatment group
+    # Split by treatment group
+    by = trt,
+    # Report mean ± SD for continuous variables
     statistic = list(all_continuous() ~ "{mean} ({sd})")
   )
 ```
@@ -260,7 +352,7 @@ gtsummary::trial |>
 #| label: table-demo-4
 #| echo: true
 #| output-location: column
-#| code-line-numbers: "1"
+#| code-line-numbers: "13-14"
 
 library(gtsummary)
 
@@ -269,7 +361,9 @@ gtsummary::trial |>
   select(trt, age, grade, response) |>
   # Create the summary table
   tbl_summary(
-    by = trt, # Split by treatment group
+    # Split by treatment group
+    by = trt,
+    # Report mean ± SD for continuous variables
     statistic = list(all_continuous() ~ "{mean} ({sd})")
   ) |>
   # Add statistical comparison (p-values)
@@ -282,7 +376,7 @@ gtsummary::trial |>
 #| label: table-demo-5
 #| echo: true
 #| output-location: column
-#| code-line-numbers: "1"
+#| code-line-numbers: "15-16"
 
 library(gtsummary)
 
@@ -291,7 +385,9 @@ gtsummary::trial |>
   select(trt, age, grade, response) |>
   # Create the summary table
   tbl_summary(
-    by = trt, # Split by treatment group
+    # Split by treatment group
+    by = trt,
+    # Report mean ± SD for continuous variables
     statistic = list(all_continuous() ~ "{mean} ({sd})")
   ) |>
   # Add statistical comparison (p-values)
@@ -306,7 +402,6 @@ gtsummary::trial |>
 #| label: table-demo-6
 #| echo: true
 #| output-location: column
-#| code-line-numbers: "1"
 
 library(gtsummary)
 
@@ -315,12 +410,14 @@ gtsummary::trial |>
   select(trt, age, grade, response) |>
   # Create the summary table
   tbl_summary(
-    by = trt, # Split by treatment group
+    # Split by treatment group
+    by = trt,
     label = list(
       age ~ "Patient Age",
       grade ~ "Tumor Grade",
       response ~ "Treatment Response"
     ),
+    # Report mean ± SD for continuous variables
     statistic = list(all_continuous() ~ "{mean} ({sd})")
   ) |>
   # Add statistical comparison (p-values)
@@ -335,22 +432,20 @@ gtsummary::trial |>
 
 # Your Turn
 
-:::{.fragment}
 ```{webr}
 #| exercise: medex
 #| setup: true
 library(palmerpenguins)
 library(medicaldata)
 library(gtsummary)
-penguins <- penguins[1:6,]
 library(dplyr)
-```
 
-:::
+penguins <- penguins[1:6, ]
+```
 
 ## Exercise 1: Isolate High-Grade Tumors {.scrollable}
 
-The `blood_storage` dataset contains a `Grade` variable (1-4). Filter the data to show only the most aggressive tumors (Grade 4) and assign it to `high_grade_cancers`.
+The `blood_storage` dataset contains a `Grade` variable (1–4). Filter the data to show only the most aggressive tumors (**Grade 4**) and assign it to `high_grade_cancers`.
 
 :::{.fragment}
 ```{webr}
@@ -398,7 +493,7 @@ A PSA (Prostate Specific Antigen) level $\ge$ 10 is often considered high risk. 
 #| exercise: medex_2
 # Create a logical flag for high PSA
 psa_analysis <- blood_storage |> 
-  mutate(high_psa = ________ >= 10)
+  mutate(high_psa = ___ >= 10)
 
 # View the first few rows
 head(psa_analysis)
@@ -438,8 +533,8 @@ The PI wants to look at younger patients (Age $\le$ 60) who had a cancer recurre
 #| exercise: medex_3
 # Combine filter and summarize
 summary_stats <- blood_storage |> 
-  filter(Age <= 60, ________ == 1) |> 
-  summarize(mean_psa = ________(PreopPSA, na.rm = TRUE))
+  filter(Age <= 60, ___ == 1) |> 
+  summarize(mean_psa = ___(PreopPSA, na.rm = TRUE))
 
 summary_stats
 ```
@@ -467,3 +562,39 @@ gradethis::grade_this_code()
 ```
 
 :::
+
+## Recap & Key Takeaways
+
+::: {.incremental}
+- 🧹 **`tidyr::separate()`** splits combined columns (e.g., blood pressure)
+- 🔢 **`dplyr::mutate()`** creates and transforms columns
+- 📊 **`gtsummary::tbl_summary()`** produces publication-ready clinical tables in seconds
+- 📈 **`ggplot2`** turns tidy data into polished visuals with a few lines of code
+- 💡 The **pipe `|>`** chains steps cleanly — read it as *"and then..."*
+:::
+
+::: {.fragment}
+**Next steps:** Try these on your own research data. The skills transfer directly.
+:::
+
+## Resources
+
+| Resource | Link |
+|---|---|
+| R for Data Science (free) | [r4ds.hadley.nz](https://r4ds.hadley.nz) |
+| gtsummary documentation | [danieldsjoberg.com/gtsummary](https://www.danieldsjoberg.com/gtsummary/) |
+| Tidy Tuesday (practice data) | [github.com/rfordatascience/tidytuesday](https://github.com/rfordatascience/tidytuesday) |
+| IU CTSI Biostatistics | [indianactsi.org](https://indianactsi.org) |
+
+::: {.fragment}
+**Thank you — questions welcome!**
+
+Mirindi Kabangu · IU School of Medicine · SNMA AMEC 2026
+:::
+
+## Session Info {.allow-framebreaks}
+
+```{r session-info, echo=FALSE}
+# Session information for reproducibility
+utils::sessionInfo()
+```
