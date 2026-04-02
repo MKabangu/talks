@@ -375,11 +375,7 @@ trial |>
 gradethis::grade_this_code()
 ```
 
----
-
 # Section 3: Showing Your Results
-
----
 
 ## What goes in the Results figures?
 
@@ -657,11 +653,7 @@ trial |>
 :::
 :::
 
----
-
 # Section 4: The Numbers Behind the Story
-
----
 
 ## What "analysis" means in a clinical paper
 
@@ -828,11 +820,7 @@ trial |>
 gradethis::grade_this_code()
 ```
 
----
-
 # Section 5: Conclusions — What Does It All Mean?
-
----
 
 ## The conclusion follows from the output
 
