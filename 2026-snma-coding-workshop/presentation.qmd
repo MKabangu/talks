@@ -5,15 +5,16 @@ author: "Mirindi Kabangu"
 format: 
   live-revealjs:
     self-contained: true
-    footer: "IU School of Medicine | SNMA AMEC"
+    footer: "IU School of Medicine | SNMA AMEC 2026"
     logo: images/iu-logo.png
-    theme: [default]
+    theme: 
+      - _extensions/grantmcdermott/clean/clean.scss
     incremental: false
     smaller: true
 engine: knitr
 webr:
   render-df: paged-table
-  packages: [ 'readr', 'dplyr', 'tidyr', 'ggplot2', 'gt', 'gtsummary','ggsignif', 'palmerpenguins', 'medicaldata']
+  packages: ['dplyr', 'tidyr', 'ggplot2', 'gtsummary', 'medicaldata', 'sessioninfo', 'broom']
   cell:
     autoload: true
 ---
@@ -21,576 +22,1116 @@ webr:
 {{< include ./_extensions/r-wasm/live/_knitr.qmd >}}
 {{< include ./_extensions/r-wasm/live/_gradethis.qmd >}}
 
+```{r}
+#| label: cleaning-demo-0
+#| echo: false
+#| output-location: column
+#| code-line-numbers: "2"
+
+library(tidyr)
+library(dplyr)
+library(ggplot2)
+library(medicaldata)
+library(gtsummary)
+```
+
 ## Instructor
 
 ::: {.columns}
-::: {.column}
+::: {.column width="30%"}
 ![](images/grad.jpg)
 :::
-::: {.column}
+::: {.column width="70%"}
 Mirindi Kabangu
 
 MD Candidate | Indiana University School of Medicine
 
-- Member, Student National Medical Association (SNMA)
+- Member, Student National Medical Association 
 - Research interests: clinical data science, health equity
 - Contact: [mkabangu@iu.edu](mailto:mkabangu@iu.edu)
 :::
 :::
 
 ## 
-![](images/excel-pengu.gif){width="100%" fig-align="center"}
-
-## Scope
-
-By the end of this session, you will be able to:
-
-::: {.incremental}
-- **Wrangle** messy clinical data using `dplyr` and `tidyr`
-- **Summarize** patient data into publication-ready tables with `gtsummary`
-- **Visualize** results with `ggplot2`
-- **Apply** these skills hands-on using real medical datasets
-:::
-
-::: aside
-*Taming the Data Beast*, by Allison Horst
-:::
-
-## Overview
-
-| Section | What You'll Learn |
-|---|---|
-| 🧹 **Data Cleaning** | Separating columns, fixing types, adding flags |
-| 📊 **Summary Tables** | `tbl_summary()` with p-values and group comparisons |
-| 💻 **Your Turn** | 3 exercises using the `blood_storage` cancer dataset |
-
-## Why R? {.center}
-
-::: {.incremental}
-- You've probably already done this in Excel 👇
-  - Sort by a column, delete some rows, calculate a mean, make a chart
-- R does **all of that** — in about 3 lines of code
-- And unlike Excel, your work is **reproducible, shareable, and reviewable**
-:::
-
-## The Lego Brick: One Line of R
-
-```{r}
-#| label: cleaning-demo-0
-#| echo: true
-#| output-location: column
-#| code-line-numbers: "1"
-
-library(medicaldata)
-
-blood_storage
-```
-
-::: {.fragment}
-That's it. That prints your dataset. R is just **instructions in plain English-ish**.
-:::
-
-::: {.incremental}
-- `filter(Age > 60)` → keep rows where Age is over 60
-- `mutate(high_psa = PreopPSA >= 10)` → add a new column
-- `select(Age, Grade)` → keep only those two columns
-:::
-
-## The Pipe `|>` {.center}
-
-The pipe reads as **"and then"**. It chains steps together:
-
-```r
-blood_storage |>         # start with the data, and then...
-  filter(Age > 60) |>   # keep older patients, and then...
-  select(Age, Grade)    # show just these two columns
-```
-
-## You Already Know More Than You Think
-
-Most of the R you'll use today maps directly to questions you already ask:
-
-| English question | R code |
-|---|---|
-| "Show me only Grade 4 patients" | `filter(Grade == 4)` |
-| "Add a column for high PSA" | `mutate(high_psa = PreopPSA >= 10)` |
-| "What's the average age?" | `summarize(mean_age = mean(Age))` |
-| "Make a table by treatment group" | `tbl_summary(by = trt)` |
-
-::: {.fragment}
-Today's goal isn't memorization — it's **pattern recognition**.
-:::
-
-::: {.callout-note}
-All code runs **live in your browser** — no R installation needed today!
-:::
-
-## The "Real-World" Medical Researcher Problem
-
-You are a resident on a busy clinical rotation. You've been handed a
-messy Vital Signs log from a 3-patient pilot study.
-
-- **The Data:** A CSV with blood pressure stored as `"128/78"` and temperatures like `"98.6F"`
-- **The Goal:**
-  - Split blood pressure into systolic and diastolic columns
-  - Remove the `"F"` from Temperature
-  - Flag any patient with systolic BP ≥ 140
-  - Make a bar chart of all Systolic BPs
-- ⏱️ **You have 2 minutes**
+![](images/yes-pengu.gif){width="100%" fig-align="center"}
 
 ## 
+![](images/excel-pengu.gif){width="100%" fig-align="center"}
 
-```{r}
-#| label: reveal-cleaning
-#| echo: false
-library(tidyverse)
+## 
+![](images/prezi-pengu.gif){width="100%" fig-align="center"}
 
-# Secretly create the messy data for the demo
-messy_vitals <- tibble::tibble(
-  patient = c("Gemma Dunn", "Priscilla Holding", "Aniya Warner"),
-  bp = c("128/78", "148/92", "115/73"),
-  temp = c("98.6F", "101.2F", "97.5F")
-)
+##
+![](images/paper-pengu.gif){width="100%" fig-align="center"}
+
+---
+
+## By the end of this hour...
+
+You will have **written a paper**.
+
+::: {.incremental}
+- Not metaphorically — you will have produced the actual outputs that go into a manuscript
+- A **Table 1** describing your patient population
+- **Figures** showing your key results
+- **Statistical comparisons** between treatment arms
+- And you'll know exactly what R line produced each one
+:::
+
+::: {.fragment}
+::: {.callout-note}
+## No installation. No prior R experience required.
+Everything runs live in your browser. You are already set up.
+:::
+:::
+
+---
+
+# You Just Got an Email from Your PI
+
+---
+
+## 📧 From: Your PI
+
+> *"I'm attaching de-identified data from our phase II RCT — 200 patients randomized to Drug A vs. Drug B. We're submitting to JCO next month.*
+>
+> *I need:*
+> - *Table 1 comparing baseline characteristics by treatment arm*
+> - *A figure showing tumor response rates by treatment*
+> - *A figure showing marker levels by grade and treatment*
+> - *p-values throughout*
+>
+> *Can you have a draft by end of week?*
+>
+> *— PI"*
+
+::: {.fragment}
+You open your laptop. Let's go.
+:::
+
+---
+
+# Section 1: Meet Your Data
+
+---
+
+## Step 1: Look at what you've got
+
+Before you write a single word of a paper, you need to know your data.
+
+In R, that's two lines:
+
+```r
+glimpse(trial)   # column names, types, first values
+head(trial)      # first 6 rows
 ```
 
-## {auto-animate="true"}
+::: {.fragment}
+::: {.callout-note}
+`trial` is a real-format RCT dataset from the `gtsummary` package.
+200 patients. 6 variables. Two treatment arms: Drug A and Drug B.
+:::
+:::
 
-```{r}
-#| label: cleaning-demo-1
-#| echo: true
-#| output-location: column
-#| code-line-numbers: "1"
+---
 
-print(messy_vitals)
+## 🖥️ Try It: Explore the Data {.scrollable}
+
+Run the code below. Then swap `glimpse` for `head` and run it again. What variables do you see?
+
+```{webr}
+#| exercise: explore_1
+#| setup: true
+library(dplyr)
+library(gtsummary)
+library(ggplot2)
+library(broom)
 ```
 
-## {auto-animate="true"}
-
-```{r}
-#| label: cleaning-demo-2
-#| echo: true
-#| output-location: column
-#| code-line-numbers: "2-3"
-
-messy_vitals |>
-  # Separate BP into systolic and diastolic
-  separate(bp, into = c("sys", "dia"), sep = "/")
+```{webr}
+#| exercise: explore_1
+glimpse(trial)
 ```
 
-## {auto-animate="true"}
+::: {.callout-tip}
+## What you're looking at
+- `trt` — treatment arm (Drug A / Drug B)
+- `age` — patient age in years
+- `marker` — a continuous biomarker level
+- `stage` — tumor stage (T1–T4)
+- `grade` — tumor differentiation (I / II / III)
+- `response` — binary treatment response (0/1)
+- `death` — death event (0/1)
+- `ttdeath` — time to death or censoring (months)
+:::
 
-```{r}
-#| label: cleaning-demo-3
-#| echo: true
-#| output-location: column
-#| code-line-numbers: "4-5"
+---
 
-messy_vitals |>
-  # Separate BP into systolic and diastolic
-  separate(bp, into = c("sys", "dia"), sep = "/") |>
-  # Strip the "F" unit from temperature
-  mutate(temp = parse_number(temp))
-```
+## The Paper Line This Produces
 
-## {auto-animate="true"}
+Every time you run code today, ask: **what would I write in the paper?**
 
-```{r}
-#| label: cleaning-demo-4
-#| echo: true
-#| output-location: column
-#| code-line-numbers: "6-7"
+::: {.fragment}
+After `glimpse(trial)`, your Methods section now has:
 
-messy_vitals |>
-  # Separate BP into systolic and diastolic
-  separate(bp, into = c("sys", "dia"), sep = "/") |>
-  # Strip the "F" unit from temperature
-  mutate(temp = parse_number(temp)) |>
-  # Convert BP columns from character to numeric
-  mutate(across(c(sys, dia), as.numeric))
-```
+> *"Data were available for 200 patients randomized to Drug A (n = 107) or Drug B (n = 93).
+> Variables included patient age, serum marker level, tumor stage and grade, treatment response, and overall survival."*
+:::
 
-## {auto-animate="true"}
+::: {.fragment}
+That sentence used to require you to count rows manually in Excel.
+Now it takes 1 line of R.
+:::
 
-```{r}
-#| label: cleaning-demo-5
-#| echo: true
-#| output-location: column
-#| code-line-numbers: "8-9"
+---
 
-messy_vitals |>
-  # Separate BP into systolic and diastolic
-  separate(bp, into = c("sys", "dia"), sep = "/") |>
-  # Strip the "F" unit from temperature
-  mutate(temp = parse_number(temp)) |>
-  # Convert BP columns from character to numeric
-  mutate(across(c(sys, dia), as.numeric)) |>
-  # Flag patients with elevated systolic BP (≥ 140)
-  mutate(flag = sys >= 140)
-```
+# Section 2: Describing Your Patients
 
-## {auto-animate="true"}
+---
 
-```{r}
-#| label: cleaning-demo-6
-#| echo: true
-#| output-location: column
-#| code-line-numbers: "10-12"
+## What goes in Table 1?
 
-messy_vitals |>
-  # Separate BP into systolic and diastolic
-  separate(bp, into = c("sys", "dia"), sep = "/") |>
-  # Strip the "F" unit from temperature
-  mutate(temp = parse_number(temp)) |>
-  # Convert BP columns from character to numeric
-  mutate(across(c(sys, dia), as.numeric)) |>
-  # Flag patients with elevated systolic BP (≥ 140)
-  mutate(flag = sys >= 140) |>
-  # Visualize
-  ggplot(aes(x = patient, y = sys, fill = flag)) +
-  geom_col()
-```
+Table 1 is the "who are these patients?" table. It appears in nearly every clinical paper ever published.
 
-## {auto-animate="true"}
+::: {.incremental}
+- **Rows:** your variables (age, stage, grade, marker, response)
+- **Columns:** your treatment groups + a Total column
+- **Cells:** mean ± SD for continuous variables, n (%) for categorical
+- **Last column:** p-values testing whether groups are balanced at baseline
+:::
 
-```{r}
-#| label: cleaning-demo-7
-#| echo: true
-#| output-location: column
-#| code-line-numbers: "13-14"
+::: {.fragment}
+In Excel: calculate each cell manually. Choose each test manually. Format manually.
 
-messy_vitals |>
-  # Separate BP into systolic and diastolic
-  separate(bp, into = c("sys", "dia"), sep = "/") |>
-  # Strip the "F" unit from temperature
-  mutate(temp = parse_number(temp)) |>
-  # Convert BP columns from character to numeric
-  mutate(across(c(sys, dia), as.numeric)) |>
-  # Flag patients with elevated systolic BP (≥ 140)
-  mutate(flag = sys >= 140) |>
-  # Visualize
-  ggplot(aes(x = patient, y = sys, fill = flag)) +
-  geom_col() +
-  scale_fill_manual(values = c("gray", "#990000")) + # IU Crimson!
-  theme_minimal()
-```
+In R: **one function.**
+:::
 
-## Another Challenge
+---
 
-You are a resident on a busy clinical rotation. You've been handed a
-messy cancer treatment outcomes dataset.
-
-- **The Data:** The `trial` dataset — 200 patients, 2 treatment arms
-- **The Goal:**
-  - Summarize patient characteristics (age, tumor grade, treatment response)
-  - Split summaries by treatment group
-  - Report mean ± SD for continuous variables
-  - Calculate p-values for group comparisons
-- ⏱️ **You have 2 minutes**
-
-## {auto-animate="true"} 
-
-```{r}
-#| label: table-demo-1
-#| echo: true
-#| output-location: column
-#| code-line-numbers: "4-7"
+```{r tbl-setup}
+#| setup: true
+#| include: false
 
 library(gtsummary)
+library(dplyr)
+library(ggplot2)
+```
 
-# Use the built-in 'trial' clinical dataset
-gtsummary::trial |>
-  select(trt, age, grade, response) |>
-  # Create the summary table
+---
+
+## Building Table 1 Step by Step {auto-animate="true"}
+
+```r
+trial |> tbl_summary()
+```
+
+::: {.fragment}
+That's it. But we can make it publication-ready in 6 lines total.
+
+We'll build it one line at a time — **you'll see every decision.**
+:::
+
+---
+
+## Building Table 1 {auto-animate="true"}
+
+```{r}
+#| echo: true
+#| output-location: column
+
+trial |>
+  # Step 1: select variables for the table
+  select(trt, age, marker, stage, grade, response) |>
   tbl_summary()
 ```
 
-## {auto-animate="true"} 
+## Building Table 1 {auto-animate="true"}
 
 ```{r}
-#| label: table-demo-2
 #| echo: true
 #| output-location: column
-#| code-line-numbers: "8-9"
 
-library(gtsummary)
-
-# Use the built-in 'trial' clinical dataset
-gtsummary::trial |>
-  select(trt, age, grade, response) |>
-  # Create the summary table
+trial |>
+  # Step 1: select variables for the table
+  select(trt, age, marker, stage, grade, response) |>
   tbl_summary(
-    # Split by treatment group
-    by = trt,
+    # Step 2: split by treatment arm
+    by = trt
   )
 ```
 
-## {auto-animate="true"} 
+## Building Table 1 {auto-animate="true"}
 
 ```{r}
-#| label: table-demo-3
 #| echo: true
 #| output-location: column
-#| code-line-numbers: "10-11"
 
-library(gtsummary)
-
-# Use the built-in 'trial' clinical dataset
-gtsummary::trial |>
-  select(trt, age, grade, response) |>
-  # Create the summary table
+trial |>
+  # Step 1: select variables for the table
+  select(trt, age, marker, stage, grade, response) |>
   tbl_summary(
-    # Split by treatment group
+    # Step 2: split by treatment arm
     by = trt,
-    # Report mean ± SD for continuous variables
-    statistic = list(all_continuous() ~ "{mean} ({sd})")
+    # Step 3: report mean ± SD for continuous variables
+    statistic = list(
+      all_continuous() ~ "{mean} ({sd})",
+      all_categorical() ~ "{n} ({p}%)"
+    )
   )
 ```
 
-## {auto-animate="true"} 
+## Building Table 1 {auto-animate="true"}
 
 ```{r}
-#| label: table-demo-4
 #| echo: true
 #| output-location: column
-#| code-line-numbers: "13-14"
 
-library(gtsummary)
-
-# Use the built-in 'trial' clinical dataset
-gtsummary::trial |>
-  select(trt, age, grade, response) |>
-  # Create the summary table
+trial |>
+  # Step 1: select variables for the table
+  select(trt, age, marker, stage, grade, response) |>
   tbl_summary(
-    # Split by treatment group
+    # Step 2: split by treatment arm
     by = trt,
-    # Report mean ± SD for continuous variables
-    statistic = list(all_continuous() ~ "{mean} ({sd})")
+    # Step 3: report mean ± SD for continuous variables
+    statistic = list(
+      all_continuous() ~ "{mean} ({sd})",
+      all_categorical() ~ "{n} ({p}%)"
+    )
   ) |>
-  # Add statistical comparison (p-values)
+  # Step 4: add p-values (auto test selection)
   add_p()
 ```
 
-## {auto-animate="true"} 
+## Building Table 1 {auto-animate="true"}
 
 ```{r}
-#| label: table-demo-5
-#| echo: true
-#| output-location: column
-#| code-line-numbers: "15-16"
-
-library(gtsummary)
-
-# Use the built-in 'trial' clinical dataset
-gtsummary::trial |>
-  select(trt, age, grade, response) |>
-  # Create the summary table
-  tbl_summary(
-    # Split by treatment group
-    by = trt,
-    # Report mean ± SD for continuous variables
-    statistic = list(all_continuous() ~ "{mean} ({sd})")
-  ) |>
-  # Add statistical comparison (p-values)
-  add_p() |>
-  # Add a "Total" column
-  add_overall()
-```
-
-## {auto-animate="true"} 
-
-```{r}
-#| label: table-demo-6
 #| echo: true
 #| output-location: column
 
-library(gtsummary)
-
-# Use the built-in 'trial' clinical dataset
-gtsummary::trial |>
-  select(trt, age, grade, response) |>
-  # Create the summary table
+trial |>
+  # Step 1: select variables for the table
+  select(trt, age, marker, stage, grade, response) |>
   tbl_summary(
-    # Split by treatment group
+    # Step 2: split by treatment arm
     by = trt,
-    label = list(
-      age ~ "Patient Age",
-      grade ~ "Tumor Grade",
-      response ~ "Treatment Response"
-    ),
-    # Report mean ± SD for continuous variables
-    statistic = list(all_continuous() ~ "{mean} ({sd})")
+    # Step 3: report mean ± SD for continuous variables
+    statistic = list(
+      all_continuous() ~ "{mean} ({sd})",
+      all_categorical() ~ "{n} ({p}%)"
+    )
   ) |>
-  # Add statistical comparison (p-values)
+  # Step 4: add p-values (auto test selection)
   add_p() |>
-  # Add a "Total" column
+  # Step 5: add overall column + polish labels
   add_overall() |>
-  # Make it look professional
   bold_labels() |>
-  modify_header(label = "**Variable**")
+  modify_header(label = "**Characteristic**")
 ```
 
+---
 
-# Your Turn
+## What the Paper Says
+
+::: {.fragment}
+You just produced **Table 1**. Here's what it gives you word-for-word:
+
+> *"Baseline characteristics were broadly balanced between treatment arms (Table 1). The mean age was 47 years (SD 14) in the Drug A arm and 49 years (SD 14) in the Drug B arm (p = 0.3). Tumor stage and grade distributions did not differ significantly between groups (p > 0.05 for both)."*
+:::
+
+::: {.fragment}
+::: {.callout-tip}
+## That paragraph took 5 minutes and 6 lines of R.
+In Excel it would have been 30 minutes of copy-pasting, formula-writing, and manual formatting — and you'd have to redo it if a patient was excluded.
+:::
+:::
+
+---
+
+## 🖥️ Your Turn: Reproduce Table 1 {.scrollable}
+
+Fill in the blanks to reproduce the table. The variable list and label are already there — you just need the `by` argument and `add_p()`.
 
 ```{webr}
-#| exercise: medex
+#| exercise: tbl_ex
 #| setup: true
-library(palmerpenguins)
-library(medicaldata)
 library(gtsummary)
 library(dplyr)
-
-penguins <- penguins[1:6, ]
 ```
 
-## Exercise 1: Isolate High-Grade Tumors {.scrollable}
-
-The `blood_storage` dataset contains a `Grade` variable (1–4). Filter the data to show only the most aggressive tumors (**Grade 4**) and assign it to `high_grade_cancers`.
-
-:::{.fragment}
 ```{webr}
-#| exercise: medex_1
-# Filter for Grade 4 tumors
-high_grade_cancers <- blood_storage |> 
-  filter(Grade == ____)
-
-# Count the results
-nrow(high_grade_cancers)
+#| exercise: tbl_ex
+trial |>
+  select(trt, age, marker, stage, grade, response) |>
+  tbl_summary(
+    by = ____,
+    statistic = list(
+      all_continuous()  ~ "{mean} ({sd})",
+      all_categorical() ~ "{n} ({p}%)"
+    )
+  ) |>
+  ____() |>
+  add_overall() |>
+  bold_labels()
 ```
 
-::: { .solution exercise="medex_1"} 
-::: { .callout-tip collapse=false}
-
+::: {.solution exercise="tbl_ex"}
+::: {.callout-tip collapse=false}
 ```{webr}
-#| exercise: medex_1
+#| exercise: tbl_ex
 #| solution: true
-high_grade_cancers <- blood_storage |> 
-  filter(Grade == 4)
-
-nrow(high_grade_cancers)
+trial |>
+  select(trt, age, marker, stage, grade, response) |>
+  tbl_summary(
+    by = trt,
+    statistic = list(
+      all_continuous()  ~ "{mean} ({sd})",
+      all_categorical() ~ "{n} ({p}%)"
+    )
+  ) |>
+  add_p() |>
+  add_overall() |>
+  bold_labels()
 ```
-
 :::
 :::
 
 ```{webr}
-#| exercise: medex_1
+#| exercise: tbl_ex
 #| check: true
 gradethis::grade_this_code()
 ```
-
-:::
 
 ---
 
-## Exercise 2: Defining Clinical Risk {.scrollable}
-
-A PSA (Prostate Specific Antigen) level $\ge$ 10 is often considered high risk. Use `mutate()` to create a new column called `high_psa` that is `TRUE` if `PreopPSA` is 10 or greater.
-
-:::{.fragment}
-
-```{webr}
-#| exercise: medex_2
-# Create a logical flag for high PSA
-psa_analysis <- blood_storage |> 
-  mutate(high_psa = ___ >= 10)
-
-# View the first few rows
-head(psa_analysis)
-```
-
-::: { .solution exercise="med_ex_2"} 
-::: { .callout-tip collapse=false}
-
-```{webr}
-#| exercise: medex_2
-#| solution: true
-psa_analysis <- blood_storage |> 
-  mutate(high_psa = PreopPSA >= 10)
-
-head(psa_analysis)
-```
-
-:::
-:::
-
-```{webr}
-#| exercise: medex_2
-#| check: true
-gradethis::grade_this_code()
-```
-
-:::
+# Section 3: Showing Your Results
 
 ---
 
-## Exercise 3: Complex Data Preparation {.scrollable}
+## What goes in the Results figures?
 
-The PI wants to look at younger patients (Age $\le$ 60) who had a cancer recurrence (`Recurrence == 1`). Select only those patients and calculate their average PSA.
-
-:::{.fragment}
-```{webr}
-#| exercise: medex_3
-# Combine filter and summarize
-summary_stats <- blood_storage |> 
-  filter(Age <= 60, ___ == 1) |> 
-  summarize(mean_psa = ___(PreopPSA, na.rm = TRUE))
-
-summary_stats
-```
-
-::: { .solution exercise="medex_3"} 
-::: { .callout-tip collapse=false}
-
-```{webr}
-#| exercise: medex_3
-#| solution: true
-summary_stats <- blood_storage |> 
-  filter(Age <= 60, Recurrence == 1) |> 
-  summarize(mean_psa = mean(PreopPSA, na.rm = TRUE))
-
-summary_stats
-```
-
-::: 
-:::
-
-```{webr}
-#| exercise: medex_3
-#| check: true
-gradethis::grade_this_code()
-```
-
-:::
-
-## Recap & Key Takeaways
+Your PI asked for two figures:
 
 ::: {.incremental}
-- 🧹 **`tidyr::separate()`** splits combined columns (e.g., blood pressure)
-- 🔢 **`dplyr::mutate()`** creates and transforms columns
-- 📊 **`gtsummary::tbl_summary()`** produces publication-ready clinical tables in seconds
-- 📈 **`ggplot2`** turns tidy data into polished visuals with a few lines of code
-- 💡 The **pipe `|>`** chains steps cleanly — read it as *"and then..."*
+1. **Treatment response rates** by arm — *"Did Drug A or Drug B work better?"*
+2. **Marker levels** by grade and treatment — *"Does the biomarker behave differently across subgroups?"*
 :::
 
 ::: {.fragment}
-**Next steps:** Try these on your own research data. The skills transfer directly.
+Both are answered with `ggplot2`. The grammar is always:
+
+```r
+data |>
+  ggplot(aes(x = ..., y = ..., fill = ...)) +
+  geom_*()
+```
 :::
 
-## Resources
+---
 
-| Resource | Link |
+## Figure 1: Treatment Response Rates {auto-animate="true"}
+
+```{r fig-1a}
+#| echo: true
+#| output-location: column
+
+trial |>
+  group_by(trt) |>
+  # Step 1: calculate response rate per arm
+  summarize(
+    response_rate = mean(response, na.rm = TRUE)
+  )
+```
+
+## Figure 1: Treatment Response Rates {auto-animate="true"}
+
+```{r fig-1b}
+#| echo: true
+#| output-location: column
+
+trial |>
+  group_by(trt) |>
+  # Step 1: calculate response rate per arm
+  summarize(
+    response_rate = mean(response, na.rm = TRUE)
+  ) |>
+  # Step 2: pipe directly into ggplot
+  ggplot(aes(x = trt, y = response_rate, fill = trt))
+```
+
+## Figure 1: Treatment Response Rates {auto-animate="true"}
+
+```{r fig-1c}
+#| echo: true
+#| output-location: column
+
+trial |>
+  group_by(trt) |>
+  # Step 1: calculate response rate per arm
+  summarize(
+    response_rate = mean(response, na.rm = TRUE)
+  ) |>
+  # Step 2: pipe directly into ggplot
+  ggplot(aes(x = trt, y = response_rate, fill = trt)) +
+  # Step 3: add bars
+  geom_col(width = 0.5)
+```
+
+## Figure 1: Treatment Response Rates {auto-animate="true"}
+
+```{r fig-1d}
+#| echo: true
+#| output-location: column
+
+trial |>
+  group_by(trt) |>
+  # Step 1: calculate response rate per arm
+  summarize(
+    response_rate = mean(response, na.rm = TRUE)
+  ) |>
+  # Step 2: pipe directly into ggplot
+  ggplot(aes(x = trt, y = response_rate, fill = trt)) +
+  # Step 3: add bars
+  geom_col(width = 0.5) +
+  # Step 4: convert to % and add labels
+  geom_text(
+    aes(label = scales::percent(response_rate, accuracy = 1)),
+    vjust = -0.5,
+    fontface = "bold"
+  ) +
+  scale_y_continuous(
+    labels = scales::percent_format(),
+    limits = c(0, 0.75)
+  )
+```
+
+## Figure 1: Treatment Response Rates {auto-animate="true"}
+
+```{r fig-1e}
+#| echo: true
+#| output-location: column
+
+trial |>
+  group_by(trt) |>
+  # Step 1: calculate response rate per arm
+  summarize(
+    response_rate = mean(response, na.rm = TRUE)
+  ) |>
+  # Step 2: pipe directly into ggplot
+  ggplot(aes(x = trt, y = response_rate, fill = trt)) +
+  # Step 3: add bars
+  geom_col(width = 0.5) +
+  # Step 4: convert to % and add labels
+  geom_text(
+    aes(label = scales::percent(response_rate, accuracy = 1)),
+    vjust = -0.5,
+    fontface = "bold"
+  ) +
+  scale_y_continuous(
+    labels = scales::percent_format(),
+    limits = c(0, 0.75)
+  ) +
+  # Step 5: publication-ready theme and labels
+  scale_fill_manual(values = c("#990000", "#7D9FC2")) +
+  labs(
+    title = "Figure 1. Treatment Response Rate by Arm",
+    x = "Treatment",
+    y = "Response Rate",
+    caption = "Drug A vs. Drug B — trial dataset"
+  ) +
+  theme_minimal(base_size = 14) +
+  theme(legend.position = "none")
+```
+
+---
+
+## What the Paper Says
+
+Look at Figure 1. Here's the sentence it produces:
+
+::: {.fragment}
+> *"The overall response rate was 28% in the Drug A arm compared to 35% in the Drug B arm. Drug B demonstrated a nominally higher response rate, though formal testing in Section 4 will determine statistical significance."*
+:::
+
+::: {.fragment}
+::: {.callout-note}
+## The figure does the heavy lifting.
+A reader scanning your paper sees that bar chart before they read a single word of Results. Make it clear and labeled — `ggplot2` just did that for you automatically.
+:::
+:::
+
+---
+
+## Figure 2: Marker Levels by Grade and Treatment {auto-animate="true"}
+
+```{r fig-2a}
+#| echo: true
+#| output-location: column
+
+trial |>
+  ggplot(aes(x = grade, y = marker, fill = trt)) +
+  # Step 1: raw marker data by treatment
+  geom_boxplot()
+```
+
+## Figure 2: Marker Levels by Grade and Treatment {auto-animate="true"}
+
+```{r fig-2b}
+#| echo: true
+#| output-location: column
+
+trial |>
+  ggplot(aes(x = grade, y = marker, fill = trt)) +
+  # Step 1: raw marker data by treatment
+  geom_boxplot(outlier.shape = NA, alpha = 0.7) +
+  # Step 2: add individual data points
+  geom_jitter(
+    aes(color = trt),
+    width = 0.15,
+    alpha = 0.5,
+    size = 1.5
+  )
+```
+
+## Figure 2: Marker Levels by Grade and Treatment {auto-animate="true"}
+
+```{r fig-2c}
+#| echo: true
+#| output-location: column
+
+trial |>
+  ggplot(aes(x = grade, y = marker, fill = trt)) +
+  # Step 1: raw marker data by treatment
+  geom_boxplot(outlier.shape = NA, alpha = 0.7) +
+  # Step 2: add individual data points
+  geom_jitter(
+    aes(color = trt),
+    width = 0.15,
+    alpha = 0.5,
+    size = 1.5
+  ) +
+  # Step 3: publication-ready polish
+  scale_fill_manual(values = c("#990000", "#7D9FC2")) +
+  scale_color_manual(values = c("#990000", "#7D9FC2")) +
+  labs(
+    title = "Figure 2. Marker Level by Tumor Grade and Treatment",
+    x = "Tumor Grade",
+    y = "Marker Level",
+    fill = "Treatment",
+    color = "Treatment",
+    caption = "Boxes show IQR; points show individual patients"
+  ) +
+  theme_minimal(base_size = 14)
+```
+
+---
+
+## What the Paper Says
+
+Look at Figure 2. Here's what you'd write:
+
+::: {.fragment}
+> *"Marker levels were broadly similar across tumor grades in both treatment arms (Figure 2). Among Grade I and II patients, median marker levels were comparable between Drug A and Drug B. Grade III patients showed greater variability in marker levels, with a wider interquartile range in both arms."*
+:::
+
+::: {.fragment}
+::: {.callout-tip}
+## You didn't touch a formula.
+No `=STDEV()`. No pivot table. No manually filtering by grade. One `ggplot` call split the data, colored it by group, and showed you the distribution — automatically.
+:::
+:::
+
+---
+
+## 🖥️ Your Turn: Build Figure 2 from Scratch {.scrollable}
+
+Using `trial`, make a boxplot of `marker` levels by `stage` (not grade this time), filled by `trt`. Add axis labels and a title.
+
+*Hint: `geom_boxplot(aes(x = stage, y = marker, fill = trt))`*
+
+```{webr}
+#| exercise: fig_ex2
+#| label: fig_ex2
+trial |>
+  ggplot(aes(x = _____, y = _____, fill = _____)) +
+  geom_boxplot(alpha = 0.7) +
+  labs(
+    title = "Marker Level by Tumor Stage and Treatment",
+    x     = "_____",
+    y     = "_____",
+    fill  = "Treatment"
+  ) +
+  theme_minimal()
+```
+
+::: {.solution exercise="fig_ex2"}
+::: {.callout-tip collapse=false}
+```{webr}
+#| exercise: fig_ex2
+#| label: fig_ex2_solution
+#| solution: true
+trial |>
+  ggplot(aes(x = stage, y = marker, fill = trt)) +
+  geom_boxplot(alpha = 0.7) +
+  labs(
+    title = "Marker Level by Tumor Stage and Treatment",
+    x     = "Tumor Stage",
+    y     = "Marker Level",
+    fill  = "Treatment"
+  ) +
+  theme_minimal()
+```
+:::
+:::
+
+---
+
+# Section 4: The Numbers Behind the Story
+
+---
+
+## What "analysis" means in a clinical paper
+
+You've described the data (Table 1) and shown it visually (Figures 1–2).
+
+Now you need to **formally answer the research question**:
+
+::: {.fragment}
+> *"Is Drug A more effective than Drug B?"*
+:::
+
+::: {.incremental}
+- A **chi-square test** on response rate (categorical outcome)
+- A **group comparison** of marker levels by treatment
+- These are the p-values that go in your Results section
+:::
+
+---
+
+## Formal Test: Response Rate {auto-animate="true"}
+
+```{r analysis-1}
+#| echo: true
+#| output-location: column
+
+# Chi-square: response rate by treatment arm
+trial |>
+  select(trt, response) |>
+  tbl_summary(
+    by = trt,
+    statistic = all_categorical() ~ "{n} ({p}%)",
+    label = response ~ "Treatment Response"
+  ) |>
+  add_p() |>
+  bold_labels()
+```
+
+## Formal Test: Marker Levels {auto-animate="true"}
+
+```{r analysis-2}
+#| echo: true
+#| output-location: column
+
+# t-test: marker level by treatment arm
+trial |>
+  select(trt, marker) |>
+  tbl_summary(
+    by = trt,
+    statistic = all_continuous() ~ "{mean} ({sd})",
+    label = marker ~ "Marker Level"
+  ) |>
+  add_p() |>
+  bold_labels()
+```
+
+## Full Results Table {auto-animate="true"}
+
+```{r analysis-3}
+#| echo: true
+#| output-location: column
+
+# Combine into one clean results table
+trial |>
+  select(trt, response, marker, grade, stage) |>
+  tbl_summary(
+    by = trt,
+    statistic = list(
+      all_continuous() ~ "{mean} ({sd})",
+      all_categorical() ~ "{n} ({p}%)"
+    ),
+    label = list(
+      response ~ "Treatment Response",
+      marker ~ "Marker Level",
+      grade ~ "Tumor Grade",
+      stage ~ "T Stage"
+    )
+  ) |>
+  add_p() |>
+  add_overall() |>
+  bold_labels() |>
+  modify_header(label = "**Outcome / Variable**")
+```
+
+---
+
+## What the Paper Says
+
+Your Results section now writes itself from the output:
+
+::: {.fragment}
+> *"**Treatment Response.** The response rate was 28% (30/107) in the Drug A arm vs. 35% (33/93) in the Drug B arm. This difference was not statistically significant (p = 0.2)."*
+:::
+
+::: {.fragment}
+> *"**Biomarker Levels.** Mean marker level was 0.92 ng/mL (SD 0.86) with Drug A and 0.86 ng/mL (SD 0.80) with Drug B. No significant difference was observed between arms (p = 0.6)."*
+:::
+
+::: {.fragment}
+::: {.callout-note}
+## What does this tell us about the trial?
+Neither the response rate nor the biomarker differed significantly between arms. In a real paper, this shapes your Discussion — Drug B showed a numerically higher response rate but the study may have been underpowered to detect a difference.
+:::
+:::
+
+---
+
+## 🖥️ Your Turn: Grade-Stratified Analysis {.scrollable}
+
+Filter for **Grade III patients only**, then build a `tbl_summary()` comparing `response` and `marker` by `trt`, with p-values.
+
+*This is a subgroup analysis — one of the most common requests in clinical research.*
+
+```{webr}
+#| exercise: analysis_ex
+#| label: analysis_setup
+#| setup: true
+library(gtsummary)
+library(dplyr)
+```
+
+```{webr}
+#| exercise: analysis_ex
+#| label: analysis_ex
+trial |>
+  filter(____ == "____") |>
+  select(trt, response, marker) |>
+  tbl_summary(
+    by = ____,
+    statistic = list(
+      all_continuous()  ~ "{mean} ({sd})",
+      all_categorical() ~ "{n} ({p}%)"
+    )
+  ) |>
+  add_p() |>
+  bold_labels()
+```
+
+::: {.solution exercise="analysis_ex"}
+::: {.callout-tip collapse=false}
+```{webr}
+#| exercise: analysis_ex
+#| label: analysis_ex_solution
+#| solution: true
+trial |>
+  filter(grade == "III") |>
+  select(trt, response, marker) |>
+  tbl_summary(
+    by = trt,
+    statistic = list(
+      all_continuous()  ~ "{mean} ({sd})",
+      all_categorical() ~ "{n} ({p}%)"
+    )
+  ) |>
+  add_p() |>
+  bold_labels()
+```
+:::
+:::
+
+```{webr}
+#| exercise: analysis_ex
+#| label: analysis_ex_check
+#| check: true
+gradethis::grade_this_code()
+```
+
+---
+
+# Section 5: Conclusions — What Does It All Mean?
+
+---
+
+## The conclusion follows from the output
+
+You've now produced:
+
+::: {.incremental}
+- ✅ **Table 1** — patients were balanced at baseline
+- ✅ **Figure 1** — response rates by treatment arm
+- ✅ **Figure 2** — marker levels by grade and treatment
+- ✅ **Analysis table** — formal p-values for all comparisons
+:::
+
+::: {.fragment}
+All of it came from one dataset. All of it is reproducible. If the data changes — one row excluded, one variable added — **you re-run the script and every table and figure updates automatically.**
+:::
+
+---
+
+## 🖥️ Boss Level: Write Your Own Analysis {.scrollable}
+
+No blanks. No hints. Your PI just emailed back:
+
+> *"Can you also look at whether marker level predicts response, stratified by grade? Just a quick summary — whatever you think makes sense."*
+
+Use `trial`. Use any combination of `filter()`, `group_by()`, `tbl_summary()`, or `ggplot()`. There is no single right answer.
+
+```{webr}
+#| exercise: boss_ex
+#| label: boss_ex_setup
+#| setup: true
+library(gtsummary)
+library(dplyr)
+library(ggplot2)
+```
+
+```{webr}
+#| exercise: boss_ex
+#| label: boss_ex
+# Your code here — this is your analysis now.
+
+
+```
+
+::: {.solution exercise="boss_ex"}
+::: {.callout-tip collapse=false title="One possible approach"}
+```{webr}
+#| exercise: boss_ex
+#| label: boss_ex_solution
+#| solution: true
+# Option 1: summary table — marker by response, stratified by grade
+trial |>
+  group_by(grade) |>
+  tbl_summary(
+    by = response,
+    include = marker,
+    statistic = all_continuous() ~ "{mean} ({sd})",
+    label = marker ~ "Marker Level"
+  ) |>
+  add_p() |>
+  bold_labels()
+```
+:::
+:::
+
+---
+
+# One More Thing: Reproducible Prose
+
+---
+
+## The hidden reproducibility problem
+
+Tables and figures update when you re-run. But what about the **sentences in your paper**?
+
+::: {.fragment}
+This is the most common way reproducibility breaks down in practice:
+
+> *"The mean age was **47** years..."*
+
+Six months later, you exclude 3 patients. You re-run R. The tables update. But that **47** in your Methods section? Still there. **Manually. Wrong.**
+:::
+
+::: {.fragment}
+::: {.callout-warning}
+## Hard-coded numbers in prose are a reproducibility leak.
+Every time you type a number into a sentence, you create a place where the paper and the data can silently disagree.
+:::
+:::
+
+---
+
+## The fix: inline R code
+
+In a Quarto document, you can embed live R expressions directly inside your prose using `` `r` ``:
+
+```markdown
+The mean age was ` r round(mean(trial$age, na.rm = TRUE), 1)` years
+(SD ` r round(sd(trial$age, na.rm = TRUE), 1)`).
+```
+
+::: {.fragment}
+When the document renders, that becomes:
+
+> *"The mean age was 47.2 years (SD 14.3)."*
+:::
+
+::: {.fragment}
+Re-run on updated data? The sentence updates **automatically**. The number in the prose and the number in the table are guaranteed to match — they come from the same computation.
+:::
+
+---
+
+## Your entire Results section, reproducible {auto-animate="true"}
+
+```markdown
+A total of ` r nrow(trial)` patients were enrolled, randomized to
+Drug A (n = ` r sum(trial$trt == "Drug A")`) or
+Drug B (n = ` r sum(trial$trt == "Drug B")`).
+```
+
+::: {.fragment}
+Renders as:
+
+> *"A total of 200 patients were enrolled, randomized to Drug A (n = 107) or Drug B (n = 93)."*
+:::
+
+---
+
+## Your entire Results section, reproducible {auto-animate="true"}
+
+```markdown
+A total of ` r nrow(trial)` patients were enrolled, randomized to
+Drug A (n = ` r sum(trial$trt == "Drug A")`) or
+Drug B (n = ` r sum(trial$trt == "Drug B")`).
+
+The response rate was
+` r scales::percent(mean(trial$response[trial$trt=="Drug A"], na.rm=TRUE), accuracy=1)`
+in the Drug A arm vs.
+` r scales::percent(mean(trial$response[trial$trt=="Drug B"], na.rm=TRUE), accuracy=1)`
+in the Drug B arm.
+```
+
+::: {.fragment}
+Renders as:
+
+> *"The response rate was 28% in the Drug A arm vs. 35% in the Drug B arm."*
+:::
+
+---
+
+## Your entire Results section, reproducible {auto-animate="true"}
+
+```{r inline-vars}
+#| echo: false
+drug_a_resp <- scales::percent(
+  mean(
+    gtsummary::trial$response[gtsummary::trial$trt == "Drug A"],
+    na.rm = TRUE
+  ),
+  accuracy = 1
+)
+drug_b_resp <- scales::percent(
+  mean(
+    gtsummary::trial$response[gtsummary::trial$trt == "Drug B"],
+    na.rm = TRUE
+  ),
+  accuracy = 1
+)
+n_total <- nrow(gtsummary::trial)
+n_drug_a <- sum(gtsummary::trial$trt == "Drug A")
+n_drug_b <- sum(gtsummary::trial$trt == "Drug B")
+```
+
+```markdown
+A total of ` r nrow(trial)` patients were enrolled...
+The response rate was ` r drug_a_resp` vs. ` r drug_b_resp`...
+```
+
+::: {.fragment}
+::: {.callout-tip}
+## The full power of reproducible research.
+Change the dataset → re-render the document → **every number in every sentence updates**.
+
+Tables ✅ Figures ✅ Prose ✅
+
+This is what separates a reproducible paper from a paper that just happens to have code attached.
+:::
+:::
+
+---
+
+# Wrapping Up: The Paper You Just Wrote
+
+---
+
+## Look what you built in 60 minutes
+
+::: {.incremental}
+- 📋 **Table 1** — baseline characteristics, mean ± SD, p-values, formatted for submission
+- 📊 **Figure 1** — treatment response rate bar chart, percent-labeled, publication-ready
+- 📦 **Figure 2** — marker levels by grade and treatment, boxplot with jittered points
+- 🔬 **Results table** — formal group comparisons across all outcomes
+- 🔍 **Subgroup analysis** — Grade III patients, stratified by treatment
+- ✍️ **Reproducible prose** — every number in your sentences tied to the data with `` `r ` ``
+:::
+
+::: {.fragment}
+Update the data → re-render → **everything updates**. Tables, figures, and the sentences that describe them.
+:::
+
+---
+
+## Why this matters for your career
+
+::: {.incremental}
+- NIH and major journals now **require code and data sharing** at publication
+- Hospital analytics teams are moving to **R and Python at scale** — Excel breaks at 100K rows
+- A student who can produce a clean Table 1 and two figures in an afternoon is **genuinely useful** to a PI from day one
+- The skills you used today transfer directly to **your own research data**
+:::
+
+---
+
+## Your first step after today
+
+::: {.fragment}
+**Tonight:** Go to [posit.cloud](https://posit.cloud) — free RStudio in your browser. Create a project.
+:::
+
+::: {.fragment}
+**This week:** Run `glimpse()` on any dataset you've been meaning to analyze. Paste it into ChatGPT or Claude and say "help me write a tbl_summary for this." You'll have a Table 1 draft in 10 minutes.
+:::
+
+::: {.fragment}
+**This month:** Replace one Excel analysis with R. Just one. That's the habit.
+:::
+
+---
+
+## Where to go next
+
+| Resource | What it's for |
 |---|---|
-| R for Data Science (free) | [r4ds.hadley.nz](https://r4ds.hadley.nz) |
-| gtsummary documentation | [danieldsjoberg.com/gtsummary](https://www.danieldsjoberg.com/gtsummary/) |
-| Tidy Tuesday (practice data) | [github.com/rfordatascience/tidytuesday](https://github.com/rfordatascience/tidytuesday) |
-| IU CTSI Biostatistics | [indianactsi.org](https://indianactsi.org) |
+| [r4ds.hadley.nz](https://r4ds.hadley.nz) | Free textbook |
+| [posit.cloud](https://posit.cloud) | Free RStudio in your browser |
+| [medicaldata](https://higgi13425.github.io/medicaldata/) | Free clinical datasets |
+| [rmrwr](https://bookdown.org/pdr_higgins/rmrwr/) | Free clinical r textbook |
+| [DART Program](https://arcus.github.io/education_modules/example_pathways#:~:text=Pathway%204%3A%20Analysis%20in%20R) | Free hands-on tutorials  |
 
-::: {.fragment}
-**Thank you — questions welcome!**
+---
 
-Mirindi Kabangu · IU School of Medicine · SNMA AMEC 2026
+## Thank you
+
+::: columns
+::: {.column width="60%"}
+
+- [mkabangu@uiowa.edu](mailto:your.email@iu.edu)
+- [mkabangu.github.io](https://mkabangu.github.io/mirindikabangu/)
+- [github.com/mirindikabangu](https://github.com/mirindikabangu)
+- [linkedin.com/in/mirindikabangu](https://www.linkedin.com/in/mirindikabangu/)
+- [twitter.com/mirindi_txt](https://twitter.com/mirindi_txt)
+
 :::
+
+::: {.column width="40%"}
+::: {.callout-note}
+## One last thing
+If you open R this week and run `glimpse()` on your own data — even once — this session will have done its job.
+:::
+:::
+:::
+
+---
 
 ## Session Info {.allow-framebreaks}
 
