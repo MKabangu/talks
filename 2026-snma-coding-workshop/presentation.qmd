@@ -1,7 +1,16 @@
 ---
-title: "AMEC 2026 | Indiana University School of Medicine"
-subtitle: "R for SNMA"
-author: "Mirindi Kabangu"
+title: "AMEC 2026 | Coding Workshop"
+subtitle: "Writing Reproducible \n \n Research with R"
+title-slide-attributes:
+  data-background-image: images/pittsburgh.jpg
+  data-background-size: auto 100%
+  data-background-opacity: "0.5"
+  data-background-position: right 0% bottom 45%
+author:
+    name: Mirindi Kabangu, BS
+    orcid: 0000-0002-4605-9089
+    email: mkabangu@iu.edu
+    affiliations: Indiana University School of Medicine
 format: 
   live-revealjs:
     self-contained: true
