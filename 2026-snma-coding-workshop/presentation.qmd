@@ -505,7 +505,7 @@ trial |>
     limits = c(0, 0.75)
   ) +
   # Step 5: publication-ready theme and labels
-  scale_fill_manual(values = c("#990000", "#7D9FC2")) +
+  scale_fill_manual(values = c("#50B5AF", "#F79323")) +
   labs(
     title = "Figure 1. Treatment Response Rate by Arm",
     x = "Treatment",
@@ -584,8 +584,8 @@ trial |>
     size = 1.5
   ) +
   # Step 3: publication-ready polish
-  scale_fill_manual(values = c("#990000", "#7D9FC2")) +
-  scale_color_manual(values = c("#990000", "#7D9FC2")) +
+  scale_fill_manual(values = c("#50B5AF", "#F79323")) +
+  scale_color_manual(values = c("#50B5AF", "#F79323")) +
   labs(
     title = "Figure 2. Marker Level by Tumor Grade and Treatment",
     x = "Tumor Grade",
