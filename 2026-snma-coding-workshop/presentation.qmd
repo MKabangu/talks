@@ -1076,7 +1076,7 @@ Update the data → re-render → **everything updates**. Tables, figures, and t
 ::: columns
 ::: {.column width="60%"}
 
-Keep in touch:
+Resources:
 - Slides: [github.com/MKabangu/talks](https://github.com/MKabangu/talks/tree/main/2026-snma-coding-workshop)
 - Website: [mirindikabangu.github.io](https://mirindikabangu.github.io/mirindikabangu)
 - LinkedIn [linkedin.com/in/mirindikabangu](https://www.linkedin.com/in/mirindikabangu/)
