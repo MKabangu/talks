@@ -1077,8 +1077,8 @@ Update the data → re-render → **everything updates**. Tables, figures, and t
 ::: columns
 ::: {.column width="60%"}
 
+Keep in touch:
 - [mkabangu@uiowa.edu](mailto:your.email@iu.edu)
-- [mkabangu.github.io](https://mkabangu.github.io/mirindikabangu/)
 - [github.com/mirindikabangu](https://github.com/mirindikabangu)
 - [linkedin.com/in/mirindikabangu](https://www.linkedin.com/in/mirindikabangu/)
 - [twitter.com/mirindi_txt](https://twitter.com/mirindi_txt)
