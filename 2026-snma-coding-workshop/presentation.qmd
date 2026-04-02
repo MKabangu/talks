@@ -33,6 +33,8 @@ webr:
 {{< include ./_extensions/r-wasm/live/_knitr.qmd >}}
 {{< include ./_extensions/r-wasm/live/_gradethis.qmd >}}
 
+## {visibility="hidden"}
+
 ```{r}
 #| label: cleaning-demo-0
 #| echo: false
@@ -55,16 +57,15 @@ library(gtsummary)
 ::: {.column width="70%"}
 Mirindi Kabangu
 
-MD Candidate | Indiana University School of Medicine
-
+- MD Candidate, Indiana University School of Medicine
 - Member, Student National Medical Association 
 - Research interests: clinical data science, health equity
-- Contact: [mkabangu@iu.edu](mailto:mkabangu@iu.edu)
+- Contact: [mkabangu@iu.edu](mailto:mkabangu@iu.edu) | [mkabangu@uiowa.edu](mailto:mkabangu@uiowa.edu)
 :::
 :::
 
 ## 
-![](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExajFudzh0NjdyMDFxNnp2cDV1cjFzcnA0ejNjeXVhcXV0b2VndTFpOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/4l0zEDeBE3ZhZ6GzKa/giphy.gif){width="100%" fig-align="center"}
+![](images/yes-pengu.gif){width="100%" fig-align="center"}
 
 ## 
 ![](images/excel-pengu.gif){width="100%" fig-align="center"}
@@ -96,11 +97,7 @@ Everything runs live in your browser. You are already set up.
 :::
 :::
 
----
-
 # You Just Got an Email from Your PI
-
----
 
 ## 📧 From: Your PI
 
@@ -120,11 +117,7 @@ Everything runs live in your browser. You are already set up.
 You open your laptop. Let's go.
 :::
 
----
-
 # Section 1: Meet Your Data
-
----
 
 ## Step 1: Look at what you've got
 
@@ -144,8 +137,6 @@ head(trial)      # first 6 rows
 :::
 :::
 
----
-
 ## 🖥️ Try It: Explore the Data {.scrollable}
 
 Run the code below. Then swap `glimpse` for `head` and run it again. What variables do you see?
@@ -164,8 +155,6 @@ library(broom)
 glimpse(trial)
 ```
 
----
-
 ## The Paper Line This Produces
 
 Every time you run code today, ask: **what would I write in the paper?**
@@ -182,24 +171,7 @@ That sentence used to require you to count rows manually in Excel.
 Now it takes 1 line of R.
 :::
 
-::: {.callout-tip}
-## The data dictionary
-- `trt` — treatment arm (Drug A / Drug B)
-- `age` — patient age in years
-- `marker` — a continuous biomarker level
-- `stage` — tumor stage (T1–T4)
-- `grade` — tumor differentiation (I / II / III)
-- `response` — binary treatment response (0/1)
-- `death` — death event (0/1)
-- `ttdeath` — time to death or censoring (months)
-:::
-
-
----
-
 # Section 2: Describing Your Patients
-
----
 
 ## What goes in Table 1?
 
@@ -218,8 +190,6 @@ In Excel: calculate each cell manually. Choose each test manually. Format manual
 In R: **one function.**
 :::
 
----
-
 ```{r tbl-setup}
 #| setup: true
 #| include: false
@@ -228,8 +198,6 @@ library(gtsummary)
 library(dplyr)
 library(ggplot2)
 ```
-
----
 
 ## Building Table 1 Step by Step {auto-animate="true"}
 
@@ -243,8 +211,6 @@ That's it. But we can make it publication-ready in 6 lines total.
 We'll build it one line at a time — **you'll see every decision.**
 :::
 
----
-
 ## Building Table 1 {auto-animate="true"}
 
 ```{r}
@@ -257,7 +223,7 @@ trial |>
   tbl_summary()
 ```
 
-## Building Table 1 {auto-animate="true"}
+## Building Table 1 {auto-animate="true" .scrollable}
 
 ```{r}
 #| echo: true
@@ -272,7 +238,7 @@ trial |>
   )
 ```
 
-## Building Table 1 {auto-animate="true"}
+## Building Table 1 {auto-animate="true" .scrollable}
 
 ```{r}
 #| echo: true
@@ -292,7 +258,7 @@ trial |>
   )
 ```
 
-## Building Table 1 {auto-animate="true"}
+## Building Table 1 {auto-animate="true" .scrollable}
 
 ```{r}
 #| echo: true
@@ -314,7 +280,7 @@ trial |>
   add_p()
 ```
 
-## Building Table 1 {auto-animate="true"}
+## Building Table 1 {auto-animate="true" .scrollable}
 
 ```{r}
 #| echo: true
@@ -340,8 +306,6 @@ trial |>
   modify_header(label = "**Characteristic**")
 ```
 
----
-
 ## What the Paper Says
 
 ::: {.fragment}
@@ -356,8 +320,6 @@ You just produced **Table 1**. Here's what it gives you word-for-word:
 In Excel it would have been 30 minutes of copy-pasting, formula-writing, and manual formatting — and you'd have to redo it if a patient was excluded.
 :::
 :::
-
----
 
 ## 🖥️ Your Turn: Reproduce Table 1 {.scrollable}
 
