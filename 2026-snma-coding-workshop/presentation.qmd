@@ -14,7 +14,7 @@ author:
 format: 
   live-revealjs:
     self-contained: true
-    footer: SNMA 2026 | Pittsburgh, PA
+    footer: AMEC 2026 | Pittsburgh, PA
     logo: images/snma-logo.jpg
     theme: 
       - _extensions/grantmcdermott/clean/clean.scss
